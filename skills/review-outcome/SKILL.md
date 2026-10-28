@@ -16,7 +16,7 @@ Before judging, list for yourself every claim, scenario and measure, and map eac
 - A finding names the criterion it fails and quotes the document.
 - A point the definition leaves to a later level is not a finding.
 - Wording that doesn't change what the user gets is not a finding.
-- Drop hypotheticals that no quoted text supports: perfection is the enemy of done. This does not apply to criteria 4 and 5: a missing scenario or an unsound check that the text shows is always a finding.
+- Drop anything the quoted text doesn't show: perfection is the enemy of done. For criteria 4 and 5, the text shows a finding when a claim has no scenario, or when a check's own words would misjudge the result. A way the work could game a check, or a check built badly, is not shown by the text.
 - Impact is high if the user might not get the intended result, and medium if only a check or measure is affected.
 
 Do not propose answers, rewrite the document, comment on wording or style, or list open questions.

@@ -13,7 +13,9 @@ An Outcome contains:
 
 An Outcome does not contain non-goals, behaviour rules, edge cases, design decisions, implementation, a slicing plan, where anything lives, or how tests are built.
 
-An Outcome leaves room for interpretation; later levels narrow it. A point that needs a definition, rule, threshold or procedure to resolve (what exactly counts as X, when exactly Y happens, how much work stops) belongs to a later level.
+A scenario states its starting state, what happens and what passes, as results you can observe. How the scenario is scripted, and how a check tells one case from another, is how tests are built.
+
+An Outcome leaves room for interpretation; later levels narrow it. A point that needs a definition, rule, threshold or procedure to resolve (what exactly counts as X, when exactly Y happens, how much work stops, how a scenario is scripted or a check is built) belongs to a later level.
 
 ## Criteria
 
@@ -23,7 +25,7 @@ A sound Outcome meets all six.
 2. Nothing extra. Nothing is present that the Outcome isn't responsible for.
 3. Clear. For every statement, a reader knows what result the user is meant to get.
 4. Traceable. Every part of every claim has a scenario whose check fails if that part is broken. Every scenario and measure checks a claim. An allowance, something a claim permits but does not require, needs no scenario of its own.
-5. Sound checks. Judged against the claims it traces to, no check or measure:
+5. Sound checks. Taking each check as built faithfully at a later level, and judged against the claims it traces to, no check or measure:
    - passes when the user doesn't get the result;
    - passes because the scenario never brings about what the claim is about;
    - fails or counts against behaviour a claim requires or allows. Every allowance or exception in a claim is carried into each scenario and measure it touches, unless the scenario's starting state rules it out;

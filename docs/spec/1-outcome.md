@@ -11,7 +11,7 @@
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features.
 - Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked: by a decision no one made, or by a conflict.
 
-"Code starts" means the first change to the project's code or tests.
+"Code starts" means the first change to the project's code or tests for that feature.
 
 **Scenarios.** Each runs on a sample project with a scripted user, and passes only if all 10 runs pass. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, and any agreed levels a scenario starts from, come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
 
