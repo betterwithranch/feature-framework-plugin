@@ -9,7 +9,7 @@ An Outcome contains:
 - Who the feature is for.
 - What it achieves, as results the user can observe.
 - End-to-end scenarios, each with an automated check and a pass bar. No check needs a person.
-- How success is measured on real use.
+- How success is measured on real use, each measure with a target.
 
 An Outcome does not contain non-goals, behaviour rules, edge cases, design decisions, implementation, a slicing plan, where anything lives, or how tests are built.
 
@@ -27,6 +27,7 @@ A sound Outcome meets all six.
    - passes when the user doesn't get the result;
    - fails or counts against behaviour a claim requires or allows. Every allowance or exception in a claim is carried into each scenario and measure it touches, unless the scenario's starting state rules it out;
    - can be satisfied by the work being judged;
+   - compares against an expected result that the scenario doesn't set before the run;
    - leaves its starting state to the work being judged instead of setting it.
 
    A scenario need not re-check a claim that another scenario covers.

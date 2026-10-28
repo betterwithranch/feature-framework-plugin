@@ -19,4 +19,9 @@ Read [the Outcome definition](../references/outcome.md). Write a document that h
 
 1. List the vocabulary and confirm each concept has one term.
 2. List the claims, scenarios and measures, and map every part of each claim to a scenario that fails if that part is broken.
-3. Check the document against each criterion in the definition and fix what fails.
+3. Check the document against each criterion in the definition. For criterion 5, go through each scenario and measure one at a time, against each item.
+4. Fix what fails.
+
+## After a fix
+
+Rerun the self-check on the changed text and on every claim, scenario and measure linked to it. A fix that moves a problem somewhere else is not a fix.
