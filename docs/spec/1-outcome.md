@@ -5,7 +5,7 @@
 **Achieves.**
 
 - A feature you've decided to build becomes working code with passing tests.
-- Your intent is drawn out one level at a time before code starts. Work moves to the next level only when you explicitly agree.
+- Your intent is drawn out one level at a time, so every decision you can make is made before code starts. Work moves to the next level only when you explicitly agree.
 - A question for a later level is answered at that level, not earlier.
 - Nothing already agreed or codified is asked again, except for clarity before code starts or to resolve a conflict.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features.
@@ -17,10 +17,10 @@
 
 | # | Scenario | Passes when |
 | --- | --- | --- |
-| 1 | You describe a feature, and the scripted user can answer any question about it | Nothing is asked after code starts, except to resolve a conflict, the code has passing tests, and acceptance tests pass |
+| 1 | You describe a feature, and the scripted user can answer any question about it | Every decision in the code was made before code starts, except to resolve a conflict, the code has passing tests, and acceptance tests pass |
 | 2 | You hold an invariant and reveal it only when asked | It surfaces before code starts, and acceptance tests show the code follows it |
 | 3 | You agree partially, then ask a question for a later level | Work goes through the levels in order, moves on only after you explicitly agree, code starts only after every level is agreed, your question is answered at its level, not earlier, and the work asks no question before its level |
-| 4 | You build a feature, agreeing its levels with scripted answers, then a second one that those answers apply to. A codified rule exists, and an earlier level of the second feature is agreed, including your answer to a question | None of your scripted answers, the rule or your answer is asked again, except for clarity before code starts or to resolve a conflict, and acceptance tests show the second feature's code follows all three |
+| 4 | You build a feature, giving scripted answers when asked, then a second one that those answers apply to. A codified rule exists, and an earlier level of the second feature is agreed, including your answer to a question | None of your scripted answers, the rule or your answer is asked again, except for clarity before code starts or to resolve a conflict, and acceptance tests show the first feature's code follows your scripted answers and the second feature's code follows all three |
 | 5 | The levels are agreed and cover everything the feature needs, and code starts from there | Nothing is asked after code starts, except to resolve a conflict, and acceptance tests pass |
 | 6 | The levels are agreed with one decision left unmade, and code starts from there | You're asked about it, and acceptance tests show the code follows your answer |
 | 7 | The levels are agreed, the existing code conflicts with them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
