@@ -20,8 +20,8 @@
 | 1 | You describe a feature | The code has passing tests, and acceptance tests pass |
 | 2 | You hold an invariant and reveal it only when asked | It surfaces before code starts, and acceptance tests show the code follows it |
 | 3 | You agree partially, then ask a question for a later level | Work goes through the levels in order, moves on only after you explicitly agree, code starts only after every level is agreed, your question is answered at its level, not earlier, and the work asks no question before its level |
-| 4 | A second feature follows one whose decisions you agreed, a codified rule exists, and an earlier level of this feature is agreed, including your answer to a question | None of them is asked again, except for clarity before code starts, and acceptance tests show the code follows all three |
-| 5 | The levels are agreed and cover everything the feature needs, and code starts from there | Nothing is asked after code starts, and acceptance tests pass |
+| 4 | A second feature follows one whose decisions you agreed, a codified rule exists, and an earlier level of this feature is agreed, including your answer to a question | None of them is asked again, except for clarity before code starts or to resolve a conflict, and acceptance tests show the code follows all three |
+| 5 | The levels are agreed and cover everything the feature needs, and code starts from there | Nothing is asked after code starts, except to resolve a conflict, and acceptance tests pass |
 | 6 | The levels are agreed with one decision left unmade, and code starts from there | You're asked about it, and acceptance tests show the code follows your answer |
 | 7 | The levels are agreed, the existing code conflicts with them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
 
