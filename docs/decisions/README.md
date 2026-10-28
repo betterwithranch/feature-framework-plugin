@@ -22,3 +22,8 @@ The current decisions. A decision that replaces another replaces its record; rep
 | 0016 | [Fix through the write skill; stop after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) |
 | 0019 | [An ambiguity is asked](0019-ambiguity-after-code-starts-is-asked.md) |
 | 0020 | [One classification of who decides](0020-decision-classification.md) |
+| 0021 | [Claude Code plugin](0021-claude-code-plugin.md) |
+| 0022 | [Where a feature's documents live](0022-feature-documents-location.md) |
+| 0023 | [Scenarios run as plugin evals](0023-scenarios-run-as-plugin-evals.md) |
+| 0024 | [Reuse before building](0024-reuse-before-building.md) |
+| 0025 | [A planning marker guards code](0025-planning-marker-guards-code.md) |

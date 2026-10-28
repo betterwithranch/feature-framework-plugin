@@ -13,6 +13,7 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 - Be simple and to the point. Use short sentences and say only what the reader needs to know what result is asked for.
 - Use one term per concept, and reuse the same phrase for the same idea. Define a term only when a reader couldn't tell what result it means.
 - State what each check confirms, not how it is built.
+- Reuse before building. Before designing a mechanism, look for an existing tool, host feature, documented practice or project utility that does it, and use it when it meets the need. Build only the gap, and say why.
 - Fix a problem by removing the wording that caused it, not by adding a new qualifier or distinction.
 
 ## Self-check before review
