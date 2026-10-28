@@ -5,7 +5,7 @@ description: Write the Outcome of a feature, the first planning level - who it i
 
 # Write an Outcome
 
-Read [the Outcome definition](../references/outcome.md). Write a document that has its contents and meets its criteria.
+Read [the Outcome definition](../references/outcome.md) and [the decision classification](../references/decisions.md), which sets who makes each decision. Write a document that has its contents and meets its criteria.
 
 ## Rules
 

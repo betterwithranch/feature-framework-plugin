@@ -13,6 +13,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 | `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
 | `skills/references/outcome.md` | What an Outcome contains and the criteria it must meet, shared by the Outcome skills |
+| `skills/references/decisions.md` | Which decisions need the user and which the work makes, used at every level |
 | `skills/references/behaviour.md` | What a Behaviour document contains and the criteria it must meet, shared by the Behaviour skills |
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |

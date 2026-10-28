@@ -21,5 +21,6 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0015 | [The user approves only open decisions](0015-approve-only-open-decisions.md) | Accepted |
 | 0016 | [Fix findings through the write skill, and stop a gate after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) | Accepted |
 | 0017 | [Dogfood first, then apply the framework to codeguard step 32](0017-dogfood-first-then-codeguard-step-32.md) | Accepted |
-| 0018 | [When agreements conflict, the later one wins](0018-later-agreement-wins.md) | Accepted |
+| 0018 | [When agreements conflict, the later one wins](0018-later-agreement-wins.md) | Accepted, amended by 0020 |
 | 0019 | [An ambiguity found after code starts is asked](0019-ambiguity-after-code-starts-is-asked.md) | Accepted |
+| 0020 | [One classification of who makes each decision](0020-decision-classification.md) | Accepted |

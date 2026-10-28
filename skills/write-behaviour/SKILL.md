@@ -10,7 +10,7 @@ Read [the Behaviour definition](../references/behaviour.md) and the feature's ap
 ## Rules
 
 - Start from the Outcome's claims. For each, state the rules that make it true, then the edge cases of each rule.
-- Draw out the user's intent. Before stating a rule that needs a decision about what the feature does, check the Outcome, decision records and codified rules. If none answers it, ask the user. Ask only about this level; record a question for a later level against that level.
+- Draw out the user's intent. For each decision this level needs, check the Outcome, decision records and codified rules. If none settles it, classify it with [the decision classification](../references/decisions.md): ask the user about theirs, and make and record the work's. Ask only about this level; record a question for a later level against that level.
 - State results, not mechanisms. Say what can be observed, not how it is produced.
 - State one thing per rule or edge case. When a fix needs a new statement, add a rule or edge case with its own example rather than a sentence to an existing one.
 - Keep every limit and exception of the Outcome claim a rule narrows, such as when something may happen.

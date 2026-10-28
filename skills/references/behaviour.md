@@ -16,7 +16,7 @@ A Behaviour document does not contain design decisions, implementation, a slicin
 
 An example states a case, not a test. How it becomes a test is how tests are built.
 
-A point that needs a choice between ways of building the feature belongs to Design. A point that needs a decision from the user about what the feature does belongs here: it is asked at this level, and the answer becomes a rule.
+A point that needs a choice between ways of building the feature belongs to Design. A point about what the feature does belongs here. Who makes each decision is set by [the decision classification](decisions.md).
 
 ## Criteria
 

@@ -10,7 +10,5 @@ These are the goals every change to this repo serves. Check each change against 
 
 ## Decide or ask
 
-- Decide and proceed when the answer follows from these goals, a decision record, an agreed gate or an earlier answer. Then report what you did.
-- When agreed things conflict, the later agreement wins: update the earlier one to match and report it. Ask only when it's unclear which came later.
-- Ask only when blocked by a decision no one has made.
+- Who makes each decision is set by `skills/references/decisions.md`. Make and record the work's decisions, then report them; ask about the user's.
 - Never ask to apply fixes to an agreed gate's findings, to rerun an agreed gate, to commit or push agreed work, or to take the agreed next step.
