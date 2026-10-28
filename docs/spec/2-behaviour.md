@@ -16,7 +16,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R8 | One of your decisions a level needs that no passed level, decision record or codified rule gives is asked during that level, before its review. | Decisions made before code starts | Conversation |
 | R9 | Your answer is written into the level document, decision record or codified rule the question is about. | The code follows everything agreed or codified, including your answers | Level documents, decision records, codified rules |
 | R10 | A question that belongs to a later level is answered when that level is written, not earlier. | Question answered at its level | Conversation, level documents |
-| R11 | The work doesn't ask a question that belongs to a later level before that level is written. | Question answered at its level | Conversation |
+| R11 | The work doesn't ask a question that belongs to a later level before work on that level starts. | Question answered at its level | Conversation |
 | R12 | The work doesn't ask you about what the feature's passed levels, the project's decision records or codified rules answer, except for clarity or to resolve a conflict. | Nothing agreed or codified is asked again | Conversation |
 | R13 | Each answer you give is written into a decision record. | Agreements carry over | Decision records |
 | R14 | Design cites the codified rule that covers a point instead of recording a decision about it. | The code follows everything agreed or codified | Design document |
@@ -74,7 +74,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R9 | During Design you answer that the CSV is written with Python's standard csv module, adding no library | The work continues Design | The Design document says the CSV is written with Python's standard csv module |
 | R9 | A decision record says "exclude cancelled invoices", and you answer that voided invoices count as cancelled | The work continues Behaviour | The decision record says to exclude cancelled and voided invoices |
 | R10 | During Outcome you ask which CSV library to use | The work continues | The question isn't answered during Outcome and is answered in the Design document |
-| R11 | During Outcome the work finds that whether to add a CSV library is for Design to decide | The work writes Outcome and Behaviour | You aren't asked about a CSV library before Design is written |
+| R11 | During Outcome the work finds that whether to add a CSV library is for Design to decide | The work writes Outcome and Behaviour | You aren't asked about a CSV library before work on Design starts |
 | R12 | A codified rule says all dates are UTC | The work writes Behaviour for the export | You aren't asked about time zones |
 | R12 | In the invoice export you answered that amounts in every export use two decimal places | A later feature exports payments | You aren't asked about decimal places |
 | R13 | During Behaviour of the invoice export you answer that amounts use two decimal places | The work continues Behaviour | A decision record says amounts use two decimal places |
