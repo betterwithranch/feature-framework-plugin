@@ -5,7 +5,7 @@
 **Achieves.**
 
 - A feature you've decided to build becomes working code with passing tests.
-- Your intent is drawn out one level at a time, so every decision you can make is made before code starts. Work moves to the next level only when you explicitly agree.
+- Your intent is drawn out one level at a time, so decisions are made before code starts. Work moves to the next level only when you explicitly agree.
 - A question for a later level is answered at that level, not earlier.
 - Nothing already agreed or codified is asked again, except for clarity before code starts or to resolve a conflict.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features.
