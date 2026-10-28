@@ -7,7 +7,7 @@
 - A feature you've decided to build becomes working code with passing tests.
 - Your intent is drawn out one level at a time, so your decisions are made before code starts. Work moves to the next level only when the current one passes its review.
 - A question for a later level is answered at that level, not earlier.
-- Nothing already agreed or codified is asked again, except for clarity before code starts or to resolve a conflict.
+- Nothing already agreed or codified is asked again, except for clarity or to resolve a conflict.
 - You make your decisions. The work makes its own and records them where you can see them. This holds wherever a decision is written.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features. The work's decisions never become codified rules.
 - Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked by one of your decisions: one no one made, or one the existing code conflicts with.
@@ -28,7 +28,7 @@
 
 **Measured on real features**, from transcripts and everything the work writes:
 
-- Questions about something already agreed or codified, other than for clarity before code starts or about a conflict: target zero.
+- Questions about something already agreed or codified, other than for clarity or about a conflict: target zero.
 - Your decisions that the work made instead of you: target zero.
 - Questions asking you to make one of the work's decisions: target zero.
 - The work's decisions that aren't recorded where you can see them, or that became a codified rule: target zero.
