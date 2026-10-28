@@ -22,9 +22,9 @@ A point that needs a choice between ways of building the feature belongs to Desi
 
 A sound Behaviour document meets all six.
 
-1. Complete. Every Outcome claim is narrowed by at least one rule, and every rule and edge case has an example and a surface.
+1. Complete. Every Outcome claim is narrowed by at least one rule. Every rule and edge case states one thing and has an example and a surface.
 2. Nothing extra. Nothing is present that Behaviour isn't responsible for.
 3. Clear. For every rule, edge case and example, a reader knows the one result expected.
 4. Traceable. Every rule names an Outcome claim it narrows, and every edge case names its rule.
 5. Sound examples. Each example's expected result follows from its rule or edge case, and its surface can show that result.
-6. Consistent. No rules, edge cases, examples or non-goals contradict each other or the Outcome.
+6. Consistent. No rules, edge cases, examples or non-goals contradict each other or the Outcome. A rule keeps every limit and exception of the claim it narrows.
