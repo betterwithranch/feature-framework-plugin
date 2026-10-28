@@ -1,6 +1,4 @@
-# Framework level 1: Outcome
-
-Status: review passed 2026-10-27 (three independent runs, no findings). Awaiting approval.
+# Outcome
 
 **For whom.** The person who decides which features to build and agrees each level, called "you" below.
 

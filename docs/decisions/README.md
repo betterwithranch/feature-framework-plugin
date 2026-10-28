@@ -14,3 +14,5 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0008 | [Verify everything automatically](0008-automated-verification-only.md) | Accepted |
 | 0009 | [Block questions that belong to a lower level](0009-block-lower-level-questions.md) | Accepted |
 | 0010 | [Build the framework with the framework](0010-dogfood-the-framework.md) | Accepted |
+| 0011 | [Give every document one purpose](0011-one-purpose-per-document.md) | Accepted |
+| 0012 | [Run each gate review three times and act on the union](0012-three-review-runs.md) | Accepted |

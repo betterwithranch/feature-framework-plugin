@@ -17,7 +17,8 @@ The framework is being built with itself ([decision 0010](docs/decisions/0010-do
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
 | `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
-| `levels/1-outcome/writing-guidance.md` | How to write a level 1 artifact |
-| `levels/1-outcome/review-prompt.md` | The prompt for the level 1 review gate |
+| `skills/write-outcome/` | Skill for writing a feature's Outcome |
+| `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
+| `CLAUDE.md` | Rules for agents working in this repo |
 
-`docs/` describes the framework. `levels/` holds what the framework uses on each feature.
+`docs/` describes the framework. `skills/` holds what the framework uses on each feature.
