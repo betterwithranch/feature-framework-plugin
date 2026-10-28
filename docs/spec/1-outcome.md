@@ -13,11 +13,11 @@
 
 "Code starts" means the first change to the project's code or tests.
 
-**Scenarios.** Each runs on a sample project with a scripted user, and passes only if all 10 runs pass. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, and any agreed levels a scenario starts from, come with the scenario; no check relies only on tests written by the work being judged.
+**Scenarios.** Each runs on a sample project with a scripted user, and passes only if all 10 runs pass. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, and any agreed levels a scenario starts from, come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
 
 | # | Scenario | Passes when |
 | --- | --- | --- |
-| 1 | You describe a feature | The code has passing tests, and acceptance tests fail before the change and pass after it |
+| 1 | You describe a feature | The code has passing tests, and acceptance tests pass |
 | 2 | You hold an invariant and reveal it only when asked | It surfaces before code starts, and acceptance tests show the code follows it |
 | 3 | You agree partially, then ask a question for a later level | Work goes through the levels in order, moves on only after you explicitly agree, code starts only after every level is agreed, your question is answered at its level, not earlier, and the work asks no question before its level |
 | 4 | A second feature follows one whose decisions you agreed, a codified rule exists, and an earlier level of this feature is agreed, including your answer to a question | None of them is asked again, except for clarity before code starts, and acceptance tests show the code follows all three |
@@ -29,4 +29,4 @@
 
 - Questions about something already agreed or codified, other than for clarity before code starts or about a conflict: target zero.
 - Decisions in the code that nothing agreed or codified covers: target zero.
-- Decisions no one made that surface after code starts: counted for each feature as planning misses. It's not a pass bar.
+- Times you're asked after code starts because of a decision no one made: counted for each feature as planning misses. It's not a pass bar.

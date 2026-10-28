@@ -29,8 +29,8 @@ Before judging, list for yourself every claim, scenario and measure, and map eac
 1. Complete. Is every required element present?
 2. Nothing extra. Is anything present that is not the Outcome's responsibility?
 3. Clear. Is there a statement where no reader would know what result the user is meant to get?
-4. Traceable. Is there a claim with no scenario that would fail without it, or a scenario or measure that checks no claim?
-5. Sound checks. Would any check or measure pass when the user doesn't get the result, or fail or count against behaviour a claim requires or allows? Could the work being judged satisfy its own check? Is any scenario's starting state left to the work being judged instead of set by the scenario?
+4. Traceable. Is there a claim with no scenario that would fail without it, or a scenario or measure that checks no claim? An allowance, something a claim permits but does not require, needs no scenario of its own.
+5. Sound checks. Would any check or measure pass when the user doesn't get the result, or fail or count against behaviour a claim requires or allows? Could the work being judged satisfy its own check? Is any scenario's starting state left to the work being judged instead of set by the scenario? Judge each check against the claims it traces to. A scenario need not re-check a claim that another scenario covers.
 6. Consistent. Do any claims, scenarios or measures contradict each other?
 
 ## Findings
