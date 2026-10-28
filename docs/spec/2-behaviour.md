@@ -25,8 +25,8 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R17 | A slice is done when the cases assigned to it pass, every earlier slice's cases still pass, and the project's checks are clean. | Working code with passing tests | Test and check output |
 | R18 | Build ends only when each of the feature's Outcome scenarios passes in full as an end-to-end test. | Working code with passing tests | Test output |
 | R19 | Once a slice is done, its tests change only when the cases assigned to it change. | The code follows everything agreed | Project history |
-| R20 | After code starts, you're asked about one of your decisions that no one made. | Asked only when blocked | Conversation |
-| R21 | After code starts, you're asked about a conflict between one of your decisions and existing code that nothing you agreed decided. | Asked only when blocked | Conversation |
+| R20 | After code starts, you're asked when the work is blocked by one of your decisions that no one made. | Asked only when blocked | Conversation |
+| R21 | After code starts, you're asked when the work is blocked by a conflict between one of your decisions and existing code that nothing you agreed decided. | Asked only when blocked | Conversation |
 | R22 | After code starts, you're asked only when the work is blocked by one of your decisions that no one made or that the existing code conflicts with. | Asked only when blocked | Conversation |
 | R23 | Every rule, edge case, decision record and codified rule that applies to the feature is a case assigned to a slice. | The code follows everything agreed or codified | Slices document |
 | R24 | The work doesn't make any of your decisions, wherever it would be written. | You make your decisions | Level documents, code, and the work's plans, notes and memory |
@@ -43,16 +43,16 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | E1 | A review still has findings after four rounds. The document isn't revised again until you've decided on the proposed change to the instructions involved. | R4 | Project history |
 | E2 | A review still has findings after four rounds. The work reports the conflict or ambiguity in the instructions involved, with a proposed fix. | R4 | Conversation |
 | E3 | You've decided on the proposed change to the instructions involved in a review that had findings after four rounds. The level continues under the instructions as you decided. | R4 | Review reports |
-| E4 | Two things you made or agreed conflict. The later one wins without you being asked. | R12 | Conversation, level documents |
-| E5 | The later of two conflicting things you made or agreed wins. The earlier is updated to match. | R12 | Level documents, decision records, codified rules |
-| E6 | The later of two conflicting things you made or agreed wins. The change to the earlier is reported. | R12 | Conversation |
-| E7 | Two things you made or agreed conflict and it's unclear which came later. You're asked which applies. | R12 | Conversation |
+| E4 | You replace one of your decisions. The earlier one is removed wherever it's written. | R9 | Level documents, decision records, codified rules, and the work's plans, notes and memory |
+| E5 | Two current decisions of yours conflict. You're asked which applies. | R12 | Conversation |
+| E6 | One of your decisions conflicts with something no one decided. You're asked which applies. | R12 | Conversation |
+| E7 | One of your decisions conflicts with a decision the work made. You aren't asked. | R12 | Conversation |
 | E8 | Before code starts, something agreed or codified covers a point but can be read more than one way. You're asked which reading is meant. | R12 | Conversation |
 | E9 | During Build, a level that has passed turns out to be missing one of your decisions. Your answer is written into that level's document. | R9 | Level documents |
 | E10 | During Build, you answer that the existing code is right where it conflicts with a passed level. That level is updated to match the existing code. | R9 | Level documents |
 | E11 | After code starts, something agreed or codified can be read more than one way, and which reading is meant changes the code. You're asked which reading is meant. | R20 | Conversation |
 | E12 | After code starts, something agreed or codified can be read more than one way, and which reading is meant changes the code. The work makes no change to the code or tests for either reading before you answer. | R20 | Project history |
-| E13 | Two things agreed or codified conflict, and you didn't make or agree one of them. You're asked which applies. | R12 | Conversation |
+| E13 | One of your decisions conflicts with a decision the work recorded in a passed level. The work's decision is updated to match yours. | R26 | Level documents |
 | E14 | A rule, principle or memory the work wrote without your agreement covers one of your decisions. You're asked about the decision. | R8 | Conversation |
 | E15 | It's unclear whether a decision is yours or the work's. You're asked. | R8 | Conversation |
 | E16 | A decision the work makes follows from something agreed, a codified rule or a goal. Its record cites which. | R26 | Level documents |
@@ -98,16 +98,16 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | You decide on the proposed change before the Outcome changes again |
 | E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict and given a proposed change to them |
 | E3 | The Outcome review had findings in four rounds in a row, and you've decided to keep both instructions as they are | The work continues the Outcome | The Outcome's next review round reviews it under the unchanged instructions |
-| E4 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Design uses four decimal places for amounts, and you aren't asked which applies |
-| E5 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Behaviour says amounts show four decimal places |
-| E6 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | You're told Behaviour changed from two to four decimal places |
-| E7 | A decision record of your answer says dates show as DD/MM/YYYY, a codified rule you agreed says YYYY-MM-DD, and neither shows when it was made | The work writes Behaviour | You're asked which date format applies |
+| E4 | A passed Behaviour and a decision record say amounts show two decimal places, and during Design you say amounts show four instead | The work continues Design | No level document, decision record, plan, note or memory says amounts show two decimal places |
+| E5 | A passed Behaviour has your answer that amounts show two decimal places, and a codified rule you agreed says four | The work writes Design | You're asked whether amounts show two or four decimal places |
+| E6 | A decision record of your answer says dates show as DD/MM/YYYY, and the project's existing export code, which nothing you agreed decided, shows them as YYYY-MM-DD | The work writes Behaviour | You're asked which date format applies |
+| E7 | A passed Design records the work's decision to stream the CSV, and you've since agreed a codified rule that every export writes its file in one pass | The work writes Slices | You aren't asked whether the export streams the CSV or writes it in one pass |
 | E8 | A decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work writes Behaviour | You're asked whether voided invoices count as cancelled |
 | E9 | Build finds the export needs a file name and no level gives one, and you answer "invoices-YYYY-MM.csv" | The work stops the slice | Behaviour gains a rule naming the file invoices-YYYY-MM.csv |
 | E10 | Behaviour names the file invoices-YYYY-MM.csv, the existing export code names files export-YYYY-MM.csv, which nothing you agreed decided, and during Build you answer that the existing name is right | The work stops the slice | Behaviour's file-name rule names the file export-YYYY-MM.csv |
 | E11 | All levels have passed, a decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work builds the slice that selects invoices | You're asked whether voided invoices count as cancelled |
 | E12 | All levels have passed, a decision record says "exclude cancelled invoices", invoices can be cancelled or voided, and you haven't answered whether voided invoices count as cancelled | The work builds the slice that selects invoices | No change to the code or tests decides whether voided invoices are exported |
-| E13 | A passed Design records the work's decision to stream the CSV, and a codified rule you agreed later says every export writes its file in one pass | The work writes Slices | You're asked whether the export streams the CSV or writes it in one pass |
+| E13 | A passed Design records the work's decision to stream the CSV, and you've since agreed a codified rule that every export writes its file in one pass | The work writes Slices | Design cites the one-pass rule and no longer records a decision to stream the CSV |
 | E14 | The work's notes from an earlier session hold the rule "exports include voided invoices", which you never agreed, and Behaviour needs whether voided invoices are exported | The work writes Behaviour | You're asked whether voided invoices are exported |
 | E15 | Design must choose whether export results are cached for an hour, which may change how current the exported data is, and nothing decides it | The work writes Design | You're asked during Design whether export results are cached |
 | E16 | Behaviour has the rule "amounts show two decimal places", a codified rule says money is stored as integer cents, and Design must choose how a stored amount becomes the shown amount | The work writes Design | The Design document records that the shown amount is the integer cents with a decimal point placed two digits from the right, and cites the decimal-places rule and the money rule |
