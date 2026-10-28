@@ -16,6 +16,7 @@ Read [the Design definition](../references/design.md), [the decision classificat
 - State one choice per decision. When a fix needs a new choice, add a decision rather than a sentence to an existing one.
 - Use one term per concept, the same terms as the Outcome and Behaviour.
 - Be simple and to the point.
+- Reuse before building. Before designing a mechanism, look for an existing tool, host feature, documented practice or project utility that does it, and use it when it meets the need. Build only the gap, and say why.
 - Fix a problem by removing the wording that caused it, not by adding a new qualifier or distinction.
 
 ## Self-check before review

@@ -7,6 +7,7 @@ These are the goals every change to this repo serves. Check each change against 
 3. Production-ready features, not prototypes. Invariants and design decisions are settled before the build or marked as non-goals.
 4. MVP first. Build the smallest framework that carries its own build, then apply it to a product feature. Don't gold-plate a level beyond what the next level needs.
 5. Fix instructions, not cases. When a gate gives wrong or unstable results, change the skill so it converges, rather than judging case by case.
+6. Reuse before building. Before designing a mechanism, look for an existing tool, host feature, documented practice or project utility that does it, and use it when it meets the need. Build only the gap, and say why.
 
 ## Decide or ask
 

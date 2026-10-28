@@ -17,6 +17,7 @@ Read [the Behaviour definition](../references/behaviour.md) and the feature's ap
 - Give each rule and edge case a concrete example with real values.
 - Use one term per concept, the same terms as the Outcome.
 - Be simple and to the point.
+- Reuse before building. Before designing a mechanism, look for an existing tool, host feature, documented practice or project utility that does it, and use it when it meets the need. Build only the gap, and say why.
 - Fix a problem by removing the wording that caused it, not by adding a new qualifier or distinction.
 
 ## Self-check before review
