@@ -10,7 +10,7 @@
 - Nothing already agreed or codified is asked again, except for clarity or to resolve a conflict.
 - You make your decisions. The work makes its own and records them where you can see them. This holds wherever a decision is written.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features. The work's decisions never become codified rules.
-- Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked by one of your decisions: one no one made, or one the existing code conflicts with.
+- Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked by one of your decisions.
 
 "Code starts" means the first change to the project's code or tests for that feature. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md).
 
