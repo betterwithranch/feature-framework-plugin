@@ -42,7 +42,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | --- | --- | --- | --- |
 | E1 | A review still has findings after four rounds. The work is blocked until you've decided on the proposed fix: the document isn't revised again before then. | R4 | Project history |
 | E2 | A review still has findings after four rounds. The work reports why the review keeps failing, with a proposed fix. | R4 | Conversation |
-| E3 | You've decided on the proposed fix for a review that had findings after four rounds. The level continues as you decided. | R4 | Review reports |
+| E3 | You've decided on the proposed fix for a review that had findings after four rounds. The level continues as you decided. | R4 | Review reports, project history |
 | E4 | You replace one of your decisions. The earlier one is removed wherever it's written. | R9 | Level documents, decision records, codified rules, and the work's plans, notes and memory |
 | E5 | Two current decisions of yours conflict, and the work is blocked by which applies. You're asked which applies. | R12 | Conversation |
 | E6 | One of your decisions conflicts with something no one decided, and the work is blocked by which applies. You're asked which applies. | R12 | Conversation |
