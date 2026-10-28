@@ -1,6 +1,6 @@
 # Behaviour
 
-Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "The work" is the agent building the feature.
+Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "The work" is the agent building the feature. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md).
 
 ## Rules
 
@@ -13,7 +13,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R5 | The work starts a level only after the level before it passes its review. | Moves on only when the level passes its review | Review reports, project history |
 | R6 | A passed level that changes passes its review again before work continues. | Moves on only when the level passes its review | Review reports, project history |
 | R7 | When a passed level changes, every later level that has passed is updated to match it. | The code follows everything agreed or codified | Level documents |
-| R8 | A decision a level needs that no passed level, decision record or codified rule gives is asked during that level, before its review. | Decisions made before code starts | Conversation |
+| R8 | One of your decisions a level needs that no passed level, decision record or codified rule gives is asked during that level, before its review. | Decisions made before code starts | Conversation |
 | R9 | Your answer is written into the level document, decision record or codified rule the question is about. | The code follows everything agreed or codified, including your answers | Level documents, decision records, codified rules |
 | R10 | A question that belongs to a later level is answered when that level is written, not earlier. | Question answered at its level | Conversation, level documents |
 | R11 | The work doesn't ask a question that belongs to a later level before that level is written. | Question answered at its level | Conversation |
@@ -25,10 +25,14 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R17 | A slice is done when the cases assigned to it pass, every earlier slice's cases still pass, and the project's checks are clean. | Working code with passing tests | Test and check output |
 | R18 | Build ends only when each of the feature's Outcome scenarios passes in full as an end-to-end test. | Working code with passing tests | Test output |
 | R19 | A slice's tests change only when the cases assigned to it change. | The code follows everything agreed | Project history |
-| R20 | After code starts, you're asked about a decision no one made. | Asked only when blocked | Conversation |
-| R21 | After code starts, you're asked about a conflict between the existing code and the passed levels. | Asked only when blocked | Conversation |
-| R22 | After code starts, you're asked only when the work is blocked by a decision no one made or by a conflict. | Asked only when blocked | Conversation |
+| R20 | After code starts, you're asked about one of your decisions that no one made. | Asked only when blocked | Conversation |
+| R21 | After code starts, you're asked about a conflict between the existing code and one of your decisions. | Asked only when blocked | Conversation |
+| R22 | After code starts, you're asked only when the work is blocked by one of your decisions that no one made or that the existing code conflicts with. | Asked only when blocked | Conversation |
 | R23 | Every rule, edge case, decision record and codified rule that applies to the feature is a case assigned to a slice. | The code follows everything agreed or codified | Slices document |
+| R24 | The work doesn't make any of your decisions, wherever it would be written. | You make your decisions | Level documents, code, and the work's plans, notes and memory |
+| R25 | You aren't asked to make any of the work's decisions. | The work makes its own | Conversation |
+| R26 | Each decision the work makes while writing a level's document is recorded in that document. | The work records its decisions where you can see them | Level documents |
+| R27 | A decision the work makes never becomes a codified rule. | The work's decisions never become codified rules | Codified rules, and the work's plans, notes and memory |
 
 ## Edge cases
 
@@ -37,15 +41,20 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | E1 | A review still has findings after four rounds. The instructions involved are fixed before the document is revised again. | R4 | Project history |
 | E2 | A review still has findings after four rounds. The work reports the conflict or ambiguity in the instructions involved. | R4 | Conversation |
 | E3 | The instructions involved in a review that had findings after four rounds have been fixed. The level continues under the fixed instructions. | R4 | Review reports |
-| E4 | Two things agreed or codified conflict. The later one wins without you being asked. | R12 | Conversation, level documents |
-| E5 | The later of two conflicting things agreed or codified wins. The earlier is updated to match. | R12 | Level documents, decision records, codified rules |
-| E6 | The later of two conflicting things agreed or codified wins. The change to the earlier is reported. | R12 | Conversation |
-| E7 | Two things agreed or codified conflict and it's unclear which came later. You're asked which applies. | R12 | Conversation |
-| E8 | Before code starts, a passed level, decision record or codified rule covers a point but can be read more than one way. You're asked which reading is meant. | R12 | Conversation |
-| E9 | During Build, a level that has passed turns out to have a gap that no decision covers. Your answer is written into that level's document. | R9 | Level documents |
+| E4 | Two things you made or agreed conflict. The later one wins without you being asked. | R12 | Conversation, level documents |
+| E5 | The later of two conflicting things you made or agreed wins. The earlier is updated to match. | R12 | Level documents, decision records, codified rules |
+| E6 | The later of two conflicting things you made or agreed wins. The change to the earlier is reported. | R12 | Conversation |
+| E7 | Two things you made or agreed conflict and it's unclear which came later. You're asked which applies. | R12 | Conversation |
+| E8 | Before code starts, something agreed or codified covers a point but can be read more than one way. You're asked which reading is meant. | R12 | Conversation |
+| E9 | During Build, a level that has passed turns out to be missing one of your decisions. Your answer is written into that level's document. | R9 | Level documents |
 | E10 | During Build, you answer that the existing code is right where it conflicts with a passed level. That level is updated to match the existing code. | R9 | Level documents |
-| E11 | After code starts, a passed level, decision record or codified rule can be read more than one way, and which reading is meant changes the code. You're asked which reading is meant. | R20 | Conversation |
-| E12 | After code starts, a passed level, decision record or codified rule can be read more than one way, and which reading is meant changes the code. The work makes no change to the code or tests for either reading before you answer. | R20 | Project history |
+| E11 | After code starts, something agreed or codified can be read more than one way, and which reading is meant changes the code. You're asked which reading is meant. | R20 | Conversation |
+| E12 | After code starts, something agreed or codified can be read more than one way, and which reading is meant changes the code. The work makes no change to the code or tests for either reading before you answer. | R20 | Project history |
+| E13 | Two things agreed or codified conflict, and you didn't make or agree one of them. You're asked which applies. | R12 | Conversation |
+| E14 | A rule, principle or memory the work wrote without your agreement covers one of your decisions. You're asked about the decision. | R8 | Conversation |
+| E15 | It's unclear whether a decision is yours or the work's. You're asked. | R8 | Conversation |
+| E16 | A decision the work makes follows from something agreed, a codified rule or a goal. Its record cites which. | R26 | Level documents |
+| E17 | After code starts, the existing code conflicts with one of the work's decisions in a passed level. You aren't asked. | R22 | Conversation |
 
 ## Examples
 
@@ -58,11 +67,11 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R5 | The Outcome review has one finding left | The work continues | No Behaviour document is written until the Outcome review reports no findings |
 | R6 | Behaviour has passed, Design is being written, and Behaviour is updated so amounts show four decimal places | The work goes back to Design | Behaviour's review reports no findings before any more of Design is written |
 | R7 | Behaviour, Design and Slices have passed, and during Build Behaviour gains the rule "the file is named invoices-YYYY-MM.csv" | Build resumes | Slices assigns the file-name rule to a slice |
-| R8 | Design must choose between writing the CSV in one pass or streaming it, and no level, decision record or codified rule decides it | The work writes Design | You're asked during Design, before its review |
-| R9 | During Design you answer that the CSV is streamed | The work continues Design | The Design document says the CSV is streamed |
+| R8 | Design must choose whether to add a CSV library, which adds a dependency, and no level, decision record or codified rule decides it | The work writes Design | You're asked during Design, before its review |
+| R9 | During Design you answer that the CSV is written with Python's standard csv module, adding no library | The work continues Design | The Design document says the CSV is written with Python's standard csv module |
 | R9 | A decision record says "exclude cancelled invoices", and you answer that voided invoices count as cancelled | The work continues Behaviour | The decision record says to exclude cancelled and voided invoices |
 | R10 | During Outcome you ask which CSV library to use | The work continues | The question isn't answered during Outcome and is answered in the Design document |
-| R11 | During Outcome the work finds that whether the CSV is streamed is for Design to decide | The work writes Outcome and Behaviour | You aren't asked about streaming before Design is written |
+| R11 | During Outcome the work finds that whether to add a CSV library is for Design to decide | The work writes Outcome and Behaviour | You aren't asked about a CSV library before Design is written |
 | R12 | A codified rule says all dates are UTC | The work writes Behaviour for the export | You aren't asked about time zones |
 | R12 | In the invoice export you answered that amounts use two decimal places | A later feature exports payments | You aren't asked about decimal places |
 | R13 | During Behaviour of the invoice export you answer that amounts use two decimal places | The work continues Behaviour | A decision record says amounts use two decimal places |
@@ -73,21 +82,30 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R18 | Every slice of the invoice export is done, and its Outcome has the scenario "you export March's invoices" | Build ends | The scenario's test exports all of March's invoices and passes end to end |
 | R19 | A slice's assigned test expects a header row, and the slice's cases haven't changed | The code produces no header | The work changes the code, not the test |
 | R20 | All levels have passed, and no level, decision record or codified rule says whether credit notes are exported | The work builds the slice that selects invoices | You're asked whether credit notes are exported |
-| R21 | All levels have passed and Behaviour names the file invoices-YYYY-MM.csv, and the project's existing export code names files export-YYYY-MM.csv | The work builds the slice that names the file | You're asked which file name applies |
-| R22 | All levels passed and give every decision the export needs, and none of the levels, the existing code, decision records or codified rules conflict with each other | The work builds every slice | Nothing is asked after code starts |
+| R21 | All levels have passed, Behaviour names the file invoices-YYYY-MM.csv, and the project's existing export code names files export-YYYY-MM.csv | The work builds the slice that names the file | You're asked which file name applies |
+| R22 | All levels passed and hold every one of your decisions the export needs, no level names the function that formats amounts, and none of the levels, the existing code, decision records or codified rules conflict with each other | The work builds every slice | Nothing is asked after code starts |
 | R23 | The payment export is being built. A decision record from the invoice export says amounts use two decimal places, a codified rule says money is integer cents, and Behaviour has the rule "refunded payments are excluded" | The work writes Slices | Each of the three is a case assigned to a slice |
+| R24 | Nothing decides whether credit notes are exported, and you haven't been asked | The work writes Behaviour and its plan and notes for it | Until you answer, no level document, plan, note or memory says whether credit notes are exported |
+| R25 | Design must choose between writing the CSV in one pass or streaming it, a reversible choice local to the export, and nothing decides it | The work writes Design | You aren't asked about streaming |
+| R26 | Design must choose between writing the CSV in one pass or streaming it, and nothing decides it | The work writes Design | The Design document records which of the two the work chose |
+| R27 | The invoice export's Design records the work's decision to stream the CSV | The export is built | No codified rule, plan, note or memory says that exports are streamed |
 | E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | The conflicting instructions change before the Outcome changes again |
 | E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict |
 | E3 | The Outcome review had findings in four rounds in a row, and the two conflicting instructions have been fixed | The work continues the Outcome | The Outcome's next review round reviews it under the fixed instructions |
-| E4 | A passed Behaviour says amounts show two decimal places; a codified rule added later says four | The work writes Design | Design uses four decimal places for amounts, and you aren't asked which applies |
-| E5 | A passed Behaviour says amounts show two decimal places; a codified rule added later says four | The work writes Design | Behaviour says amounts show four decimal places |
-| E6 | A passed Behaviour says amounts show two decimal places; a codified rule added later says four | The work writes Design | You're told Behaviour changed from two to four decimal places |
-| E7 | A decision record says dates show as DD/MM/YYYY, a codified rule says YYYY-MM-DD, and neither shows when it was made | The work writes Behaviour | You're asked which date format applies |
+| E4 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Design uses four decimal places for amounts, and you aren't asked which applies |
+| E5 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Behaviour says amounts show four decimal places |
+| E6 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | You're told Behaviour changed from two to four decimal places |
+| E7 | A decision record of your answer says dates show as DD/MM/YYYY, a codified rule you agreed says YYYY-MM-DD, and neither shows when it was made | The work writes Behaviour | You're asked which date format applies |
 | E8 | A decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work writes Behaviour | You're asked whether voided invoices count as cancelled |
 | E9 | Build finds the export needs a file name and no level gives one, and you answer "invoices-YYYY-MM.csv" | The work stops the slice | Behaviour gains a rule naming the file invoices-YYYY-MM.csv |
 | E10 | Behaviour names the file invoices-YYYY-MM.csv, the existing export code names files export-YYYY-MM.csv, and during Build you answer that the existing name is right | The work stops the slice | Behaviour's file-name rule names the file export-YYYY-MM.csv |
 | E11 | All levels have passed, a decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work builds the slice that selects invoices | You're asked whether voided invoices count as cancelled |
 | E12 | All levels have passed, a decision record says "exclude cancelled invoices", invoices can be cancelled or voided, and you haven't answered whether voided invoices count as cancelled | The work builds the slice that selects invoices | No change to the code or tests decides whether voided invoices are exported |
+| E13 | A passed Behaviour has your answer that dates show as YYYY-MM-DD, and the work's notes from a later session say dates show as DD/MM/YYYY | The work writes Design | You're asked which date format applies |
+| E14 | The work's notes from an earlier session hold the rule "exports include voided invoices", which you never agreed, and Behaviour needs whether voided invoices are exported | The work writes Behaviour | You're asked whether voided invoices are exported |
+| E15 | Design must choose whether export results are cached for an hour, which may change how current the exported data is, and nothing decides it | The work writes Design | You're asked during Design whether export results are cached |
+| E16 | A codified rule says money is stored as integer cents, and Design must choose how amounts are written to the CSV | The work writes Design | The Design document records how amounts are written and cites the money rule |
+| E17 | All levels have passed, Design records the work's decision to write rows with a new function named write_rows, and the existing export code already has write_csv_rows doing the same | The work builds the slice that writes rows | You aren't asked which function writes the rows |
 
 ## Non-goals
 
