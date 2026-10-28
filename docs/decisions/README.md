@@ -26,3 +26,4 @@ The current decisions. A decision that replaces another replaces its record; rep
 | 0022 | [Where a feature's documents live](0022-feature-documents-location.md) |
 | 0023 | [Scenarios run as plugin evals](0023-scenarios-run-as-plugin-evals.md) |
 | 0024 | [Reuse before building](0024-reuse-before-building.md) |
+| 0025 | [A planning marker guards code](0025-planning-marker-guards-code.md) |
