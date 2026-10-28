@@ -27,7 +27,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R19 | Once a slice is done, its tests change only when the cases assigned to it change. | The code follows everything agreed | Project history |
 | R20 | After code starts, you're asked when the work is blocked by one of your decisions that no one made. | Asked only when blocked | Conversation |
 | R21 | After code starts, you're asked when the work is blocked by a conflict between one of your decisions and existing code that nothing you agreed decided. | Asked only when blocked | Conversation |
-| R22 | After code starts, you're asked only when the work is blocked by one of your decisions that no one made or that the existing code conflicts with. | Asked only when blocked | Conversation |
+| R22 | After code starts, you're asked only when the work is blocked by one of your decisions. | Asked only when blocked | Conversation |
 | R23 | Every rule, edge case, decision record and codified rule that applies to the feature is a case assigned to a slice. | The code follows everything agreed or codified | Slices document |
 | R24 | The work doesn't make any of your decisions, wherever it would be written. | You make your decisions | Level documents, code, and the work's plans, notes and memory |
 | R25 | You aren't asked to make any of the work's decisions. | The work makes its own | Conversation |
@@ -40,21 +40,21 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 
 | # | Edge case | Rule | Surface |
 | --- | --- | --- | --- |
-| E1 | A review still has findings after four rounds. The document isn't revised again until you've decided on the proposed change to the instructions involved. | R4 | Project history |
-| E2 | A review still has findings after four rounds. The work reports the conflict or ambiguity in the instructions involved, with a proposed fix. | R4 | Conversation |
-| E3 | You've decided on the proposed change to the instructions involved in a review that had findings after four rounds. The level continues under the instructions as you decided. | R4 | Review reports |
+| E1 | A review still has findings after four rounds. The work is blocked until you've decided on the proposed fix: the document isn't revised again before then. | R4 | Project history |
+| E2 | A review still has findings after four rounds. The work reports why the review keeps failing, with a proposed fix. | R4 | Conversation |
+| E3 | You've decided on the proposed fix for a review that had findings after four rounds. The level continues as you decided. | R4 | Review reports |
 | E4 | You replace one of your decisions. The earlier one is removed wherever it's written. | R9 | Level documents, decision records, codified rules, and the work's plans, notes and memory |
-| E5 | Two current decisions of yours conflict. You're asked which applies. | R12 | Conversation |
-| E6 | One of your decisions conflicts with something no one decided. You're asked which applies. | R12 | Conversation |
+| E5 | Two current decisions of yours conflict, and the work is blocked by which applies. You're asked which applies. | R12 | Conversation |
+| E6 | One of your decisions conflicts with something no one decided, and the work is blocked by which applies. You're asked which applies. | R12 | Conversation |
 | E7 | One of your decisions conflicts with a decision the work made. You aren't asked. | R12 | Conversation |
 | E8 | Before code starts, something agreed or codified covers a point but can be read more than one way. You're asked which reading is meant. | R12 | Conversation |
 | E9 | During Build, a level that has passed turns out to be missing one of your decisions. Your answer is written into that level's document. | R9 | Level documents |
 | E10 | During Build, you answer that the existing code is right where it conflicts with a passed level. That level is updated to match the existing code. | R9 | Level documents |
-| E11 | After code starts, something agreed or codified can be read more than one way, and which reading is meant changes the code. You're asked which reading is meant. | R20 | Conversation |
-| E12 | After code starts, something agreed or codified can be read more than one way, and which reading is meant changes the code. The work makes no change to the code or tests for either reading before you answer. | R20 | Project history |
+| E11 | After code starts, something agreed or codified can be read more than one way, and the work is blocked by which reading is meant. You're asked which reading is meant. | R20 | Conversation |
+| E12 | After code starts, something agreed or codified can be read more than one way, and the work is blocked by which reading is meant. The work makes no change to the code or tests for either reading before you answer. | R20 | Project history |
 | E13 | One of your decisions conflicts with a decision the work recorded in a passed level. The work's decision is updated to match yours. | R26 | Level documents |
-| E14 | A rule, principle or memory the work wrote without your agreement covers one of your decisions. You're asked about the decision. | R8 | Conversation |
-| E15 | It's unclear whether a decision is yours or the work's. You're asked. | R8 | Conversation |
+| E14 | A rule, principle or memory the work wrote without your agreement covers one of your decisions that the work is blocked by. You're asked about the decision. | R8 | Conversation |
+| E15 | It's unclear whether a decision the work is blocked by is yours or the work's. You're asked about the decision. | R8 | Conversation |
 | E16 | A decision the work makes follows from something agreed, a codified rule or a goal. Its record cites which. | R26 | Level documents |
 | E17 | After code starts, the existing code conflicts with one of the work's decisions in a passed level. You aren't asked. | R22 | Conversation |
 | E18 | A review still has findings after four rounds. The instructions involved change only as you decide. | R24 | Instructions |
@@ -95,12 +95,13 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R28 | All levels have passed, and no level names the function that formats amounts | The work builds the slice that formats amounts and names the function format_amount | The slice's code change defines format_amount and its tests call it |
 | R29 | While writing Design, the work's plan says the CSV is streamed, and nothing decides it | The work finishes Design | The Design document records that the CSV is streamed |
 | R29 | During Build, the work's notes say amounts are formatted by a function named format_amount, and no level names it | The work builds the slice that formats amounts | The slice's code change defines format_amount |
-| E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | You decide on the proposed change before the Outcome changes again |
-| E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict and given a proposed change to them |
+| E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | You decide on the proposed fix before the Outcome changes again |
+| E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict and given a proposed fix |
+| E2 | The Behaviour review has findings in four rounds in a row because one of the three runs keeps reporting that R3's example is unclear, and no instruction involved conflicts or is ambiguous | The fourth round ends | You're told that one run keeps finding R3's example unclear and given a proposed fix |
 | E3 | The Outcome review had findings in four rounds in a row, and you've decided to keep both instructions as they are | The work continues the Outcome | The Outcome's next review round reviews it under the unchanged instructions |
 | E4 | A passed Behaviour and a decision record say amounts show two decimal places, and during Design you say amounts show four instead | The work continues Design | No level document, decision record, plan, note or memory says amounts show two decimal places |
-| E5 | A passed Behaviour has your answer that amounts show two decimal places, and a codified rule you agreed says four | The work writes Design | You're asked whether amounts show two or four decimal places |
-| E6 | A decision record of your answer says dates show as DD/MM/YYYY, and the project's existing export code, which nothing you agreed decided, shows them as YYYY-MM-DD | The work writes Behaviour | You're asked which date format applies |
+| E5 | A passed Behaviour has your answer that amounts show two decimal places, a codified rule you agreed says four, and Design must choose how amounts are formatted | The work writes Design | You're asked whether amounts show two or four decimal places |
+| E6 | A decision record of your answer says dates show as DD/MM/YYYY, the project's existing export code, which nothing you agreed decided, shows them as YYYY-MM-DD, and Behaviour must state how dates show | The work writes Behaviour | You're asked which date format applies |
 | E7 | A passed Design records the work's decision to stream the CSV, and you've since agreed a codified rule that every export writes its file in one pass | The work writes Slices | You aren't asked whether the export streams the CSV or writes it in one pass |
 | E8 | A decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work writes Behaviour | You're asked whether voided invoices count as cancelled |
 | E9 | Build finds the export needs a file name and no level gives one, and you answer "invoices-YYYY-MM.csv" | The work stops the slice | Behaviour gains a rule naming the file invoices-YYYY-MM.csv |
