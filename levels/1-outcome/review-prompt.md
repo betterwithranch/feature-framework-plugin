@@ -1,6 +1,6 @@
 # Level 1 review prompt
 
-Verified 2026-10-27: three independent runs on `outcome.md` passed with no findings. Run the review three times per round and act on the union of findings. `{ARTIFACT}` is filled in per review. The reviewer gets no other context.
+Verified 2026-10-27: three independent runs on `docs/spec/1-outcome.md` passed with no findings. Run the review three times per round and act on the union of findings. `{ARTIFACT}` is filled in per review. The reviewer gets no other context.
 
 ```text
 You review one artifact on its own: the Outcome of a feature. Judge it as a standalone document. Do not judge whether it matches any discussion or context that produced it. Review only whether it does the Outcome's job: stating what the user gets and how success is judged.

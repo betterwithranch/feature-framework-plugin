@@ -1,56 +1,23 @@
-# Feature development framework
+# Feature framework
 
-A reusable framework for taking a feature you've decided to build from intent to working code, one level at a time, so the build doesn't pull you back in.
+Takes a feature you've decided to build from intent to working code, one level at a time, so the build doesn't pull you back in to make decisions.
 
-Status: level 1 (Outcome) of the framework itself has passed its review gate and awaits approval. Everything else here is agreed direction or candidate content for later levels.
+## Status
 
-## Root cause (agreed 2026-10-27)
+The framework is being built with itself ([decision 0010](docs/decisions/0010-dogfood-the-framework.md)).
 
-When something is ambiguous, the agent resolves it by producing something concrete (a plan, a template, code), because specifics look like progress. Nothing establishes which level the work is at or what finishing that level means, so the agent reads partial agreement as permission to go deeper. The gaps then surface only as your corrections, after the detail exists.
+- Level 1 (Outcome) of the framework has passed its review and awaits approval.
+- Levels 2–5 have not started.
 
-## Direction (agreed 2026-10-27)
+## Layout
 
-Make the level explicit and treat it as a constraint:
-
-- The current level and what finishing it means are always stated.
-- The agent works only at the current level and raises alternatives only at that level.
-- Going down a level needs your explicit agreement. Partial agreement or momentum doesn't count.
-- Anything that belongs to a lower level is set aside, not developed.
-
-## Framework decisions (agreed 2026-10-27)
-
-- The levels are a reusable framework, not session-scoped. Their form (likely a Claude Code and Codex plugin) is decided later.
-- One axis: altitude. The framework refines a feature you've already committed to, from intent down to build.
-- Exploratory work (spikes, experiments) is a non-goal; a question only an experiment can answer is handed off.
-- Scope ends at working code verified locally or in CI. Deployment and opening PRs are non-goals for now.
-- The framework is for feature development only. Performance optimisation, data migrations, infrastructure and tooling changes made for other reasons are non-goals. Work a feature needs is part of the feature.
-- Design is feature-specific. General practice is codified once (codeguard, codeguard-rules, project invariants) and referenced, not asked again.
-- Vertical slices only. Completing a layer never counts as success.
-- Every verification is automated (Playwright, an LLM judge, or both). A check that needs a person doesn't count.
-- Each level blocks questions that belong to a lower level: they're recorded for the owning level, not answered.
-- The framework is built with the framework (dogfooding).
-
-## Candidate levels (to be checked against the approved Outcome)
-
-| Level | Produces | Proof |
-| --- | --- | --- |
-| 1. Outcome | Who the feature is for, what it achieves, end-to-end scenarios | Automated end-to-end tests through the real surface |
-| 2. Behaviour | Every rule and edge case, with examples, plus non-goals | Tests at the narrowest surface where each rule is observable |
-| 3. Design | Decisions only this feature raises, each decided or a non-goal; general rules cited | No open decision; nothing restating a general rule |
-| 4. Slices | Ordered vertical slices, each naming the scenario it extends and the cases it makes pass | Coverage of every scenario, case and decision; slice guideline met |
-| 5. Build | The code for one slice | Assigned cases pass, earlier slices still pass, project checks clean |
-
-Candidate gate rules: each planning level ends at a gate; an independent reviewer checks the level on its own; your approval closes it. Build never changes the tests it builds toward.
-
-## Set aside for later levels
-
-| Question | Owning level |
+| Path | Contents |
 | --- | --- |
-| Where the e2e sample project lives (separate repo, or a fixture in the plugin repo) | Design |
-| Where a feature's level artifacts are stored | Design |
+| `docs/spec/1-outcome.md` | The framework's own Outcome: what it achieves and how success is checked |
+| `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
+| `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
+| `docs/open-questions.md` | Questions set aside for the level that owns them |
+| `levels/1-outcome/writing-guidance.md` | How to write a level 1 artifact |
+| `levels/1-outcome/review-prompt.md` | The prompt for the level 1 review gate |
 
-## Files
-
-- `level-1/outcome.md`: the framework's own Outcome.
-- `level-1/writing-guidance.md`: how to write a level 1 artifact.
-- `level-1/review-prompt.md`: the level 1 gate review prompt.
+`docs/` describes the framework. `levels/` holds what the framework uses on each feature.
