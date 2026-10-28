@@ -17,8 +17,8 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R9 | Code starts only after Slices passes its review. | Decisions made before code starts | Project history |
 | R10 | Build works one slice at a time. A slice is done when the cases assigned to it pass, every earlier slice's cases still pass, and the project's checks are clean. | Working code with passing tests | Test and check output |
 | R11 | Each slice extends one Outcome scenario's test, possibly narrowed, before its code is written, and passes it end to end. | Working code with passing tests | Test output |
-| R12 | Once a slice's tests are written, Build never changes them. | The code follows everything agreed | Project history |
-| R13 | After code starts, you're asked only about a decision no one made or a conflict. | Asked only when blocked | Conversation |
+| R12 | Build never changes a slice's tests to make its code pass. When a passed level changes, the tests for the changed cases are updated from that level before Build continues. | The code follows everything agreed | Project history |
+| R13 | After code starts, you're asked only about a decision no one made, a conflict between the existing code and the passed levels, or two agreements whose order is unclear. | Asked only when blocked | Conversation |
 | R14 | Every rule, edge case, answer and codified rule that applies to the feature is a case assigned to a slice. | The code follows everything agreed or codified | Slices document |
 
 ## Edge cases
