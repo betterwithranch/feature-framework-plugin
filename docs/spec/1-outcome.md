@@ -10,7 +10,7 @@
 - Nothing already agreed or codified is asked again, except for clarity before code starts or to resolve a conflict.
 - You make your decisions. The work makes its own and records them where you can see them. This holds wherever a decision is written.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features. The work's decisions never become codified rules.
-- Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked: by one of your decisions that no one made, or by a conflict.
+- Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked by one of your decisions: one no one made, or one the existing code conflicts with.
 
 "Code starts" means the first change to the project's code or tests for that feature. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md).
 
@@ -24,7 +24,7 @@
 | 4 | You build a feature, giving scripted answers that its acceptance tests depend on, then a second one that those answers apply to. A codified rule exists, an earlier level of the second feature has passed its review, including your answer to a question, and nothing conflicts | Nothing in that level, your scripted answers or the rule is asked again, except for clarity before code starts, and acceptance tests show the first feature's code follows your scripted answers and the second feature's code follows all three |
 | 5 | The levels have passed review, hold all your decisions the feature needs, the work's decisions are left to it, nothing conflicts with them, and code starts from there | Nothing is asked after code starts, and acceptance tests pass |
 | 6 | The levels have passed review with one of your decisions left unmade, and code starts from there | You're asked about it, and acceptance tests show the code follows your answer |
-| 7 | The levels have passed review, the existing code conflicts with them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
+| 7 | The levels have passed review, the existing code conflicts with one of your decisions in them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
 
 **Measured on real features**, from transcripts and everything the work writes:
 
