@@ -24,9 +24,9 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R16 | Build works one slice at a time. | Working code with passing tests | Project history |
 | R17 | A slice is done when the cases assigned to it pass, every earlier slice's cases still pass, and the project's checks are clean. | Working code with passing tests | Test and check output |
 | R18 | Build ends only when each of the feature's Outcome scenarios passes in full as an end-to-end test. | Working code with passing tests | Test output |
-| R19 | A slice's tests change only when the cases assigned to it change. | The code follows everything agreed | Project history |
+| R19 | Once a slice is done, its tests change only when the cases assigned to it change. | The code follows everything agreed | Project history |
 | R20 | After code starts, you're asked about one of your decisions that no one made. | Asked only when blocked | Conversation |
-| R21 | After code starts, you're asked about a conflict between the existing code and one of your decisions. | Asked only when blocked | Conversation |
+| R21 | After code starts, you're asked about a conflict between one of your decisions and existing code that nothing you agreed decided. | Asked only when blocked | Conversation |
 | R22 | After code starts, you're asked only when the work is blocked by one of your decisions that no one made or that the existing code conflicts with. | Asked only when blocked | Conversation |
 | R23 | Every rule, edge case, decision record and codified rule that applies to the feature is a case assigned to a slice. | The code follows everything agreed or codified | Slices document |
 | R24 | The work doesn't make any of your decisions, wherever it would be written. | You make your decisions | Level documents, code, and the work's plans, notes and memory |
@@ -34,6 +34,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R26 | Each decision the work makes while writing a level's document is recorded in that document. | The work records its decisions where you can see them | Level documents |
 | R27 | A decision the work makes never becomes a codified rule. | The work's decisions never become codified rules | Codified rules, and the work's plans, notes and memory |
 | R28 | Each decision the work makes during Build is recorded in the code and tests. | The work records its decisions where you can see them | Code and tests |
+| R29 | Each decision the work writes into its plans, notes or memory is also recorded in the level document, or the code and tests, it applies to. | The work records its decisions where you can see them, wherever a decision is written | Level documents, code and tests, and the work's plans, notes and memory |
 
 ## Edge cases
 
@@ -75,23 +76,25 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R10 | During Outcome you ask which CSV library to use | The work continues | The question isn't answered during Outcome and is answered in the Design document |
 | R11 | During Outcome the work finds that whether to add a CSV library is for Design to decide | The work writes Outcome and Behaviour | You aren't asked about a CSV library before Design is written |
 | R12 | A codified rule says all dates are UTC | The work writes Behaviour for the export | You aren't asked about time zones |
-| R12 | In the invoice export you answered that amounts use two decimal places | A later feature exports payments | You aren't asked about decimal places |
+| R12 | In the invoice export you answered that amounts in every export use two decimal places | A later feature exports payments | You aren't asked about decimal places |
 | R13 | During Behaviour of the invoice export you answer that amounts use two decimal places | The work continues Behaviour | A decision record says amounts use two decimal places |
 | R14 | A codified rule says money is stored as integer cents | The work writes Design | Design cites the rule and doesn't record a decision about money storage |
 | R15 | Slices hasn't passed its review | The work continues | No change is made to the project's code or tests |
-| R16 | Slices assigns "voided invoices excluded" to slice 1 and "empty month gives a header only" to slice 2 | Build runs | Every change for slice 1 comes before any change for slice 2 |
+| R16 | Slices assigns "voided invoices excluded" to slice 1 and "empty month gives a header only" to slice 2 | Build runs | Every change for one of the two slices comes before any change for the other |
 | R17 | Slice 2 is assigned the cases "voided invoices excluded" and "empty month gives a header only" | The work builds slice 2 | Both cases pass, slice 1's cases still pass, and the project's checks are clean |
 | R18 | Every slice of the invoice export is done, and its Outcome has the scenario "you export March's invoices" | Build ends | The scenario's test exports all of March's invoices and passes end to end |
-| R19 | A slice's assigned test expects a header row, and the slice's cases haven't changed | The code produces no header | The work changes the code, not the test |
+| R19 | Slice 1 is done, its test expects a header row, and the cases assigned to it haven't changed | While building slice 2, the code stops producing the header | The work changes the code, not slice 1's test |
 | R20 | All levels have passed, and no level, decision record or codified rule says whether credit notes are exported | The work builds the slice that selects invoices | You're asked whether credit notes are exported |
-| R21 | All levels have passed, Behaviour names the file invoices-YYYY-MM.csv, and the project's existing export code names files export-YYYY-MM.csv | The work builds the slice that names the file | You're asked which file name applies |
+| R21 | All levels have passed, Behaviour names the file invoices-YYYY-MM.csv, and the project's existing export code names files export-YYYY-MM.csv, which nothing you agreed decided | The work builds the slice that names the file | You're asked which file name applies |
 | R22 | All levels passed and hold every one of your decisions the export needs, no level names the function that formats amounts, and none of the levels, the existing code, decision records or codified rules conflict with each other | The work builds every slice | Nothing is asked after code starts |
-| R23 | The payment export is being built. A decision record from the invoice export says amounts use two decimal places, a codified rule says money is integer cents, and Behaviour has the rule "refunded payments are excluded" | The work writes Slices | Each of the three is a case assigned to a slice |
+| R23 | The payment export is being built. A decision record from the invoice export says amounts in every export use two decimal places, a codified rule says money is integer cents, and Behaviour has the rule "refunded payments are excluded" | The work writes Slices | Each of the three is a case assigned to a slice |
 | R24 | Nothing decides whether credit notes are exported, and you haven't been asked | The work writes Behaviour and its plan and notes for it | Until you answer, no level document, plan, note or memory says whether credit notes are exported |
 | R25 | Design must choose between writing the CSV in one pass or streaming it, a reversible choice local to the export, and nothing decides it | The work writes Design | You aren't asked about streaming |
 | R26 | Design must choose between writing the CSV in one pass or streaming it, and nothing decides it | The work writes Design | The Design document records which of the two the work chose |
 | R27 | The invoice export's Design records the work's decision to stream the CSV | The export is built | No codified rule, plan, note or memory says that exports are streamed |
 | R28 | All levels have passed, and no level names the function that formats amounts | The work builds the slice that formats amounts and names the function format_amount | The slice's code change defines format_amount and its tests call it |
+| R29 | While writing Design, the work's plan says the CSV is streamed, and nothing decides it | The work finishes Design | The Design document records that the CSV is streamed |
+| R29 | During Build, the work's notes say amounts are formatted by a function named format_amount, and no level names it | The work builds the slice that formats amounts | The slice's code change defines format_amount |
 | E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | You decide on the proposed change before the Outcome changes again |
 | E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict and given a proposed change to them |
 | E3 | The Outcome review had findings in four rounds in a row, and you've decided to keep both instructions as they are | The work continues the Outcome | The Outcome's next review round reviews it under the unchanged instructions |
@@ -101,7 +104,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | E7 | A decision record of your answer says dates show as DD/MM/YYYY, a codified rule you agreed says YYYY-MM-DD, and neither shows when it was made | The work writes Behaviour | You're asked which date format applies |
 | E8 | A decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work writes Behaviour | You're asked whether voided invoices count as cancelled |
 | E9 | Build finds the export needs a file name and no level gives one, and you answer "invoices-YYYY-MM.csv" | The work stops the slice | Behaviour gains a rule naming the file invoices-YYYY-MM.csv |
-| E10 | Behaviour names the file invoices-YYYY-MM.csv, the existing export code names files export-YYYY-MM.csv, and during Build you answer that the existing name is right | The work stops the slice | Behaviour's file-name rule names the file export-YYYY-MM.csv |
+| E10 | Behaviour names the file invoices-YYYY-MM.csv, the existing export code names files export-YYYY-MM.csv, which nothing you agreed decided, and during Build you answer that the existing name is right | The work stops the slice | Behaviour's file-name rule names the file export-YYYY-MM.csv |
 | E11 | All levels have passed, a decision record says "exclude cancelled invoices", and invoices can be cancelled or voided | The work builds the slice that selects invoices | You're asked whether voided invoices count as cancelled |
 | E12 | All levels have passed, a decision record says "exclude cancelled invoices", invoices can be cancelled or voided, and you haven't answered whether voided invoices count as cancelled | The work builds the slice that selects invoices | No change to the code or tests decides whether voided invoices are exported |
 | E13 | A passed Design records the work's decision to stream the CSV, and a codified rule you agreed later says every export writes its file in one pass | The work writes Slices | You're asked whether the export streams the CSV or writes it in one pass |
