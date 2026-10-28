@@ -5,7 +5,7 @@ description: Write the Outcome of a feature, the first planning level - who it i
 
 # Write an Outcome
 
-Read [the Outcome definition](../references/outcome.md). Write a document that has its contents and meets its criteria.
+Read [the Outcome definition](../references/outcome.md) and [the decision classification](../references/decisions.md), which sets who makes each decision. Write a document that has its contents and meets its criteria.
 
 ## Rules
 
@@ -24,4 +24,4 @@ Read [the Outcome definition](../references/outcome.md). Write a document that h
 
 ## After a fix
 
-Rerun the self-check on the changed text and on every claim, scenario and measure linked to it. A fix that moves a problem somewhere else is not a fix.
+Rerun the self-check on the changed text and on every claim, scenario and measure about the same subject, whether or not they refer to each other. A fix that moves a problem somewhere else is not a fix.
