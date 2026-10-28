@@ -27,7 +27,7 @@
           {
             "type": "prompt",
             "timeout": 30,
-            "prompt": "Hook input: $ARGUMENTS\n\nIf stop_hook_active is true, return {\"ok\": true}.\n\nRead last_assistant_message. Return {\"ok\": false, \"reason\": \"Don't ask for approval of something already decided. Do it, then report. Ask only when blocked by a decision no one has made or by a conflict.\"} if the message ends by asking the user to approve or confirm any of: applying fixes for findings, rerunning a review or test, committing or pushing, or continuing to a next step the conversation already agreed. Otherwise return {\"ok\": true}. Ending a turn to wait for background work that is still running is allowed. A question about a decision no one has made yet, or about a conflict between agreed things, is allowed."
+            "prompt": "Hook input: $ARGUMENTS\n\nIf stop_hook_active is true, return {\"ok\": true}.\n\nRead last_assistant_message. Return {\"ok\": false, \"reason\": \"Don't ask for approval of something already decided. Do it, then report. Ask only when blocked by a decision no one has made or by a conflict.\"} if the message ends by asking the user to approve or confirm any of: applying fixes for findings, rerunning a review or test, committing or pushing, or continuing to a next step the conversation already agreed. Otherwise return {\"ok\": true}. Ending a turn to wait for background work that is still running is allowed, including a message that says what it will do once that work finishes. A question about a decision no one has made yet, or about a conflict between agreed things, is allowed."
           }
         ]
       }
