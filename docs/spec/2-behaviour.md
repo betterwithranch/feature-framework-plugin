@@ -39,9 +39,9 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 
 | # | Edge case | Rule | Surface |
 | --- | --- | --- | --- |
-| E1 | A review still has findings after four rounds. The document isn't revised again until the instructions involved have changed. | R4 | Project history |
+| E1 | A review still has findings after four rounds. The document isn't revised again until you've decided on the proposed change to the instructions involved. | R4 | Project history |
 | E2 | A review still has findings after four rounds. The work reports the conflict or ambiguity in the instructions involved, with a proposed fix. | R4 | Conversation |
-| E3 | The instructions involved in a review that had findings after four rounds have changed. The level continues under the changed instructions. | R4 | Review reports |
+| E3 | You've decided on the proposed change to the instructions involved in a review that had findings after four rounds. The level continues under the instructions as you decided. | R4 | Review reports |
 | E4 | Two things you made or agreed conflict. The later one wins without you being asked. | R12 | Conversation, level documents |
 | E5 | The later of two conflicting things you made or agreed wins. The earlier is updated to match. | R12 | Level documents, decision records, codified rules |
 | E6 | The later of two conflicting things you made or agreed wins. The change to the earlier is reported. | R12 | Conversation |
@@ -92,9 +92,9 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R26 | Design must choose between writing the CSV in one pass or streaming it, and nothing decides it | The work writes Design | The Design document records which of the two the work chose |
 | R27 | The invoice export's Design records the work's decision to stream the CSV | The export is built | No codified rule, plan, note or memory says that exports are streamed |
 | R28 | All levels have passed, and no level names the function that formats amounts | The work builds the slice that formats amounts and names the function format_amount | The slice's code change defines format_amount and its tests call it |
-| E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | The instructions involved change before the Outcome changes again |
+| E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | You decide on the proposed change before the Outcome changes again |
 | E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict and given a proposed change to them |
-| E3 | The Outcome review had findings in four rounds in a row, and the two conflicting instructions have changed | The work continues the Outcome | The Outcome's next review round reviews it under the changed instructions |
+| E3 | The Outcome review had findings in four rounds in a row, and you've decided to keep both instructions as they are | The work continues the Outcome | The Outcome's next review round reviews it under the unchanged instructions |
 | E4 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Design uses four decimal places for amounts, and you aren't asked which applies |
 | E5 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Behaviour says amounts show four decimal places |
 | E6 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | You're told Behaviour changed from two to four decimal places |
