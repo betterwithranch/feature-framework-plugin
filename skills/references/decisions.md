@@ -14,7 +14,7 @@ A decision needs the user when it:
 
 ## The work decides
 
-The work makes a decision itself, and records it in the current level's document, when it:
+The work makes a decision itself when it meets one of these. In a planning level it records the decision in that level's document. In Build, the code and tests are the record and code review sees them.
 
 1. Follows from something agreed, a codified rule or a goal. The record cites which.
 2. Is how to build within what is agreed, reversible and local to the feature, such as naming, structure, algorithms or test layout.
