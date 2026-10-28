@@ -23,4 +23,6 @@ The work makes a decision itself when it meets one of these. In a planning level
 
 - A decision the work makes never becomes a codified rule.
 - When it's unclear which list a decision belongs to, the user decides.
-- Between two conflicting agreements, the later wins only when both were made or agreed by the user. Otherwise the user decides.
+- A decision of the user's that replaces an earlier one removes it wherever it's written. Only final decisions are kept.
+- A decision of the user's holds over one the work made; the work's is updated to match.
+- When two current decisions of the user's conflict, or one conflicts with something no one decided, the user decides.

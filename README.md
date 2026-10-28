@@ -10,7 +10,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 | `docs/spec/2-behaviour.md` | The framework's own Behaviour: its rules, edge cases, examples and non-goals |
 | `docs/goals.md` | The goals every change serves, and when to decide versus ask |
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
-| `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
+| `docs/decisions/` | The current decisions, one per record |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
 | `skills/references/outcome.md` | What an Outcome contains and the criteria it must meet, shared by the Outcome skills |
 | `skills/references/decisions.md` | Which decisions need the user and which the work makes, used at every level |
