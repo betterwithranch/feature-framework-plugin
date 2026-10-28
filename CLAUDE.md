@@ -8,3 +8,10 @@
 - `docs/decisions/` holds one decision per record. History and dates belong here.
 - `docs/open-questions.md` lists questions set aside for the level that owns them.
 - `skills/` holds instructions the framework uses on every feature. Write them as Claude skills: frontmatter with `name` and `description`, then direct instructions. No history, dates, status or examples of past mistakes.
+- `docs/goals.md` states the goals every change serves and when to decide versus ask. Hooks in `.claude/settings.json` load it at session start and on every prompt.
+
+## Working
+
+- Follow `docs/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
+- Run an agreed gate until it passes, applying its findings, without asking between runs.
+- Commit and push each agreed change to `main` when it is done.
