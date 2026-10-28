@@ -17,6 +17,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0011 | [Give every document one purpose](0011-one-purpose-per-document.md) | Accepted |
 | 0012 | [Run each gate review three times and act on the union](0012-three-review-runs.md) | Accepted, amended by 0016 |
 | 0013 | [Enforce goals and the decide-or-ask rule with hooks](0013-enforce-goals-with-hooks.md) | Accepted |
-| 0014 | [Autonomy policy and MVP first](0014-autonomy-policy-and-mvp-first.md) | Accepted |
+| 0014 | [Autonomy policy and MVP first](0014-autonomy-policy-and-mvp-first.md) | Accepted, amended by 0017 |
 | 0015 | [The user approves only open decisions](0015-approve-only-open-decisions.md) | Accepted |
 | 0016 | [Fix findings through the write skill, and stop a gate after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) | Accepted |
+| 0017 | [Dogfood first, then apply the framework to codeguard step 32](0017-dogfood-first-then-codeguard-step-32.md) | Accepted |
