@@ -15,7 +15,8 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0009 | [Block questions that belong to a lower level](0009-block-lower-level-questions.md) | Accepted |
 | 0010 | [Build the framework with the framework](0010-dogfood-the-framework.md) | Accepted |
 | 0011 | [Give every document one purpose](0011-one-purpose-per-document.md) | Accepted |
-| 0012 | [Run each gate review three times and act on the union](0012-three-review-runs.md) | Accepted |
+| 0012 | [Run each gate review three times and act on the union](0012-three-review-runs.md) | Accepted, amended by 0016 |
 | 0013 | [Enforce goals and the decide-or-ask rule with hooks](0013-enforce-goals-with-hooks.md) | Accepted |
 | 0014 | [Autonomy policy and MVP first](0014-autonomy-policy-and-mvp-first.md) | Accepted |
 | 0015 | [The user approves only open decisions](0015-approve-only-open-decisions.md) | Accepted |
+| 0016 | [Fix findings through the write skill, and stop a gate after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) | Accepted |

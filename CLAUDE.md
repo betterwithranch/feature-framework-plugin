@@ -14,5 +14,6 @@
 ## Working
 
 - Follow `docs/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
-- Run an agreed gate until it passes, applying its findings, without asking between runs.
+- Run an agreed gate until it passes, without asking between runs. Fix its findings with the level's write skill, including its after-a-fix self-check.
+- Stop a gate after four rounds that don't pass. Look for a conflict or ambiguity in the instructions involved, report it and fix the instructions instead of patching the document again.
 - Commit and push each agreed change to `main` when it is done.

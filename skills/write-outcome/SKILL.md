@@ -1,6 +1,6 @@
 ---
 name: write-outcome
-description: Write the Outcome of a feature, the first planning level - who it is for, what it achieves, end-to-end scenarios with automated checks, and how success is measured on real use. Use when starting a feature, before any behaviour, design or code.
+description: Write the Outcome of a feature, the first planning level - who it is for, what it achieves, end-to-end scenarios with automated checks, and how success is measured on real use. Use when starting a feature, before any behaviour, design or code, and to fix findings from an Outcome review.
 ---
 
 # Write an Outcome
