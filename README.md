@@ -7,6 +7,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 | Path | Contents |
 | --- | --- |
 | `docs/spec/1-outcome.md` | The framework's own Outcome: what it achieves and how success is checked |
+| `docs/spec/2-behaviour.md` | The framework's own Behaviour: its rules, edge cases, examples and non-goals |
 | `docs/goals.md` | The goals every change serves, and when to decide versus ask |
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
 | `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
