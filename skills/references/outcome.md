@@ -25,6 +25,7 @@ A sound Outcome meets all six.
 4. Traceable. Every part of every claim has a scenario whose check fails if that part is broken. Every scenario and measure checks a claim. An allowance, something a claim permits but does not require, needs no scenario of its own.
 5. Sound checks. Judged against the claims it traces to, no check or measure:
    - passes when the user doesn't get the result;
+   - passes because the scenario never brings about what the claim is about;
    - fails or counts against behaviour a claim requires or allows. Every allowance or exception in a claim is carried into each scenario and measure it touches, unless the scenario's starting state rules it out;
    - can be satisfied by the work being judged;
    - compares against an expected result that the scenario doesn't set before the run;
