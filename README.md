@@ -6,7 +6,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 
 The framework is being built with itself ([decision 0010](docs/decisions/0010-dogfood-the-framework.md)).
 
-- Level 1 (Outcome) of the framework has passed its review and awaits approval.
+- Level 1 (Outcome) of the framework is approved.
 - Levels 2–5 have not started.
 
 ## Layout
