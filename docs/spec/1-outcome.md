@@ -17,11 +17,11 @@
 
 | # | Scenario | Passes when |
 | --- | --- | --- |
-| 1 | You describe a feature, and the scripted user can answer any question about it | Every decision in the code was agreed by you, or codified, before code starts, except to resolve a conflict, the code has passing tests, and acceptance tests pass |
+| 1 | You describe a feature, the scripted user can answer any question about it, and nothing conflicts | Every decision in the code was agreed by you, or codified, before code starts, the code has passing tests, and acceptance tests pass |
 | 2 | You hold an invariant and reveal it only when asked | It surfaces before code starts, and acceptance tests show the code follows it |
 | 3 | You agree each level, one of them only partially at first, and ask a question for a later level | Work goes through the levels in order, moves on only after you explicitly agree, code starts only after every level is agreed, your question is answered at its level, not earlier, and the work asks no question before its level |
-| 4 | You build a feature, giving scripted answers that its acceptance tests depend on, then a second one that those answers apply to. A codified rule exists, and an earlier level of the second feature is agreed, including your answer to a question | Nothing in that level, your scripted answers or the rule is asked again, except for clarity before code starts or to resolve a conflict, and acceptance tests show the first feature's code follows your scripted answers and the second feature's code follows all three |
-| 5 | The levels are agreed and cover everything the feature needs, and code starts from there | Nothing is asked after code starts, except to resolve a conflict, and acceptance tests pass |
+| 4 | You build a feature, giving scripted answers that its acceptance tests depend on, then a second one that those answers apply to. A codified rule exists, an earlier level of the second feature is agreed, including your answer to a question, and nothing conflicts | Nothing in that level, your scripted answers or the rule is asked again, except for clarity before code starts, and acceptance tests show the first feature's code follows your scripted answers and the second feature's code follows all three |
+| 5 | The levels are agreed, cover everything the feature needs and nothing conflicts with them, and code starts from there | Nothing is asked after code starts, and acceptance tests pass |
 | 6 | The levels are agreed with one decision left unmade, and code starts from there | You're asked about it, and acceptance tests show the code follows your answer |
 | 7 | The levels are agreed, the existing code conflicts with them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
 

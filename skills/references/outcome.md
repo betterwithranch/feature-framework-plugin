@@ -28,7 +28,7 @@ A sound Outcome meets all six.
 5. Sound checks. Taking each check as built faithfully at a later level, and judged against the claims it traces to, no check or measure:
    - passes when the user doesn't get the result;
    - passes because the scenario never brings about what the claim is about;
-   - fails or counts against behaviour a claim requires or allows. Every allowance or exception in a claim is carried into each scenario and measure it touches, unless the scenario's starting state rules it out;
+   - fails or counts against behaviour a claim requires or allows. Each allowance or exception a scenario touches is either ruled out by its starting state or carried into its whole check, and each one a measure touches is carried into it;
    - can be satisfied by the work being judged;
    - compares against an expected result that the scenario doesn't set before the run;
    - leaves its starting state to the work being judged instead of setting it.
