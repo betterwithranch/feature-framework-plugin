@@ -92,7 +92,7 @@ Narrows the [Outcome](1-outcome.md). "You" is the person the Outcome is for. "Th
 | R26 | Design must choose between writing the CSV in one pass or streaming it, and nothing decides it | The work writes Design | The Design document records which of the two the work chose |
 | R27 | The invoice export's Design records the work's decision to stream the CSV | The export is built | No codified rule, plan, note or memory says that exports are streamed |
 | R28 | All levels have passed, and no level names the function that formats amounts | The work builds the slice that formats amounts and names the function format_amount | The slice's code change defines format_amount and its tests call it |
-| E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | The two instructions change before the Outcome changes again |
+| E1 | The Outcome review has findings in four rounds in a row because two instructions conflict | The work continues | The instructions involved change before the Outcome changes again |
 | E2 | The Outcome review has findings in four rounds in a row because two instructions conflict | The fourth round ends | You're told which two instructions conflict and given a proposed change to them |
 | E3 | The Outcome review had findings in four rounds in a row, and the two conflicting instructions have changed | The work continues the Outcome | The Outcome's next review round reviews it under the changed instructions |
 | E4 | A passed Behaviour has your answer that amounts show two decimal places; a codified rule you agreed later says four | The work writes Design | Design uses four decimal places for amounts, and you aren't asked which applies |
