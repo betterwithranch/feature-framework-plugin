@@ -18,7 +18,7 @@
 
 "Code starts" means the first change to the project's code or tests for that feature. A level is approved when you say so, after it passes its review. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md).
 
-**Scenarios.** Each runs on a sample project with a scripted user, and passes only if all 10 runs pass. The scripted user answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
+**Scenarios.** Each runs several times on a sample project with a scripted user, and passes only if every run passes. The scripted user answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
 
 | # | Scenario | Passes when |
 | --- | --- | --- |
