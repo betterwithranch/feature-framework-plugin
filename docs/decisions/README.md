@@ -18,7 +18,10 @@ The current decisions. A decision that replaces another replaces its record; rep
 | 0012 | [Three review runs per round](0012-three-review-runs.md) |
 | 0013 | [Enforce goals with hooks](0013-enforce-goals-with-hooks.md) |
 | 0014 | [MVP first](0014-autonomy-policy-and-mvp-first.md) |
-| 0015 | [No approval step per level](0015-approve-only-open-decisions.md) |
 | 0016 | [Fix through the write skill; stop after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) |
 | 0019 | [An ambiguity is asked](0019-ambiguity-after-code-starts-is-asked.md) |
 | 0020 | [One classification of who decides](0020-decision-classification.md) |
+| 0026 | [Approve each level](0026-approve-each-level.md) |
+| 0027 | [Interview and play back before drafting](0027-interview-and-play-back-before-drafting.md) |
+| 0028 | [One branch and PR per level](0028-one-branch-and-pr-per-level.md) |
+| 0029 | [Playbacks are readable at a glance](0029-playbacks-readable-at-a-glance.md) |
