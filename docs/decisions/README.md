@@ -1,23 +1,24 @@
 # Decisions
 
-Architecture decision records. Each records one agreed decision, its context and consequences.
+The current decisions. A decision that replaces another replaces its record; replaced decisions are removed.
 
-| # | Decision | Status |
-| --- | --- | --- |
-| 0001 | [Make the level of work explicit](0001-make-the-level-explicit.md) | Accepted |
-| 0002 | [Build a reusable framework, not session-scoped agreements](0002-reusable-framework.md) | Accepted |
-| 0003 | [Refine committed features along one axis: altitude](0003-single-altitude-axis.md) | Accepted |
-| 0004 | [Cover feature development only](0004-feature-development-only.md) | Accepted |
-| 0005 | [End at working code, verified locally or in CI](0005-scope-ends-at-working-code.md) | Accepted |
-| 0006 | [Ask only feature-specific design questions](0006-feature-specific-design.md) | Accepted |
-| 0007 | [Deliver features as narrow vertical slices](0007-vertical-slices-only.md) | Accepted |
-| 0008 | [Verify everything automatically](0008-automated-verification-only.md) | Accepted |
-| 0009 | [Block questions that belong to a lower level](0009-block-lower-level-questions.md) | Accepted |
-| 0010 | [Build the framework with the framework](0010-dogfood-the-framework.md) | Accepted |
-| 0011 | [Give every document one purpose](0011-one-purpose-per-document.md) | Accepted |
-| 0012 | [Run each gate review three times and act on the union](0012-three-review-runs.md) | Accepted, amended by 0016 |
-| 0013 | [Enforce goals and the decide-or-ask rule with hooks](0013-enforce-goals-with-hooks.md) | Accepted |
-| 0014 | [Autonomy policy and MVP first](0014-autonomy-policy-and-mvp-first.md) | Accepted, amended by 0017 |
-| 0015 | [The user approves only open decisions](0015-approve-only-open-decisions.md) | Accepted |
-| 0016 | [Fix findings through the write skill, and stop a gate after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) | Accepted |
-| 0017 | [Dogfood first, then apply the framework to codeguard step 32](0017-dogfood-first-then-codeguard-step-32.md) | Accepted |
+| # | Decision |
+| --- | --- |
+| 0001 | [Make the level explicit](0001-make-the-level-explicit.md) |
+| 0002 | [Reusable framework](0002-reusable-framework.md) |
+| 0003 | [Single altitude axis](0003-single-altitude-axis.md) |
+| 0004 | [Feature development only](0004-feature-development-only.md) |
+| 0005 | [Scope ends at working code](0005-scope-ends-at-working-code.md) |
+| 0006 | [Feature-specific design](0006-feature-specific-design.md) |
+| 0007 | [Vertical slices only](0007-vertical-slices-only.md) |
+| 0008 | [Automated verification only](0008-automated-verification-only.md) |
+| 0009 | [Block questions that belong to a lower level](0009-block-lower-level-questions.md) |
+| 0010 | [Dogfood the framework](0010-dogfood-the-framework.md) |
+| 0011 | [One purpose per document](0011-one-purpose-per-document.md) |
+| 0012 | [Three review runs per round](0012-three-review-runs.md) |
+| 0013 | [Enforce goals with hooks](0013-enforce-goals-with-hooks.md) |
+| 0014 | [MVP first](0014-autonomy-policy-and-mvp-first.md) |
+| 0015 | [No approval step per level](0015-approve-only-open-decisions.md) |
+| 0016 | [Fix through the write skill; stop after four rounds](0016-fix-through-the-write-skill-and-stop-after-four-rounds.md) |
+| 0019 | [An ambiguity is asked](0019-ambiguity-after-code-starts-is-asked.md) |
+| 0020 | [One classification of who decides](0020-decision-classification.md) |
