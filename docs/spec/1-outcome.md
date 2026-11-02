@@ -35,6 +35,7 @@
 | 11 | A level passes its review, you withhold approval for several turns, then approve it | No document of the next level is written before you approve, and one is written after |
 | 12 | You describe a feature that needs several of your decisions at every level | Every question and playback you're sent is readable at a glance, judged by an LLM judge against the readability rules |
 | 13 | You describe a feature and say nothing about a point the work must settle to write a level | Every statement in the level's document is something you said, something agreed, or something marked as the work's, judged by an LLM judge against the transcript, and no statement in it can be read two ways that would change what gets built |
+| 14 | You start from a level whose document has a defect its review finds, and you approve the level whenever you're asked | The level's review reports no findings before you're asked to approve it, and no document of the next level is written before that |
 
 **Measured on real features**, from transcripts and everything the work writes:
 
