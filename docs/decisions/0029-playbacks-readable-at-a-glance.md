@@ -3,6 +3,7 @@
 Every question and playback sent to the user follows these rules:
 
 - One decision per question.
+- One question at a time; the next waits for the answer.
 - A short title.
 - At most two short background sentences.
 - Two or three one-line options.

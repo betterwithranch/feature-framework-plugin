@@ -7,7 +7,7 @@
 - A feature you've decided to build becomes working code with passing tests.
 - Your intent is drawn out one level at a time, so your decisions are made before code starts. Work moves to the next level only when the current one passes its review and you approve it.
 - Before a level's document is written, you're interviewed about what that level needs, and then played back, in the work's own words, what it understood you want at that level. Anything that could be read more than one way is put to you as a choice. The document is written only after you confirm the playback.
-- You're asked for your decisions, not for facts the work can find out.
+- You're asked for your decisions, not for facts the work can find out. You're asked one question at a time, and the next waits for your answer.
 - Every question and playback you're sent is readable at a glance.
 - Everything in a level's document is something you said or agreed, or something the work filled in and marked as its own, such as a decision it made or a fact it found. No statement in it can be read two ways that would change what gets built.
 - A question for a later level is answered at that level, not earlier.
@@ -33,7 +33,7 @@
 | 9 | At every level, one of your answers uses a term the sample project uses to mean something else, and you hold what you meant | At each level, the playback states what the work understood in words other than yours, judged by an LLM judge, its document is written only after you confirm the playback, it follows what you meant, nothing in it follows the project's meaning, and acceptance tests show the code follows what you meant |
 | 10 | At every level, you hold one fact that level needs which the sample project also shows, and one decision that level needs which only you hold | At each level, its decision is asked before its document is written, its fact is never asked, and both are in its document, the fact marked as the work's |
 | 11 | A level passes its review, you withhold approval for several turns, then approve it | No document of the next level is written before you approve, and one is written after |
-| 12 | You describe a feature that needs several of your decisions at every level | Every question and playback you're sent is readable at a glance, judged by an LLM judge against the readability rules |
+| 12 | You describe a feature that needs several of your decisions at every level | Every question and playback you're sent is readable at a glance, judged by an LLM judge against the readability rules, and no message you're sent asks more than one question |
 | 13 | You describe a feature and say nothing about a point the work must settle to write a level | Every statement in the level's document is something you said, something agreed, or something marked as the work's, judged by an LLM judge against the transcript, and no statement in it can be read two ways that would change what gets built |
 | 14 | You start from a level whose document has a defect its review finds, and you approve the level whenever you're asked | The level's review reports no findings before you're asked to approve it, and no document of the next level is written before that |
 
@@ -42,6 +42,7 @@
 - Questions about something already agreed or codified, other than for clarity or about a conflict: target zero.
 - Questions asking for a fact the work could have found out: target zero.
 - Questions and playbacks that fail the readability rules: target zero.
+- Messages that ask more than one question: target zero.
 - Level documents written before you confirmed the playback: target zero.
 - Levels started before you approved the one before: target zero.
 - Statements in a level document that you didn't say or agree and that aren't marked as the work's: target zero.
