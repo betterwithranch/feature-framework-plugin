@@ -14,6 +14,8 @@
 ## Working
 
 - Follow `docs/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
+- Before acting on anything from the user that could change the project, play back what you understood in your own words and wait for confirmation. A plain answer to your own question needs no playback.
+- Ask one question at a time, with a recommended answer and enough detail to answer it without asking back. Every message for a person is readable at a glance.
 - Run an agreed gate until it passes, without asking between runs. Fix its findings with the level's write skill, including its after-a-fix self-check.
 - Stop a gate after four rounds that don't pass. Look for a conflict or ambiguity in the instructions involved and report it with a proposed fix. Changing the instructions is the user's decision.
 - Each level is built on its own branch, with its own pull request against `main`. Commit and push each agreed change to that branch when it is done. Work on the next level starts when the user approves the level.
