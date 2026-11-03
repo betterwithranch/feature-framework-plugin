@@ -12,4 +12,5 @@ These are the goals every change to this repo serves. Check each change against 
 
 - Who makes each decision is set by `skills/references/decisions.md`. Make and record the work's decisions, then report them; ask about the user's.
 - Before acting on anything from the user that could change the project, play back what you understood and wait for confirmation. Ask one question at a time, with a recommended answer and enough detail to answer it.
+- Nothing is guessed. Look up a fact, ask a decision, ask a reading, and put to the user anything you can't settle one of those ways.
 - Fixes that aren't decisions don't need approval; all decisions need approval. A fix is not a decision only when it restores the document to something already agreed and cites it. Never ask to commit or push agreed work, or to take the agreed next step.
