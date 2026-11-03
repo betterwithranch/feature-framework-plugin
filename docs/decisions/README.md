@@ -27,3 +27,4 @@ The current decisions. A decision that replaces another replaces its record; rep
 | 0029 | [Readable at a glance](0029-readable-at-a-glance.md) |
 | 0030 | [Where found facts live](0030-where-found-facts-live.md) |
 | 0031 | [A decision holds within its scope](0031-decisions-hold-within-their-scope.md) |
+| 0032 | [Questions per level are tracked, not targeted](0032-questions-per-level-are-tracked.md) |
