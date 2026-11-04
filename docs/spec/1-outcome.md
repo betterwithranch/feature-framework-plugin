@@ -6,7 +6,7 @@
 
 - A feature you've decided to build becomes working code with passing tests.
 - Your intent is drawn out one level at a time, so your decisions are made before code starts. Each level produces one document. Work moves to the next level only when the current one passes its review and you approve it.
-- Before the work acts on anything from you that could change the project, it tells you what it understood, in its own words, and waits for you to confirm. A plain answer to the work's own question needs no playback of its own. Anything that could be read more than one way about what the current level decides is put to you as a choice, on its own, after the playback.
+- Before the work acts on anything from you that could change the project, it tells you what it understood, in its own words, and waits for you to confirm. A plain answer to the work's own question is acted on without a playback of its own. Anything that could be read more than one way about what the current level decides is put to you as a choice, on its own, after the playback.
 - Before a level's document is written, you're interviewed about what that level needs, and then played back what the work understood you want at that level. The document is written only after you confirm the playback.
 - You're asked for your decisions, not for facts the work can find out. You're asked one question at a time, and the next waits for your answer. Each question gives you enough to answer it without asking back.
 - Nothing is guessed. A fact is looked up, a decision of yours is asked, a reading is asked, and anything the work can't settle one of those ways is put to you.
