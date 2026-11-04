@@ -11,7 +11,7 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 
 - State what the user gets. Leave exactly what counts, and how it works, to later levels.
 - Be simple and to the point. Use short sentences and say only what the reader needs to know what result is asked for.
-- An absolute term (every, never, only, always, all, none) means no exceptions. If a requirement has exceptions, write it in non-absolute terms.
+- An absolute term, such as every, never, only, always, all, none, any or anything, means no exceptions. If a requirement has exceptions, write it in non-absolute terms.
 - Use one term per concept, and reuse the same phrase for the same idea. Define a term only when a reader couldn't tell what result it means.
 - State what each verification confirms, not how it is built. Each verifies the behaviour the user observes and passes or fails on its own.
 - Fix a problem by removing the wording that caused it, not by adding a new qualifier or distinction.
