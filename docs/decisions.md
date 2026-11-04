@@ -164,3 +164,6 @@ D51  Every requirement covered; structure is a later level's
 
 D52  What a level's review checks
       Decided 2026-11-04. A level's review checks that the level's document meets the standards for completing that level and is consistent and complete. It does not hunt for defects. A level passes its review when its document does. Why: the user said "reviews aren't supposed to be reviewing for defects. they are supposed to be reviewing that the level matches the standards to complete the level and that the artifact is consistent and complete."
+
+D53  A level document is committed only with a full self-check
+      Decided 2026-11-04 by the work. A git pre-commit hook, `hooks/git/pre-commit`, blocks a commit that changes any `docs/spec/*.md` unless `<git dir>/ff-selfcheck/<blob hash of the staged file>.md` exists and names every requirement (R<n>), scenario (S<n>) and measure (M<n>) the hook parses from the staged file. SessionStart under Claude Code and Codex runs `git config core.hooksPath hooks/git`, so every session has it on. A git hook runs the same under both hosts (D47). Why: the user asked for a hook "to make sure you stop doing this when making changes", after fixes were made one finding at a time without write-outcome's full self-check; the work chose how to build it (decisions.md, the work decides 2).

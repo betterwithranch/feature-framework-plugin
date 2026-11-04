@@ -7,6 +7,10 @@
           {
             "type": "command",
             "command": "cat \"$CLAUDE_PROJECT_DIR/hooks/prompts/goals.md\""
+          },
+          {
+            "type": "command",
+            "command": "git -C \"$CLAUDE_PROJECT_DIR\" config core.hooksPath hooks/git"
           }
         ]
       }
