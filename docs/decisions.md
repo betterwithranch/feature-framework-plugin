@@ -44,6 +44,7 @@ D12  Run each gate review three times and act on the union
       Decided 2026-10-28. Each gate review runs three times independently. Every finding from any run is acted on. A finding that only some runs raise shows where the review instructions need to be clearer. A review passes when all three runs report no findings. Why: a single review run missed findings that another run of the same prompt caught.
 
 D13  Enforce goals and the decide-or-ask rule with hooks
+      Replaced by D44.
       Decided 2026-10-28. `docs/goals.md` holds the goals and the decide-or-ask rule. A SessionStart hook (startup, resume, compact) and a UserPromptSubmit hook load it into context. A Stop prompt hook blocks ending a turn on a request to approve something already decided. The goals survive compaction and are restated on every prompt; the Stop hook costs one small model call per turn, may misjudge, and is tuned against real sessions like any other instruction. Why: an assessment of the session that built level 1 found about 30 user corrections and about 10 unnecessary approval requests in 22; rules written in documents were not followed because nothing loaded or enforced them, and the goals drifted.
 
 D14  Autonomy policy and MVP first
