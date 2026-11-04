@@ -21,10 +21,11 @@
 - You make your decisions. The work makes its own and records them where you can see them. This holds wherever a decision is written.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features. The work's decisions never become codified rules.
 - Once code starts, the work proceeds with everything it needs. If one of your decisions still blocks it, you're asked, and only then.
+- You get the same results whether the work runs under Claude Code or under Codex. Nothing you get depends on something only one of them has.
 
 "Code starts" means the first change to the project's code or tests for that feature. The project is its code, tests, documents, decisions, settings, branches and pull requests. A level is approved when you say so, after it passes its review. A requirement is a result in the list above or in a level's document, and its verification is what shows it holds. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md).
 
-**Scenarios.** Each runs several times on a sample project with a scripted user, and passes only if every run passes. The scripted user answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
+**Scenarios.** Each runs several times under Claude Code and several times under Codex, on a sample project with a scripted user, and passes only if every run under both passes. The scripted user answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
 
 | # | Scenario | Passes when |
 | --- | --- | --- |
@@ -69,3 +70,4 @@
 - Your decisions that the work made instead of you: target zero.
 - Questions asking you to make one of the work's decisions: target zero.
 - The work's decisions that aren't recorded where you can see them, or that became a codified rule: target zero.
+- Results you get under one of Claude Code and Codex but not the other: target zero.
