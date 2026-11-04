@@ -29,7 +29,7 @@ A sound Outcome meets all six.
 4. Traceable. Every part of every requirement has a scenario whose verification fails if that part is broken. A requirement that holds across levels, people or features needs one verification, unless the requirement itself says the cases differ; asking for a copy per case is not a finding. Every scenario and measure verifies a requirement. An allowance, something a requirement permits but does not require, needs no scenario of its own.
 5. Sound verifications. Each verification is judged by its own words against the requirement it verifies, taken as built faithfully at a later level. No verification or measure:
    - passes when the user doesn't get the result;
-   - relies on the work to produce anything it needs before its event, such as a failing draft, a defect, a decision or an earlier feature;
+   - relies on the work to have produced anything it needs before its event, such as a failing draft, a defect, a decision or an earlier feature. A starting state that sets these up itself is not a finding;
    - tests how the result is implemented instead of the behaviour the user observes, for example by reading the system's own log or report that it succeeded;
    - fails or counts against behaviour the requirement it verifies requires or allows. Only that requirement's allowances and exceptions count, and each one the starting state could bring about is either ruled out by the starting state or carried into the verification;
    - compares against an expected result that the scenario doesn't set before the run.
