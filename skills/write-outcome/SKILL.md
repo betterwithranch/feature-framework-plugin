@@ -18,11 +18,17 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 
 ## Self-check before review
 
-1. List the vocabulary and confirm each concept has one term.
-2. List the requirements, scenarios and measures, and map each requirement to a scenario whose verification fails if the requirement isn't met.
-3. Check the document against each criterion in the definition. For criterion 5, go through each scenario and measure one at a time, against each item.
-4. Fix what fails.
+Run every step on the whole document and write the result as a table, one row per item checked. Name requirements, scenarios and measures as R1, S1 and M1, numbered in document order.
+
+1. Vocabulary. List every concept and confirm each has one term.
+2. Complete (criterion 1). Confirm each element of the definition's contents is present.
+3. Nothing extra (criterion 2). Go through each statement and confirm it is none of what an Outcome does not contain.
+4. Clear (criterion 3). For each statement, name the result the user is meant to get.
+5. Traceable (criterion 4). Map each requirement to a scenario or measure whose verification fails if the requirement isn't met, and each scenario and measure to the requirement it verifies.
+6. Sound verifications (criterion 5). Go through each scenario and measure one at a time, against each of the five items.
+7. Consistent (criterion 6). List every absolute term in every sentence of every requirement and definition, and check each against every other requirement for an exception. Then check each requirement, scenario, measure and definition against the others on the same subject for a contradiction.
+8. Fix what fails.
 
 ## After a fix
 
-Rerun the self-check on the changed text and on every requirement, scenario and measure about the same subject, whether or not they refer to each other. A fix that moves a problem somewhere else is not a fix.
+Rerun the whole self-check. A fix that moves a problem somewhere else is not a fix.
