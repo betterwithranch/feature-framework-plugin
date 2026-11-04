@@ -41,6 +41,7 @@ D11  Give every document one purpose
       Decided 2026-10-28. Every file has one purpose and holds only content that serves it. History and dates belong only in decision records. Instructions the framework uses on features are written as Claude skills under `skills/`, with no history, dates or status. The rules are in `CLAUDE.md`. Content that doesn't fit a file's purpose moves to the file whose purpose it serves. Why: files mixed records, history and instructions, which made them hard to read and to find things in.
 
 D12  Run each gate review three times and act on the union
+      Replaced by D54.
       Decided 2026-10-28. Each gate review runs three times independently. Every finding from any run is acted on. A finding that only some runs raise shows where the review instructions need to be clearer. A review passes when all three runs report no findings. Why: a single review run missed findings that another run of the same prompt caught.
 
 D13  Enforce goals and the decide-or-ask rule with hooks
@@ -167,3 +168,7 @@ D52  What a level's review checks
 
 D53  A level document is committed only with a full self-check
       Decided 2026-11-04 by the work. A git pre-commit hook, `hooks/git/pre-commit`, blocks a commit that changes any `docs/spec/*.md` unless `<git dir>/ff-selfcheck/<blob hash of the staged file>.md` exists and names every requirement (R<n>), scenario (S<n>) and measure (M<n>) the hook parses from the staged file. SessionStart under Claude Code and Codex runs `git config core.hooksPath hooks/git`, so every session has it on. A git hook runs the same under both hosts (D47). Why: the user asked for a hook "to make sure you stop doing this when making changes", after fixes were made one finding at a time without write-outcome's full self-check; the work chose how to build it (decisions.md, the work decides 2).
+
+D54  A review round: one run, then two more if it's clean
+      Replaces D12.
+      Decided 2026-11-04. A review round starts with one run. When it reports no findings, two more runs follow, each independent, and the round passes when all three are clean. When the first run has findings, they are fixed and the next round starts again at its first run. Every finding from any run is acted on. Why: the user said "run the review once to make sure it passes, then 2 more times separately. running 3 times when you don't even know it passes once is wrong... the first pass makes sure its correct, the multi-check follow-up makes sure it is reliable. count the first pass in the total so for 3 total, it is a run of 1 followed by a run of 2 if the first run was clean".

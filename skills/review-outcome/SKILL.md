@@ -21,6 +21,10 @@ Before judging, list for yourself every requirement, scenario and measure, and m
 
 Do not propose answers, rewrite the document, comment on wording or style, or list open questions.
 
+## Rounds
+
+A round starts with one run of this review. When it reports no findings, two more run independently, and the round passes when all three report none. When the first run reports findings, the round ends there and the findings are fixed before the next round.
+
 ## Output
 
 - Trace map: each requirement to its scenarios, one line each.
