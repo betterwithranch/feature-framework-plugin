@@ -19,7 +19,7 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 ## Self-check before review
 
 1. List the vocabulary and confirm each concept has one term.
-2. List the requirements, scenarios and measures, and map every part of each requirement to a scenario whose verification fails if that part is broken.
+2. List the requirements, scenarios and measures, and map each requirement to a scenario whose verification fails if the requirement isn't met.
 3. Check the document against each criterion in the definition. For criterion 5, go through each scenario and measure one at a time, against each item.
 4. Fix what fails.
 

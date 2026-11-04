@@ -16,7 +16,7 @@ Before judging, list for yourself every requirement, scenario and measure, and m
 - A finding names the criterion it fails and quotes the document.
 - A point the definition leaves to a later level is not a finding.
 - Wording that doesn't change what the user gets is not a finding.
-- Drop anything the quoted text doesn't show: perfection is the enemy of done. For criteria 4 and 5, the text shows a finding when a requirement has no scenario, or when a verification's own words, built faithfully, would misjudge the result. A verification that tests implementation instead of the behaviour the user observes is a finding. A verification that could be built badly is not.
+- Drop anything the quoted text doesn't show: perfection is the enemy of done. For criteria 4 and 5, the text shows a finding when a requirement has no verification that fails if it isn't met, or when a verification's own words, built faithfully, would misjudge the result. A verification that tests implementation instead of the behaviour the user observes is a finding. A verification that could be built badly is not.
 - Impact is high if the user might not get the intended result, and medium if only a verification or measure is affected.
 
 Do not propose answers, rewrite the document, comment on wording or style, or list open questions.
