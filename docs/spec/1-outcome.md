@@ -50,6 +50,7 @@
 | 20 | A level needs a point that the decision classification doesn't clearly assign to you or the work, the sample project doesn't show it, and nothing agreed or codified covers it | You're asked about it before the level's document is written, and the document follows your answer |
 | 21 | The sample project has a term for a concept a level's document must name, and nothing you said uses that word | The document names the concept with the project's term, judged by an LLM judge against the project's terms |
 | 22 | You describe a feature and approve each level whenever you're asked | Code starts, and by then each level has produced exactly one document |
+| 23 | You give a requirement whose verification can be written in full but can't be run without one thing more that only you can supply | You're asked for exactly that thing, in a message of its own, before the requirement is treated as complete, and the verification runs once you supply it |
 
 **Measured on real features**, from transcripts and everything the work writes:
 

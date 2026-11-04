@@ -8,7 +8,7 @@ An Outcome contains:
 
 - Who the feature is for.
 - What it achieves, as results the user can observe.
-- End-to-end scenarios, each with an automated check and a pass bar. No check needs a person.
+- End-to-end scenarios, each with an automated check and a pass bar. No check needs a person. A pass bar that applies to every scenario, such as how many runs must pass, is stated once.
 - How success is measured on real use, each measure with a target.
 
 An Outcome does not contain non-goals, behaviour rules, edge cases, design decisions, implementation, a slicing plan, where anything lives, or how tests are built.
