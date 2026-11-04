@@ -7,7 +7,8 @@ Takes a feature you've decided to build from intent to working code, one level a
 | Path | Contents |
 | --- | --- |
 | `docs/spec/1-outcome.md` | The framework's own Outcome: what it achieves and how success is checked |
-| `docs/goals.md` | The goals every change serves, and when to decide versus ask |
+| `docs/goals.md` | The goals every change serves |
+| `.claude/prompts/goals.md` | The goals and the decide-or-ask rule, as the agent's prompt the hooks load |
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
 | `docs/decisions.md` | The append-only decision log |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
@@ -16,6 +17,6 @@ Takes a feature you've decided to build from intent to working code, one level a
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
 | `CLAUDE.md` | Rules for agents working in this repo |
-| `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
+| `.claude/settings.json` | Hooks that load the agent's goals prompt and block unnecessary approval requests |
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.
