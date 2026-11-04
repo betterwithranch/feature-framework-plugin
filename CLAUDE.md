@@ -9,12 +9,13 @@
 - `docs/open-questions.md` lists questions set aside for the level that owns them.
 - `skills/` holds instructions the framework uses on every feature. Write them as Claude skills: frontmatter with `name` and `description`, then direct instructions. No history, dates, status or examples of past mistakes.
 - `skills/references/` holds what more than one skill needs, such as what a level's document contains and the criteria it must meet. Skills refer to it and don't repeat it.
-- `docs/goals.md` explains the goals every change serves, for people. The agent's version is `.claude/prompts/goals.md`, which hooks load at session start and on every prompt.
-- `.claude/prompts/` holds the prompts settings reference, written as instructions to an agent. Settings files hold no prompts; a prompt and a doc are separate files written for their reader.
+- `docs/goals.md` explains the goals every change serves, for people. The agent's version is `hooks/prompts/goals.md`, which hooks load at session start and on every prompt.
+- `hooks/` holds the hook scripts and `hooks/prompts/` the prompts they load, written as instructions to an agent. `.claude/settings.json` and `.codex/config.toml` only point at them: settings hold no prompts, and a prompt and a doc are separate files written for their reader.
+- Everything here works under both Claude Code and Codex. Nothing depends on a feature only one of them has.
 
 ## Working
 
-- Follow `.claude/prompts/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
+- Follow `hooks/prompts/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
 - Before acting on anything from the user that could change the project, play back what you understood in your own words and wait for confirmation. A plain answer to your own question needs no playback.
 - Ask one question at a time, with a recommended answer and enough detail to answer it without asking back. Every message for a person is readable at a glance.
 - Nothing is guessed. Look up a fact, ask a decision, ask a reading, and put to the user anything you can't settle one of those ways.

@@ -135,4 +135,12 @@ D43  Settings hold no prompts; prompts and docs are separate
 
 D44  Enforce goals and the decide-or-ask rule with hooks
       Replaces D13.
+      Replaced by D46.
       Decided 2026-11-04. `.claude/prompts/goals.md` holds the goals and the decide-or-ask rule as the agent's prompt; `docs/goals.md` explains the goals to people. A SessionStart hook (startup, resume, compact) and a UserPromptSubmit hook load the prompt into context. A Stop prompt hook blocks ending a turn on a request to approve something already decided. Every recorded rule the framework depends on is enforced by a hook or a check where one can enforce it. Why: D43 separates prompts from docs; the rest of D13 stands.
+
+D45  Work under both Claude Code and Codex
+      Decided 2026-11-04. Everything the framework ships works under both Claude Code and Codex: its prompts, its checks, and the settings that load them. Nothing depends on a feature only one host has. Why: the user said "this solution cannot be claude code only. It needs to support both claude and codex. this requirement needs to be added to avoid future breaking changes."
+
+D46  Enforce goals and the decide-or-ask rule with hooks, on both hosts
+      Replaces D44.
+      Decided 2026-11-04. `hooks/prompts/goals.md` holds the goals and the decide-or-ask rule as the agent's prompt; `docs/goals.md` explains the goals to people. SessionStart and UserPromptSubmit hooks load the prompt into context, under Claude Code from `.claude/settings.json` and under Codex from `.codex/config.toml`. The Stop check is a command hook, `hooks/stop.py <host>`: it reads its prompt from `hooks/prompts/stop-check.md`, asks the host's own CLI on its smallest model (`claude -p --model haiku`, `codex exec --model gpt-6-luna`) whether the last message asks to approve something already decided, and blocks the stop with the reason. It respects `stop_hook_active`, prints one JSON object both hosts read, and exits 0. Settings hold no prompts. Every recorded rule the framework depends on is enforced by a hook or a check where one can enforce it. Why: the user chose a command hook for the Stop check (FF-32 A), since a prompt hook keeps its prompt in settings and exists only under Claude Code; D45 needs both hosts.
