@@ -1,6 +1,6 @@
 # Candidate content for later levels
 
-Agreed before the framework's Outcome existed. Per [decision 0010](../decisions/0010-dogfood-the-framework.md), each item is checked against the approved [Outcome](1-outcome.md) at the level that owns it before it is treated as settled.
+Agreed before the framework's Outcome existed. Per [D37](../decisions.md), each item is checked against the approved [Outcome](1-outcome.md) at the level that owns it before it is treated as settled.
 
 ## Levels
 

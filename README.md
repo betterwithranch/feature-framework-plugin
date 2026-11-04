@@ -9,7 +9,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 | `docs/spec/1-outcome.md` | The framework's own Outcome: what it achieves and how success is checked |
 | `docs/goals.md` | The goals every change serves, and when to decide versus ask |
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
-| `docs/decisions/` | The current decisions, one per record |
+| `docs/decisions.md` | The append-only decision log |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
 | `skills/references/outcome.md` | What an Outcome contains and the criteria it must meet, shared by the Outcome skills |
 | `skills/references/decisions.md` | Which decisions need the user and which the work makes, used at every level |
