@@ -155,3 +155,6 @@ D48  Verifications test behaviour and pass independently
 
 D49  One verification for a requirement that holds across cases
       Decided 2026-11-04. A requirement that holds across levels, people or features needs one verification, unless the requirement itself says the cases differ. Asking for a copy of the verification per case is not a review finding. Why: the user said "assume that we will run all the tests for every level at the end and they must all pass so duplicating is unneeded".
+
+D50  Absolute terms have no exceptions
+      Decided 2026-11-04. An absolute term (every, never, only, always, all, none) means no exceptions. A requirement with exceptions is written in non-absolute terms. An absolute requirement that another requirement makes an exception to is a contradiction. Why: the user said "a description that says "every" or "never" shouldn't have exceptions. those terms are absolute. if there are exceptions, different non-absolute terms should be used".

@@ -35,4 +35,4 @@ A sound Outcome meets all six.
    - compares against an expected result that the scenario doesn't set before the run.
 
    A scenario need not re-verify a requirement that another scenario covers.
-6. Consistent. No requirements, scenarios, measures or definitions contradict each other.
+6. Consistent. No requirements, scenarios, measures or definitions contradict each other. An absolute term (every, never, only, always, all, none) means no exceptions, so an absolute requirement that another requirement makes an exception to is a contradiction.
