@@ -11,7 +11,7 @@
 - `skills/references/` holds what more than one skill needs, such as what a level's document contains and the criteria it must meet. Skills refer to it and don't repeat it.
 - `docs/goals.md` explains the goals every change serves, for people. The agent's version is `hooks/prompts/goals.md`, which hooks load at session start and on every prompt.
 - `hooks/` holds the hook scripts and `hooks/prompts/` the prompts they load, written as instructions to an agent. `.claude/settings.json` and `.codex/config.toml` only point at them: settings hold no prompts, and a prompt and a doc are separate files written for their reader.
-- Everything here works under both Claude Code and Codex. Nothing depends on a feature only one of them has.
+- The code the framework ships to enforce itself (its hooks, checks, skills and the settings that load them) works under both Claude Code and Codex, and depends on nothing only one of them has.
 
 ## Working
 

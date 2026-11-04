@@ -12,7 +12,7 @@
 - Nothing is guessed. A fact is looked up, a decision of yours is asked, a reading is asked, and anything the work can't settle one of those ways is put to you.
 - A requirement is complete when its verification can be written in full and run, with nothing left to ask you. A verification is complete when it names what is checked, how, and what result passes. Anything missing from either is asked, one question at a time, unless the work can find it out.
 - Every document and message meant for a person is readable at a glance.
-- Everything in a level's document is something you said or agreed, or something the work filled in and marked as its own, such as a decision it made or a fact it found. No statement in it can be read two ways that would change what gets built.
+- Everything in a level's document is something you said or agreed, or something the work filled in and marked as its own, such as a decision it made. No statement in it can be read two ways that would change what gets built.
 - A fact the work found appears only in a level that allows it, marked as the work's. Before you approve such a level, its review checks each found fact against the project, and a wrong fact is a finding.
 - A level's document uses the project's terms with the project's meanings. When a word of yours clashes with one, the playback names the clash; after you confirm, the document keeps the project's term for the project's meaning, uses a distinct phrase for yours, and records the clash where you see it.
 - A question for a later level is answered at that level, not earlier.
