@@ -21,7 +21,7 @@
 - You make your decisions. The work makes its own and records them where you can see them. This holds wherever a decision is written.
 - The code follows everything agreed or codified, including your answers. Agreements carry over to later features. The work's decisions never become codified rules.
 - Once code starts, the work proceeds with everything it needs. If one of your decisions still blocks it, you're asked, and only then.
-- You get the same results whether the work runs under Claude Code or under Codex. Nothing you get depends on something only one of them has.
+- The framework enforces itself the same way whether the work runs under Claude Code or under Codex.
 
 "Code starts" means the first change to the project's code or tests for that feature. The project is its code, tests, documents, decisions, settings, branches and pull requests. A level is approved when you say so, after it passes its review. A requirement is a result in the list above or in a level's document, and its verification is what shows it holds. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md).
 
@@ -70,4 +70,3 @@
 - Your decisions that the work made instead of you: target zero.
 - Questions asking you to make one of the work's decisions: target zero.
 - The work's decisions that aren't recorded where you can see them, or that became a codified rule: target zero.
-- Results you get under one of Claude Code and Codex but not the other: target zero.
