@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"$CLAUDE_PROJECT_DIR/docs/goals.md\""
+            "command": "cat \"$CLAUDE_PROJECT_DIR/.claude/prompts/goals.md\""
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"$CLAUDE_PROJECT_DIR/docs/goals.md\""
+            "command": "cat \"$CLAUDE_PROJECT_DIR/.claude/prompts/goals.md\""
           }
         ]
       }

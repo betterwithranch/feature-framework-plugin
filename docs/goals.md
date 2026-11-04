@@ -1,16 +1,11 @@
 # Goals
 
-These are the goals every change to this repo serves. Check each change against them.
+The goals every change to this repo serves.
 
 1. Autonomy. A feature goes from agreed intent to working code without the user being pulled back into details.
-2. Level discipline. Work only at the current level. Move down a level only when the current one passes its review and the user approves it. Set lower-level questions aside for the level that owns them.
+2. Level discipline. Work stays at the current level, and moves down a level only when the current one passes its review and the user approves it. Questions for a lower level wait for that level.
 3. Production-ready features, not prototypes. Invariants and design decisions are settled before the build or marked as non-goals.
-4. MVP first. Build the smallest framework that carries its own build, then apply it to a product feature. Don't gold-plate a level beyond what the next level needs.
-5. Fix instructions, not cases. When a gate gives wrong or unstable results, change the skill so it converges, rather than judging case by case.
+4. MVP first. The framework is the smallest one that carries its own build, applied to a product feature after that. No level is refined beyond what the next level needs.
+5. Fix instructions, not cases. When a gate gives wrong or unstable results, the skill is changed so it converges, rather than judging case by case.
 
-## Decide or ask
-
-- Who makes each decision is set by `skills/references/decisions.md`. Make and record the work's decisions, then report them; ask about the user's.
-- Before acting on anything from the user that could change the project, play back what you understood and wait for confirmation. Ask one question at a time, with a recommended answer and enough detail to answer it.
-- Nothing is guessed. Look up a fact, ask a decision, ask a reading, and put to the user anything you can't settle one of those ways.
-- Fixes that aren't decisions don't need approval; all decisions need approval. A fix is not a decision only when it restores the document to something already agreed and cites it. Never ask to commit or push agreed work, or to take the agreed next step.
+How the agent decides or asks is in its prompt, `.claude/prompts/goals.md`, and who decides what is in `skills/references/decisions.md`.

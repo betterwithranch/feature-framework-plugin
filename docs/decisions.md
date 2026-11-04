@@ -128,3 +128,10 @@ D41  One purpose per document
 D42  One classification of who decides
       Replaces D20.
       Decided 2026-11-04. `skills/references/decisions.md` is the single source for who makes each decision, at every level and for decisions written anywhere, including plans, notes and memory. The user decides what users get, anything that creates, changes or overrides an agreement or codified rule, tools and external dependencies, hard-to-reverse or outward-facing choices, and trade-offs between goals. The work decides what follows from something agreed and reversible build choices within it, and records them: in a planning level's document, or, in Build, in the code and tests. Its decisions never become codified rules. When unsure, the user decides. Where a decision is written into a level document, code or notes, a decision that replaces it removes it there; this framework's own decision log keeps both under D40. Why: D40 makes the log append-only; the rest of D20 stands.
+
+D43  Settings hold no prompts; prompts and docs are separate
+      Decided 2026-11-04. Settings files hold no prompts. Each prompt is its own file that settings references. Agent prompts and human docs are separate files, each written for its reader: a prompt gives an agent direct instructions; a doc explains to a person. Duplication between them is kept to a minimum, and no hook points at a human doc. Why: documentation and agent prompts have different audiences.
+
+D44  Enforce goals and the decide-or-ask rule with hooks
+      Replaces D13.
+      Decided 2026-11-04. `.claude/prompts/goals.md` holds the goals and the decide-or-ask rule as the agent's prompt; `docs/goals.md` explains the goals to people. A SessionStart hook (startup, resume, compact) and a UserPromptSubmit hook load the prompt into context. A Stop prompt hook blocks ending a turn on a request to approve something already decided. Every recorded rule the framework depends on is enforced by a hook or a check where one can enforce it. Why: D43 separates prompts from docs; the rest of D13 stands.
