@@ -9,7 +9,7 @@ Read [the Outcome definition](../references/outcome.md). Review the Outcome docu
 
 ## Method
 
-Before judging, list for yourself every requirement, scenario and measure, and map each requirement to the scenarios whose verification would fail without it. List every absolute term in every sentence of every requirement and definition, and check each against every other requirement for an exception. For each check in a scenario or measure, find the requirement words that rule out what it fails; a requirement allows whatever its words don't rule out. Then judge the document against each of the definition's six criteria.
+Before judging, list for yourself every requirement, scenario and measure, and map each requirement to the scenarios whose verification would fail without it. List every absolute term in every sentence of every requirement and definition, and check each against every other requirement for an exception. For each check in a scenario or measure, quote the requirement words that rule out what it fails, and confirm that a run doing the failed behaviour would break them. Words on the same subject that don't forbid it are not enough; a requirement allows whatever its words don't rule out. Then judge the document against each of the definition's six criteria.
 
 ## Findings
 
