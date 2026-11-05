@@ -24,7 +24,7 @@ Run every step on the whole document and write the result as a table, one row pe
 2. Complete (criterion 1). Confirm each element of the definition's contents is present.
 3. Nothing extra (criterion 2). Go through each statement and confirm it is none of what an Outcome does not contain.
 4. Clear (criterion 3). For each statement, name the result the user is meant to get.
-5. Traceable (criterion 4). Map each requirement to a scenario or measure whose verification fails if the requirement isn't met, and each scenario and measure to the requirement it verifies.
+5. Traceable (criterion 4). For each requirement, list every way a run could break each of its parts, and name the scenario or measure whose verification fails for each. Map each scenario and measure to the requirement it verifies.
 6. Sound verifications (criterion 5). Go through each scenario and measure one at a time, against each of the five items. For each check in it, quote the requirement words that rule out what it fails, and confirm that a run doing the failed behaviour would break them. Consider every way a run could get the user the result, not only the one the scenario has in mind. Words on the same subject that don't forbid it are not enough; a requirement allows whatever its words don't rule out.
 7. Consistent (criterion 6). List every absolute term in every sentence of every requirement and definition, and check each against every other requirement for an exception. Then check each requirement, scenario, measure and definition against the others on the same subject for a contradiction.
 8. Fix what fails.
