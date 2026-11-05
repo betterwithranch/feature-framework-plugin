@@ -31,7 +31,7 @@ A sound Outcome meets all six.
    - passes when the user doesn't get the result;
    - relies on the work to have produced anything it needs before its event, such as a failing draft, a defect, a decision or an earlier feature. A starting state that sets these up itself is not a finding;
    - tests how the result is implemented instead of the behaviour the user observes, for example by reading the system's own log or report that it succeeded;
-   - fails or counts against behaviour the requirement it verifies requires or allows. Only that requirement's allowances and exceptions count, and each one the starting state could bring about is either ruled out by the starting state or carried into the verification;
+   - fails or counts against behaviour the requirement it verifies requires or allows. A behaviour is ruled out only by requirement words that a run doing it would break; words on the same subject that don't forbid it don't rule it out. Only that requirement's allowances and exceptions count, and each one the starting state could bring about is either ruled out by the starting state or carried into the verification;
    - compares against an expected result that the scenario doesn't set before the run.
 
    A scenario need not re-verify a requirement that another scenario covers.
