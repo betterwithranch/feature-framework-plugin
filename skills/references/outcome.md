@@ -32,7 +32,7 @@ A sound Outcome meets all six.
 
 1. Complete. Every required element is present, in the form the contents set.
 2. Nothing extra. Nothing is present that the Outcome isn't responsible for.
-3. Clear. For every statement, a reader knows what result the user is meant to get.
+3. Clear. For every statement, a reader knows what result the user is meant to get. A statement reads two ways only if the rest of the document, its glossary, its other requirements and the scenarios that verify it, doesn't settle which reading is meant.
 4. Traceable. Every requirement is covered by a verification that fails if the requirement isn't met. How verifications are split, grouped or structured, such as one per listed item or one per level, person or feature, is for a later level; asking for a different structure is not a finding. Every scenario and measure verifies a requirement. An allowance, something a requirement permits but does not require, needs no scenario of its own. A requirement allows whatever its words don't rule out.
 5. Sound verifications. Each verification is judged by its own words against the requirement it verifies, taken as built faithfully at a later level. No verification or measure:
    - passes when the user doesn't get the result;

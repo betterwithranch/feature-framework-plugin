@@ -28,7 +28,8 @@ Run every step on the whole document and write the result as a table, one row pe
 5. Traceable (criterion 4). For each requirement, list every way a run could break each of its parts, and name the scenario or measure whose verification fails for each. Map each scenario and measure to the requirement it verifies.
 6. Sound verifications (criterion 5). Go through each scenario and measure one at a time, against each of the five items. For each check in it, quote the requirement words that rule out what it fails, and confirm that a run doing the failed behaviour would break them. Consider every way a run could get the user the result, and every way a run could pass without it, not only the one the scenario has in mind. Words on the same subject that don't forbid it are not enough; a requirement allows whatever its words don't rule out.
 7. Consistent (criterion 6). Run `scripts/absolutes.py <document>`; it lists every absolute term with its ID and sentence. Write one row per listed term, and check each against every requirement for an exception. Then check each requirement, scenario, measure and definition against the others on the same subject for a contradiction.
-8. Fix what fails.
+8. Rewrites. After splitting or moving any text, re-check every requirement it touched against criterion 6 and against the scenarios that verify it.
+9. Fix what fails.
 
 ## After a fix
 
