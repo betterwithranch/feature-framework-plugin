@@ -19,6 +19,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 | `docs/decisions.md` | The append-only decision log |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
 | `skills/references/outcome.md` | What an Outcome contains and how it is reviewed, shared by the Outcome skills |
+| `skills/references/glossary-review.md` | The glossary review's yes/no rules, judged against each entry of the project glossary |
 | `skills/references/outcome-reviews/` | The four Outcome reviews' yes/no rules: scope, clarity, verification, provenance |
 | `skills/references/decisions.md` | Which decisions need the user and which the work makes, used at every level |
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
