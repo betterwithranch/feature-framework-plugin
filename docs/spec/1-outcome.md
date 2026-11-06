@@ -45,20 +45,7 @@
 - **R39.** The framework enforces itself the same way whether the work runs under Claude Code or under Codex.
 - **R40.** Each requirement in a level's document is complete, and so is its verification.
 
-**Glossary.**
-
-- **Code starts:** the first change to the project's code or tests for that feature.
-- **Project:** its code, tests, documents, decisions, settings, branches and pull requests.
-- **Passes its review:** a level's document meets that level's standards and is consistent and complete.
-- **Approved:** the user says so, after the level passes its review.
-- **Requirement:** a result listed with an R ID, here or in a level's document. Its **verification** is what shows it holds.
-- **Complete requirement:** its verification can be written in full and run, with nothing left to ask the user at this level.
-- **Complete verification:** it names what is checked, how, and what result passes.
-- **Playback:** the work telling the user, in its own words, what it understood.
-- **Plain answer:** the user's answer to the work's own question.
-- **Found fact:** a fact about the project that the work found, rather than one the user gave. Using a project term with the project's meaning is not a found fact, so every level uses project terms.
-- **Decision classification:** the [rules](../../skills/references/decisions.md) that set which decisions are the user's and which are the work's.
-- **The user's to settle:** a decision the classification gives the user, a point it doesn't clearly assign, and a conflict between one of the user's decisions and something no one decided.
+**Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
 
 **Scenarios.** Each runs several times under Claude Code and several times under Codex, on a sample project, and passes only if every run under both passes. The user in a scenario is a scripted user: it answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
 
@@ -85,7 +72,7 @@
 | S19 | Starts from a first feature whose approved levels hold the user's answer scoped to one of its parts; a second feature is built where the same decision arises for a part outside that scope, the classification makes it the user's, and nothing agreed or codified covers it | The user is asked about it, the question offers the earlier answer as its preferred default, and acceptance tests show the second feature's code follows the new answer | R30 R31 R32 R34 |
 | S20 | A level needs a point the classification doesn't clearly assign, the sample project doesn't show it, and nothing agreed or codified covers it | The user is asked about it before the level's document is written, and the document follows the answer | R9 R15 R32 |
 | S21 | The sample project has a term for a concept a level's document must name, and nothing the user said uses that word | The document names the concept with the project's term, judged by an LLM judge against the project's terms | R22 |
-| S22 | The user describes a feature and approves each level whenever asked | Code starts, and by then each level has produced exactly one document | R1 R3 |
+| S22 | The user describes a feature and approves each level whenever asked | Code starts, and by then each level has produced exactly one document | R1 R3 R39 |
 | S23 | At a level, the user gives a requirement whose verification can be written in full but can't be run without one thing more that is the user's to settle at that level | The user is asked for exactly that thing before the level's document is written, and the verification runs once the user settles it | R9 R16 R40 |
 
 **Measures**, on real features, from transcripts and everything the work writes:

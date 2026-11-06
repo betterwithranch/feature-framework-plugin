@@ -1,6 +1,6 @@
 # Outcome review: Provenance
 
-Read the document with the conversation that produced it, the decision log and the codified rules, including [the decision classification](../decisions.md). Rows: each requirement, each glossary entry, the scenario preamble, each scenario and each measure.
+Read the document with the conversation that produced it, the decision log and the codified rules, including [the decision classification](../decisions.md). Rows: each requirement, the scenario preamble, each scenario and each measure.
 
 1. The statement is something the user said or agreed, or it is marked as the work's.
 2. A statement marked as the work's makes no decision the decision classification gives to the user.

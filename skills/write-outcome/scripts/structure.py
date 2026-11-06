@@ -5,7 +5,7 @@ Usage: structure.py <document.md> [level]
 
 Prints one line per failure and exits 1 if any; prints nothing and exits 0 if
 the document passes. The level defaults to the number the file name starts with.
-Checks: the required sections are present; every requirement ID is cited by a
+Checks: the required sections and the reference to the project glossary are present; every requirement ID is cited by a
 scenario or measure, and every cited ID exists; R, S and M IDs run in document
 order from 1 without gaps or duplicates; no banned term for the level appears.
 """
@@ -17,7 +17,8 @@ SECTIONS = {
     1: [("For whom", r"^\*\*For whom\.\*\*"),
         ("Requirements", r"^\*\*Requirements\.\*\*"),
         ("Scenarios", r"^\*\*Scenarios\.\*\*"),
-        ("Measures", r"^\*\*Measures\b")],
+        ("Measures", r"^\*\*Measures\b"),
+        ("reference to the project glossary", r"\]\(glossary\.md\)")],
 }
 BANNED = {1: ["Behaviour", "Behavior", "Design", "Slices"]}
 

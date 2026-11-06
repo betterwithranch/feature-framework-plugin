@@ -1,6 +1,6 @@
 # Outcome review: Clarity
 
-Rows: each requirement, each glossary entry, the scenario preamble, each scenario and each measure. Read each with the glossary and the rest of the document. For rule 5, use the absolute terms `skills/write-outcome/scripts/absolutes.py` lists.
+Rows: each requirement, the scenario preamble, each scenario and each measure. Read each with the project's glossary, which the document refers to, and the rest of the document. For rule 5, use the absolute terms `skills/write-outcome/scripts/absolutes.py` lists.
 
 1. A reader can tell what result the user gets from the statement, read with the glossary and the rest of the document. It fails only when no reader could tell the result, not when two readers would narrow it differently.
 2. The statement uses each term with the meaning the glossary gives it.

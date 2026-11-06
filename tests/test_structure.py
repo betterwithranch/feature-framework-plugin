@@ -9,6 +9,8 @@ spec.loader.exec_module(structure)
 
 DOC = """**For whom.** Someone.
 
+**Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
+
 **Requirements.**
 
 - **R1.** One.
@@ -32,6 +34,10 @@ class StructureTest(unittest.TestCase):
 
     def test_a_missing_section_fails(self) -> None:
         self.assertIn("missing section: Measures", structure.check(DOC.replace("**Measures**", "Measures"), 1))
+
+    def test_a_missing_glossary_reference_fails(self) -> None:
+        doc = DOC.replace("[glossary](glossary.md)", "glossary")
+        self.assertIn("missing section: reference to the project glossary", structure.check(doc, 1))
 
     def test_an_uncited_requirement_fails(self) -> None:
         doc = DOC.replace("Count of R2 failures", "Count of failures")

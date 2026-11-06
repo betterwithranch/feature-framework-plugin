@@ -1,6 +1,6 @@
 # Outcome review: Scope
 
-Rows: the "for whom" line, each requirement, each glossary entry, the scenario preamble, each scenario and each measure. Rule 1 applies only to the "for whom" row, rule 2 only to requirement rows, rule 3 only to scenario rows and rule 4 only to measure rows; every other cell in rules 1–4 is "n/a". Rules 5–8 apply to every row.
+Rows: the "for whom" line, each requirement, the scenario preamble, each scenario and each measure. Rule 1 applies only to the "for whom" row, rule 2 only to requirement rows, rule 3 only to scenario rows and rule 4 only to measure rows; every other cell in rules 1–4 is "n/a". Rules 5–8 apply to every row.
 
 1. The document says who the feature is for.
 2. Each requirement is a result the user can observe.

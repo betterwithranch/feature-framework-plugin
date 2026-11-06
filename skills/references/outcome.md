@@ -14,7 +14,7 @@ An Outcome contains:
 - Its requirements: what it achieves, as results the user can observe.
 - End-to-end scenarios, each with an automated verification and a pass bar. No verification needs a person. A pass bar that applies to every scenario, such as how many runs must pass, is stated once.
 - How success is measured on real use, each measure with a target.
-- A glossary of the terms it defines.
+- A reference to the project's glossary, which defines its terms.
 
 Every requirement, scenario and measure carries a visible ID (R1, S1, M1), stable once approved. Each line states one requirement.
 

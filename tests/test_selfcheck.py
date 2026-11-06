@@ -11,6 +11,8 @@ DOC = """# Outcome
 
 **For whom.** Someone.
 
+**Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
+
 **Requirements.**
 
 - **R1.** First result.
