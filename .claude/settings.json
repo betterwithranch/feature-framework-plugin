@@ -7,10 +7,6 @@
           {
             "type": "command",
             "command": "cat \"$CLAUDE_PROJECT_DIR/hooks/prompts/goals.md\""
-          },
-          {
-            "type": "command",
-            "command": "git -C \"$CLAUDE_PROJECT_DIR\" config core.hooksPath hooks/git"
           }
         ]
       }
@@ -32,6 +28,18 @@
             "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/stop.py\" claude",
             "timeout": 120
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/selfcheck.py\"",
+            "timeout": 30
           }
         ]
       }

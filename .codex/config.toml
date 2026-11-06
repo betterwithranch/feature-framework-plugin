@@ -9,10 +9,6 @@ type = "command"
 command = 'cat "$(git rev-parse --show-toplevel)/hooks/prompts/goals.md"'
 additionalContextLimit = 0
 
-[[hooks.SessionStart.hooks]]
-type = "command"
-command = 'git -C "$(git rev-parse --show-toplevel)" config core.hooksPath hooks/git'
-
 [[hooks.UserPromptSubmit]]
 
 [[hooks.UserPromptSubmit.hooks]]
@@ -26,3 +22,11 @@ additionalContextLimit = 0
 type = "command"
 command = 'python3 "$(git rev-parse --show-toplevel)/hooks/stop.py" codex'
 timeout = 120
+
+[[hooks.PreToolUse]]
+matcher = "^Bash$"
+
+[[hooks.PreToolUse.hooks]]
+type = "command"
+command = 'python3 "$(git rev-parse --show-toplevel)/hooks/selfcheck.py"'
+timeout = 30
