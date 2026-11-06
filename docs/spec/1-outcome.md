@@ -88,7 +88,8 @@
 - **M9.** *Statements in a level document that the user didn't say or agree and that aren't marked as the work's (R18): target zero.*
 - **M10.** *Found facts in approved levels that are wrong (R21): target zero.*
 - **M11.** *Clashing words left with two meanings in an approved level (R24): target zero.*
-- **M12.** *Approved levels later changed because the work read the user wrong: target zero.*
+- **M12.** *Approved levels later changed because the work read the user wrong (R6 R8 R10): target zero.*
 - **M13.** *The user's decisions that the work made instead (R32): target zero.*
 - **M14.** *Questions asking the user to make one of the work's decisions (R15): target zero.*
 - **M15.** *The work's decisions that aren't recorded where the user can see them, or that became a codified rule (R33 R36): target zero.*
+- **M16.** Times the user is asked after code starts because of a decision no one made: counted for each feature as planning misses. It's not a pass bar.
