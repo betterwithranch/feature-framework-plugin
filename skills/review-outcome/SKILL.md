@@ -1,34 +1,25 @@
 ---
 name: review-outcome
-description: Reviews a feature's Outcome document on its own and reports findings that would change what gets built. Use at the Outcome gate, given only the Outcome document.
+description: Reviews a feature's Outcome document by running its structure checks and its four rule-based reviews, each as an isolated judge, and merges their grids. Use at the Outcome gate.
 ---
 
 # Review an Outcome
 
-Read [the Outcome definition](../references/outcome.md). Review the Outcome document you are given against it, on its own, as the reader the definition names would read it. Do not judge whether it matches any discussion or context that produced it.
+Read [the Outcome definition](../references/outcome.md). It names the structure checks and the four reviews.
 
 ## Method
 
-Before judging, list for yourself every requirement, scenario and measure, and map each requirement to the scenarios whose verification would fail without it. Then judge the document against each of the definition's six criteria.
-
-## Findings
-
-- A finding names the criterion it fails and quotes the document.
-- A point the definition leaves to a later level is not a finding.
-- A finding that a statement reads two ways shows that the rest of the document, its glossary, its other requirements and the scenarios that verify it, doesn't settle the reading.
-- Wording that doesn't change what the user gets is not a finding.
-- Drop anything the quoted text doesn't show: perfection is the enemy of done. For criteria 4 and 5, the text shows a finding when a requirement has no verification that fails if it isn't met, or when a verification's own words, built faithfully, would misjudge the result. A verification that tests implementation instead of the behaviour the user observes is a finding. A verification that could be built badly is not.
-- Impact is high if the user might not get the intended result, and medium if only a verification or measure is affected.
-
-Do not propose answers, rewrite the document, comment on wording or style, or list open questions.
-
-## Rounds
-
-A round starts with one run of this review. When it reports no findings, two more run independently, and the round passes when all three report none. When the first run reports findings, the round ends there and the findings are fixed before the next round.
+1. Run `skills/write-outcome/scripts/structure.py <document>`. Report any failure it prints.
+2. Run `skills/write-outcome/scripts/absolutes.py <document>` and keep its output for the Clarity judge.
+3. Run each of the four reviews as its own isolated judge, in parallel. Give each judge only the document, its own rule file and what that file says to read: the Clarity judge also gets the absolutes output; the Provenance judge also gets the conversation, the decision log and the codified rules. A judge sees no other judge's rules or output.
+4. Merge the four grids into one, keeping every cell.
 
 ## Output
 
-- Trace map: each requirement to its scenarios, one line each.
-- Criteria 1-6: PASS or FINDINGS for each.
-- Findings: id, criterion, quoted evidence, what it changes, impact.
-- Dropped: one line each, with the reason.
+- Structure: the script's failures, or "pass".
+- The merged grid: every row against every rule of every review, PASS, FAIL with its quote, or n/a.
+- The FAIL cells, listed with review, rule, row and quote.
+
+## Rounds
+
+A round starts with one review. When every cell passes, two more run independently, and the round passes when all three pass. When the first review has a FAIL, the round ends there and the failures are fixed before the next round.

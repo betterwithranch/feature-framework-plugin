@@ -9,22 +9,24 @@ SCRIPT = Path(__file__).resolve().parent.parent / "hooks" / "selfcheck.py"
 
 DOC = """# Outcome
 
+**For whom.** Someone.
+
 **Requirements.**
 
 - **R1.** First result.
 - **R2.** Second result.
 
-| ID | Scenario | Passes when |
-| --- | --- | --- |
-| S1 | a | b |
-| S2 | c | d |
+**Scenarios.**
 
-**Measures.**
+| ID | Scenario | Passes when | Verifies |
+| --- | --- | --- | --- |
+| S1 | a | b | R1 |
+| S2 | c | d | R2 |
+
+**Measures**, on real use:
 
 - **M1.** A measure: target zero.
 """
-
-FULL = "R1 R2 S1 S2 M1\n"
 
 
 class SelfCheckHookTest(unittest.TestCase):
@@ -50,11 +52,6 @@ class SelfCheckHookTest(unittest.TestCase):
         self.git("add", "docs/spec/1-outcome.md")
         return self.git("rev-parse", ":docs/spec/1-outcome.md").strip()
 
-    def write_table(self, blob: str, text: str) -> None:
-        tables = self.repo / ".git" / "ff-selfcheck"
-        tables.mkdir(exist_ok=True)
-        (tables / f"{blob}.md").write_text(text)
-
     def hook(self, command: str, tool: str = "Bash") -> dict[str, object] | None:
         payload = {
             "hook_event_name": "PreToolUse",
@@ -77,22 +74,18 @@ class SelfCheckHookTest(unittest.TestCase):
         self.assertEqual(decision["permissionDecision"], "deny")
         self.assertIn(text, decision["permissionDecisionReason"])
 
-    def test_denies_commit_without_table(self) -> None:
+    def test_allows_a_document_that_passes(self) -> None:
         self.stage_doc()
-        self.assert_denied(self.hook('git commit -m "x"'), "no self-check table")
-
-    def test_denies_commit_when_an_id_is_missing(self) -> None:
-        self.write_table(self.stage_doc(), "R1 R2 S1 M1\n")
-        self.assert_denied(self.hook("git -C . commit -qm x"), "S2")
-
-    def test_allows_commit_with_full_table(self) -> None:
-        self.write_table(self.stage_doc(), FULL)
         self.assertIsNone(self.hook('git add -A && git commit -m "x"'))
 
-    def test_table_for_an_older_version_does_not_count(self) -> None:
-        self.write_table(self.stage_doc(), FULL)
-        (self.repo / "docs" / "spec" / "1-outcome.md").write_text(DOC + "\nMore.\n")
-        self.assert_denied(self.hook("git commit -am x"), "no self-check table")
+    def test_denies_an_uncited_requirement(self) -> None:
+        self.stage_doc(DOC.replace("| R2 |", "| |"))
+        self.assert_denied(self.hook("git -C . commit -qm x"), "R2 is cited by no scenario or measure")
+
+    def test_checks_the_working_tree_version_too(self) -> None:
+        self.stage_doc()
+        (self.repo / "docs" / "spec" / "1-outcome.md").write_text(DOC + "\nDesign it later.\n")
+        self.assert_denied(self.hook("git commit -am x"), "banned term")
 
     def test_commit_outside_docs_spec_passes(self) -> None:
         (self.repo / "README.md").write_text("changed\n")
@@ -100,12 +93,12 @@ class SelfCheckHookTest(unittest.TestCase):
         self.assertIsNone(self.hook("git commit -m x"))
 
     def test_command_that_is_not_a_commit_passes_untouched(self) -> None:
-        self.stage_doc()
+        self.stage_doc(DOC.replace("| R2 |", "| |"))
         self.assertIsNone(self.hook("git status && git log --grep commit"))
         self.assertIsNone(self.hook("git commit-tree HEAD^{tree}"))
 
     def test_other_tools_pass_untouched(self) -> None:
-        self.stage_doc()
+        self.stage_doc(DOC.replace("| R2 |", "| |"))
         self.assertIsNone(self.hook("git commit -m x", tool="apply_patch"))
 
 

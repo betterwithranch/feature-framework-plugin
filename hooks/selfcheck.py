@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-"""PreToolUse hook: deny an agent's git commit of a level document without a full self-check.
+"""PreToolUse hook: deny an agent's git commit of a level document that fails its structure checks.
 
 Runs under Claude Code and Codex. Both send one JSON object on stdin with
 tool_name "Bash" and the shell command in tool_input.command. The hook acts
-only when that command runs `git commit`. For each docs/spec/*.md whose staged
-or working-tree version differs from HEAD, a self-check table must exist at
-<git dir>/ff-selfcheck/<blob hash of that version>.md and name every
-requirement, scenario and measure ID (R<n>, S<n>, M<n>) printed in it.
+only when that command runs `git commit`. Each level document
+(docs/spec/<level>-*.md) whose staged or working-tree version differs from HEAD
+must pass skills/write-outcome/scripts/structure.py.
 """
+import importlib.util
 import json
+import os
 import re
 import subprocess
 import sys
+
+STRUCTURE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "skills", "write-outcome", "scripts", "structure.py")
+_spec = importlib.util.spec_from_file_location("structure", STRUCTURE)
+structure = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(structure)
 
 COMMIT = re.compile(r"(?:^|[\s;&|(])git(?:\s+-[^\s]+(?:\s+[^\s-][^\s]*)?)*\s+commit(?![\w-])")
 
@@ -22,16 +28,11 @@ def git(cwd: str, *args: str, stdin: str | None = None) -> str:
     ).stdout
 
 
-def ids(doc: str) -> list[str]:
-    """The printed IDs: a bullet or table row that starts with R<n>, S<n> or M<n>."""
-    return re.findall(r"^(?:-\s+(?:\*\*)?|\|\s*)([RSM]\d+)\b", doc, flags=re.M)
-
-
 def versions(cwd: str) -> list[tuple[str, str, str]]:
     """(path, blob, content) for each changed version of a level document."""
     out = []
-    changed = git(cwd, "diff", "HEAD", "--name-only", "--", "docs/spec/*.md").split()
-    changed += git(cwd, "diff", "--cached", "--name-only", "--diff-filter=ACMR", "--", "docs/spec/*.md").split()
+    changed = git(cwd, "diff", "HEAD", "--name-only", "--", "docs/spec/[0-9]*-*.md").split()
+    changed += git(cwd, "diff", "--cached", "--name-only", "--diff-filter=ACMR", "--", "docs/spec/[0-9]*-*.md").split()
     for path in sorted(set(changed)):
         seen = set()
         staged = subprocess.run(["git", "show", f":{path}"], cwd=cwd, capture_output=True, text=True)
@@ -56,22 +57,10 @@ def versions(cwd: str) -> list[tuple[str, str, str]]:
 
 def problems(cwd: str) -> list[str]:
     root = git(cwd, "rev-parse", "--show-toplevel").strip()
-    tables = git(root, "rev-parse", "--absolute-git-dir").strip() + "/ff-selfcheck"
     found = []
-    for path, blob, content in versions(root):
-        table_path = f"{tables}/{blob}.md"
-        try:
-            with open(table_path, encoding="utf-8") as f:
-                table = f.read()
-        except FileNotFoundError:
-            found.append(
-                f"{path}: no self-check table for this version. Run write-outcome's full "
-                f"self-check on the whole document and write it to {table_path}."
-            )
-            continue
-        missing = [i for i in ids(content) if not re.search(rf"\b{i}\b", table)]
-        if missing:
-            found.append(f"{path}: the self-check table {table_path} doesn't cover: {', '.join(missing)}.")
+    for path, _blob, content in versions(root):
+        for failure in structure.check(content, structure.level_of(path)):
+            found.append(f"{path}: {failure}")
     return found
 
 
@@ -89,7 +78,7 @@ def main() -> int:
     except subprocess.CalledProcessError:
         return 0
     if found:
-        reason = "Commit blocked: a level document changed without a full self-check.\n" + "\n".join(
+        reason = "Commit blocked: a level document fails its structure checks.\n" + "\n".join(
             f"- {p}" for p in found
         )
         print(json.dumps({"hookSpecificOutput": {

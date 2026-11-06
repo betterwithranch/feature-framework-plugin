@@ -5,8 +5,7 @@ Usage: absolutes.py <document.md>
 
 Prints one tab-separated line per absolute: ID (R<n>, S<n>, M<n>, or
 "glossary: <term>", or "preamble"), the term, and the sentence it sits in.
-The terms are the definition's absolute terms (skills/references/outcome.md,
-criterion 6) and words that say the same.
+The terms are the absolute terms the decision log lists and words that say the same.
 """
 import re
 import sys
