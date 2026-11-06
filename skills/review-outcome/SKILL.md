@@ -5,7 +5,7 @@ description: Review a feature's Outcome document on its own and report findings 
 
 # Review an Outcome
 
-Read [the Outcome definition](../references/outcome.md). Review the Outcome document you are given against it, on its own. Do not judge whether it matches any discussion or context that produced it.
+Read [the Outcome definition](../references/outcome.md). Review the Outcome document you are given against it, on its own, as the reader the definition names would read it. Do not judge whether it matches any discussion or context that produced it.
 
 ## Method
 

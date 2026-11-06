@@ -2,6 +2,10 @@
 
 An Outcome states what the user gets and how success is judged. It is the first planning level of a feature.
 
+## Reader
+
+An Outcome is written for those who build from it: the agents doing later levels, whoever turns its scenarios into tests, and maintainers. The user approves that same document. It is written in a neutral voice, naming "the user", not "you".
+
 ## Contents
 
 An Outcome contains:
@@ -10,6 +14,9 @@ An Outcome contains:
 - Its requirements: what it achieves, as results the user can observe.
 - End-to-end scenarios, each with an automated verification and a pass bar. No verification needs a person. A pass bar that applies to every scenario, such as how many runs must pass, is stated once.
 - How success is measured on real use, each measure with a target.
+- A glossary of the terms it defines.
+
+Every requirement, scenario and measure carries a visible ID (R1, S1, M1), stable once approved. Each line states one requirement.
 
 An Outcome does not contain non-goals, behaviour rules, edge cases, design decisions, implementation, a slicing plan, where anything lives, or how tests are built.
 
@@ -23,7 +30,7 @@ An Outcome leaves room for interpretation; later levels narrow it. A point that 
 
 A sound Outcome meets all six.
 
-1. Complete. Every required element is present.
+1. Complete. Every required element is present, in the form the contents set.
 2. Nothing extra. Nothing is present that the Outcome isn't responsible for.
 3. Clear. For every statement, a reader knows what result the user is meant to get.
 4. Traceable. Every requirement is covered by a verification that fails if the requirement isn't met. How verifications are split, grouped or structured, such as one per listed item or one per level, person or feature, is for a later level; asking for a different structure is not a finding. Every scenario and measure verifies a requirement. An allowance, something a requirement permits but does not require, needs no scenario of its own. A requirement allows whatever its words don't rule out.

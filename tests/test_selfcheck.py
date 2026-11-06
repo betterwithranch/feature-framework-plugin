@@ -9,19 +9,19 @@ SCRIPT = Path(__file__).resolve().parent.parent / "hooks" / "selfcheck.py"
 
 DOC = """# Outcome
 
-**Achieves.**
+**Requirements.**
 
-- First result.
-- Second result.
+- **R1.** First result.
+- **R2.** Second result.
 
-| # | Scenario | Passes when |
+| ID | Scenario | Passes when |
 | --- | --- | --- |
-| 1 | a | b |
-| 2 | c | d |
+| S1 | a | b |
+| S2 | c | d |
 
-**Measured on real features**:
+**Measures.**
 
-- A measure: target zero.
+- **M1.** A measure: target zero.
 """
 
 FULL = "R1 R2 S1 S2 M1\n"

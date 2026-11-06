@@ -9,6 +9,7 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 
 ## Rules
 
+- Write for the reader the definition names, in the form its contents set.
 - State what the user gets. Leave exactly what counts, and how it works, to later levels.
 - Be simple and to the point. Use short sentences and say only what the reader needs to know what result is asked for.
 - An absolute term, such as every, never, only, always, all, none, any or anything, means no exceptions. If a requirement has exceptions, write it in non-absolute terms.
@@ -18,7 +19,7 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 
 ## Self-check before review
 
-Run every step on the whole document and write the result as a table, one row per item checked. Name requirements, scenarios and measures as R1, S1 and M1, numbered in document order.
+Run every step on the whole document and write the result as a table, one row per item checked. Name requirements, scenarios and measures by their IDs.
 
 1. Vocabulary. List every concept and confirm each has one term.
 2. Complete (criterion 1). Confirm each element of the definition's contents is present.

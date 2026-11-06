@@ -6,7 +6,7 @@ tool_name "Bash" and the shell command in tool_input.command. The hook acts
 only when that command runs `git commit`. For each docs/spec/*.md whose staged
 or working-tree version differs from HEAD, a self-check table must exist at
 <git dir>/ff-selfcheck/<blob hash of that version>.md and name every
-requirement (R<n>), scenario (S<n>) and measure (M<n>) in it.
+requirement, scenario and measure ID (R<n>, S<n>, M<n>) printed in it.
 """
 import json
 import re
@@ -23,26 +23,8 @@ def git(cwd: str, *args: str, stdin: str | None = None) -> str:
 
 
 def ids(doc: str) -> list[str]:
-    found: list[str] = []
-    section = None
-    count = {"R": 0, "M": 0}
-    for line in doc.splitlines():
-        if line.startswith("**Achieves"):
-            section = "R"
-            continue
-        if line.startswith("**Measured"):
-            section = "M"
-            continue
-        if section and line.startswith("- "):
-            count[section] += 1
-            found.append(f"{section}{count[section]}")
-            continue
-        if section and line.strip():
-            section = None
-        row = re.match(r"^\|\s*(\d+)\s*\|", line)
-        if row:
-            found.append(f"S{row.group(1)}")
-    return found
+    """The printed IDs: a bullet or table row that starts with R<n>, S<n> or M<n>."""
+    return re.findall(r"^(?:-\s+(?:\*\*)?|\|\s*)([RSM]\d+)\b", doc, flags=re.M)
 
 
 def versions(cwd: str) -> list[tuple[str, str, str]]:

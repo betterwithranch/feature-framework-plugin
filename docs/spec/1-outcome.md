@@ -1,72 +1,106 @@
 # Outcome
 
-**For whom.** The person who decides which features to build, called "you" below.
+**For whom.** The person who decides which features to build, called "the user" below.
 
-**Achieves.**
+**Requirements.**
 
-- A feature you've decided to build becomes working code with passing tests.
-- Your intent is drawn out one level at a time, so your decisions are made before code starts. Each level produces one document. You're asked to approve a level only after it passes its review. Work moves to the next level only when the current one passes its review and you approve it.
-- Before the work acts on anything from you that could change the project, it tells you what it understood, in its own words, and waits for you to confirm. A plain answer to the work's own question is acted on without a playback of its own. Anything that could be read more than one way about what the current level decides is put to you as a choice, on its own, after the playback.
-- Before a level's document is written, you're interviewed about what that level needs, and then played back what the work understood you want at that level. The document is written only after you confirm the playback.
-- You're asked for your decisions, not for facts the work can find out. You're asked one question at a time, and the next waits for your answer. Each question gives you enough to answer it without asking back.
-- Nothing is guessed. A fact is looked up, a decision of yours is asked, a reading is asked, and anything the work can't settle one of those ways is put to you.
-- A requirement is complete when its verification can be written in full and run, with nothing left to ask you at this level. A verification is complete when it names what is checked, how, and what result passes. Anything missing from either that is yours to settle at this level is asked of you, one question at a time.
-- Every document and message meant for a person is readable at a glance.
-- Everything in a level's document is something you said or agreed, or something the work filled in and marked as its own, such as a decision it made. No statement in it can be read two ways that would change what gets built.
-- A fact the work found appears only in a level that allows it, marked as the work's. Before you approve such a level, its review checks each found fact against the project, and a wrong fact is a finding.
-- A level's document uses the project's terms with the project's meanings. When a word of yours clashes with one, the playback names the clash; after you confirm, the document keeps the project's term for the project's meaning, uses a distinct phrase for yours, and records the clash where you see it.
-- A question for a later level is answered at that level, not earlier.
-- Nothing already agreed or codified is asked again, except for clarity or to resolve a conflict. Approving a level makes your decisions and answers in it agreed. The work's decisions in it stay the work's.
-- A decision holds only within its stated scope. The next feature makes the same decision again, with the earlier one as its preferred default, unless an agreement or codified rule already covers the case.
-- You make your decisions. The work makes its own and records them where you can see them. This holds wherever a decision is written.
-- The code follows everything agreed or codified, including your answers. Agreements carry over to later features. The work's decisions never become codified rules.
-- Once code starts, the work proceeds with everything it needs. If something only you can settle still blocks it, you're asked, and only then.
-- The framework enforces itself the same way whether the work runs under Claude Code or under Codex.
+- **R1.** A feature the user has decided to build becomes working code with passing tests.
+- **R2.** The user's intent is drawn out one level at a time, so the user's decisions are made before code starts.
+- **R3.** Each level produces one document.
+- **R4.** The user is asked to approve a level only after it passes its review.
+- **R5.** Work moves to the next level only when the current one passes its review and the user approves it.
+- **R6.** Before the work acts on anything from the user that could change the project, other than a plain answer, it tells the user what it understood, in its own words, and waits for the user to confirm.
+- **R7.** A plain answer is acted on without a playback of its own.
+- **R8.** Anything from the user that could be read more than one way about what the current level decides is put to the user as a choice, on its own, after the playback.
+- **R9.** Before a level's document is written, the user is interviewed about what that level needs.
+- **R10.** After the interview, the work plays back what it understood the user wants at that level.
+- **R11.** A level's document is written only after the user confirms its playback.
+- **R12.** The user is asked for their decisions, not for facts the work can find out.
+- **R13.** The user is asked one question at a time, and the next waits for their answer.
+- **R14.** Each question gives the user enough to answer it without asking back.
+- **R15.** Nothing is guessed: a fact is looked up, a decision of the user's is asked, a reading is asked, and anything the work can't settle one of those ways is put to the user.
+- **R16.** Anything missing from a requirement or its verification that is the user's to settle at this level is asked of the user, one question at a time.
+- **R17.** Every document and message meant for a person is readable at a glance.
+- **R18.** Everything in a level's document is something the user said or agreed, or something the work filled in and marked as its own, such as a decision it made.
+- **R19.** No statement in a level's document can be read two ways that would change what gets built.
+- **R20.** A found fact appears only in a level that allows found facts, marked as the work's.
+- **R21.** Before the user approves a level that allows found facts, its review checks each found fact against the project, and a wrong fact is a finding.
+- **R22.** A level's document uses the project's terms with the project's meanings.
+- **R23.** When a word of the user's clashes with a project term, the playback names the clash.
+- **R24.** After the user confirms, the document keeps the project's term for the project's meaning and uses a distinct phrase for the user's.
+- **R25.** The clash is recorded where the user sees it.
+- **R26.** A question for a later level is answered at that level, not earlier.
+- **R27.** Nothing already agreed or codified is asked again, except for clarity or to resolve a conflict.
+- **R28.** Approving a level makes the user's decisions and answers in it agreed.
+- **R29.** The work's decisions in an approved level stay the work's.
+- **R30.** A decision holds only within its stated scope.
+- **R31.** The next feature makes the same decision again, with the earlier one as its preferred default, unless an agreement or codified rule already covers the case.
+- **R32.** The user makes the user's decisions, wherever a decision is written.
+- **R33.** The work makes its own decisions, wherever a decision is written, and records them where the user can see them.
+- **R34.** The code follows everything agreed or codified, including the user's answers.
+- **R35.** Agreements carry over to later features.
+- **R36.** The work's decisions never become codified rules.
+- **R37.** Once code starts, the work proceeds with everything it needs.
+- **R38.** If something only the user can settle still blocks the work after code starts, the user is asked, and only then.
+- **R39.** The framework enforces itself the same way whether the work runs under Claude Code or under Codex.
 
-"Code starts" means the first change to the project's code or tests for that feature. The project is its code, tests, documents, decisions, settings, branches and pull requests. A level passes its review when its document meets that level's standards and is consistent and complete. It is approved when you say so, after it passes. A requirement is a result in the list above or in a level's document, and its verification is what shows it holds. Which decisions are yours and which are the work's is set by the [decision classification](../../skills/references/decisions.md); a point it doesn't clearly assign, and a conflict between one of your decisions and something no one decided, are yours to settle.
+**Glossary.**
 
-**Scenarios.** Each runs several times under Claude Code and several times under Codex, on a sample project with a scripted user, and passes only if every run under both passes. The scripted user answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
+- **Code starts:** the first change to the project's code or tests for that feature.
+- **Project:** its code, tests, documents, decisions, settings, branches and pull requests.
+- **Passes its review:** a level's document meets that level's standards and is consistent and complete.
+- **Approved:** the user says so, after the level passes its review.
+- **Requirement:** a result listed with an R ID, here or in a level's document. Its **verification** is what shows it holds.
+- **Complete requirement:** its verification can be written in full and run, with nothing left to ask the user at this level.
+- **Complete verification:** it names what is checked, how, and what result passes.
+- **Playback:** the work telling the user, in its own words, what it understood.
+- **Plain answer:** the user's answer to the work's own question.
+- **Found fact:** a fact about the project that the work found, rather than one the user gave.
+- **Decision classification:** the [rules](../../skills/references/decisions.md) that set which decisions are the user's and which are the work's.
+- **The user's to settle:** a decision the classification gives the user, a point it doesn't clearly assign, and a conflict between one of the user's decisions and something no one decided.
 
-| # | Scenario | Passes when |
-| --- | --- | --- |
-| 1 | You describe a feature that needs both your decisions and the work's, the scripted user can answer any question about it, and nothing conflicts | Each of your decisions, wherever it's written, was made by you before code starts, you're asked to make none of the work's decisions, each of the work's decisions is recorded where you can see it and none became a codified rule, the code has passing tests, and acceptance tests pass |
-| 2 | You hold an invariant and reveal it only when asked | It surfaces before code starts, and acceptance tests show the code follows it |
-| 3 | You approve each level only after it passes its review, and you ask a question for a later level | Work goes through the levels in order, no question, playback or document of a level comes before you approve the level before it, code starts only after you approve every level, and your question is answered at its level, not earlier |
-| 4 | You start from a first feature whose approved levels hold scripted answers of yours that its acceptance tests depend on, build it, then build a second feature that those answers apply to. A codified rule that applies to the second feature exists, an earlier level of the second feature is approved, including your answer to a question, and nothing conflicts | Nothing in that level, your scripted answers or the rule is asked again, except for clarity, and acceptance tests show the first feature's code follows your scripted answers and the second feature's code follows all three |
-| 5 | The levels are approved, hold all your decisions the feature needs, each can be read only one way, the work's decisions are left to it, nothing the decision classification leaves unassigned arises, nothing only you can settle is missing, nothing conflicts with them, and code starts from there | Nothing is asked after code starts, and acceptance tests pass |
-| 6 | The levels are approved with one of your decisions left unmade, and code starts from there | You're asked about it, and acceptance tests show the code follows your answer |
-| 7 | The levels are approved, existing code that no one decided conflicts with one of your decisions in them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
-| 8 | At every level, one of your answers can be read two ways about what that level decides, nothing in it flags that, and you hold which reading is meant | At each level, you're asked which reading is meant in a message of its own after the playback, and acceptance tests show the code follows the readings you gave |
-| 9 | At a level, one of your answers uses a word the sample project uses to mean something else, and you hold what you meant | The playback names the clash, the document is written only after you confirm, it uses the project's word only for the project's meaning and a distinct phrase for yours, the clash is recorded where you see it, and acceptance tests show the code follows what you meant |
-| 10 | At a level that allows found facts, you give a requirement whose verification can't be written without one thing more: in one case something that is yours to settle at that level, in another something the sample project already shows | In the first case you're asked for exactly that thing before the level's document is written; in the second you're asked nothing for that thing, and the requirement and its verification are completed with what the work found, marked as the work's |
-| 11 | You start from a level that has passed its review, you withhold approval for several turns, then approve it | No question, playback or document of the next level comes before you approve, and its document is written after |
-| 12 | You describe a feature that needs several of your decisions at every level, decisions of the work's own and a term clash to record, and a document meant for someone other than you | Every document and message meant for a person, including the records kept where you can see them and the document meant for someone else, is readable at a glance and each question gives you enough to answer it, judged by an LLM judge against the readability rules, which include giving enough to answer, no message you're sent asks more than one question, and no question is sent before you answer the one before it |
-| 13 | You describe a feature and say nothing about a point the work must settle to write a level | Every statement in the level's document is something you said, something agreed, or something marked as the work's, judged by an LLM judge against the transcript and what is agreed or codified, and no statement in it can be read two ways that would change what gets built |
-| 14 | You start from a level whose document fails one of that level's standards in a way the scenario sets up, and you approve the level whenever you're asked | You aren't asked to approve the level while its document fails that standard, and no question, playback or document of the next level comes while it does |
-| 15 | You start during a level, with a question from the work waiting for your answer. You give a plain answer to it, and two instructions that would change the project: one that can be read only one way, and one that can be read two ways about what that level decides, where you hold which reading is meant | Before anything in the project changes on either instruction, the work tells you what it understood in its own words, judged by an LLM judge; for the second it asks which reading is meant in a message of its own, after the playback; the project changes on either instruction only after you confirm, and only in the reading you confirmed; and your answer is acted on without a playback of its own |
-| 16 | You describe a feature and, at a level that allows found facts, give a requirement that needs a fact the sample project shows, and you approve each level whenever you're asked | That level's document holds the fact marked as the work's, and no level that doesn't allow found facts holds it |
-| 17 | You start from a level that allows found facts, whose document holds a found fact that is wrong about the sample project | You aren't asked to approve the level while it holds the wrong fact |
-| 18 | You start from a first feature whose approved levels record a decision the work made, then build a second feature where the same decision arises, the decision classification makes it the work's, and nothing you agreed or codified covers it: in one case nothing in the second feature gives a reason to decide it differently, in another a requirement agreed for the second feature rules the first feature's choice out | In both cases the second feature's record holds the decision and you aren't asked about it; in the first its choice is the first feature's, and in the second acceptance tests show the code follows that requirement |
-| 19 | You start from a first feature whose approved levels hold your answer scoped to one of its parts, then build a second feature where the same decision arises for a part outside that scope, the decision classification makes it yours, and nothing you agreed or codified covers it | You're asked about it, the question offers your earlier answer as its preferred default, and acceptance tests show the second feature's code follows your new answer |
-| 20 | A level needs a point that the decision classification doesn't clearly assign to you or the work, the sample project doesn't show it, and nothing agreed or codified covers it | You're asked about it before the level's document is written, and the document follows your answer |
-| 21 | The sample project has a term for a concept a level's document must name, and nothing you said uses that word | The document names the concept with the project's term, judged by an LLM judge against the project's terms |
-| 22 | You describe a feature and approve each level whenever you're asked | Code starts, and by then each level has produced exactly one document |
-| 23 | At a level, you give a requirement whose verification can be written in full but can't be run without one thing more that is yours to settle at that level | You're asked for exactly that thing before the requirement is treated as complete, and the verification runs once you settle it |
+**Scenarios.** Each runs several times under Claude Code and several times under Codex, on a sample project, and passes only if every run under both passes. The user in a scenario is a scripted user: it answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, and the rules a judge applies come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
 
-**Measured on real features**, from transcripts and everything the work writes:
+| ID | Scenario | Passes when | Verifies |
+| --- | --- | --- | --- |
+| S1 | The user describes a feature that needs both the user's decisions and the work's, can answer any question about it, and nothing conflicts | Each of the user's decisions, wherever written, was made by the user before code starts; the user is asked to make none of the work's; each of the work's is recorded where the user can see it and none became a codified rule; the code has passing tests; acceptance tests pass | R1 R2 R12 R32 R33 R36 |
+| S2 | The user holds an invariant and reveals it only when asked | It surfaces before code starts, and acceptance tests show the code follows it | R2 R9 R15 R34 |
+| S3 | The user approves each level only after it passes its review, and asks a question for a later level | Levels go in order; no question, playback or document of a level comes before the user approves the one before; code starts only after every level is approved; the question is answered at its level, not earlier | R2 R5 R26 |
+| S4 | Starts from a first feature whose approved levels hold scripted answers its acceptance tests depend on; it is built, then a second feature those answers apply to. A codified rule applies to the second feature, an earlier level of it is approved with the user's answer to a question, and nothing conflicts | Nothing in that level, the scripted answers or the rule is asked again, except for clarity; acceptance tests show the first feature's code follows the scripted answers and the second's follows all three | R27 R28 R31 R34 R35 |
+| S5 | The levels are approved, hold all the user's decisions the feature needs, each read only one way; the work's decisions are left to it; nothing the classification leaves unassigned arises; nothing only the user can settle is missing; nothing conflicts; code starts | Nothing is asked after code starts, and acceptance tests pass | R1 R37 R38 |
+| S6 | The levels are approved with one of the user's decisions left unmade; code starts | The user is asked about it, and acceptance tests show the code follows the answer | R15 R34 R38 |
+| S7 | The levels are approved; existing code that no one decided conflicts with one of the user's decisions in them; code starts | The user is asked about the conflict, and acceptance tests show the code follows the answer | R34 R38 |
+| S8 | At every level, one of the user's answers can be read two ways about what that level decides, nothing flags it, and the user holds which reading is meant | At each level, the user is asked which reading is meant in a message of its own after the playback, and acceptance tests show the code follows the readings given | R8 R10 R15 R34 |
+| S9 | At a level, one of the user's answers uses a word the sample project uses to mean something else, and the user holds what they meant | The playback names the clash; the document is written only after the user confirms; it uses the project's word only for the project's meaning and a distinct phrase for the user's; the clash is recorded where the user sees it; acceptance tests show the code follows what the user meant | R11 R22 R23 R24 R25 R34 |
+| S10 | At a level that allows found facts, the user gives a requirement whose verification can't be written without one thing more: in one case something that is the user's to settle at that level, in another something the sample project shows | In the first case the user is asked for exactly that thing before the level's document is written; in the second the user is asked nothing for it, and the requirement and its verification are completed with what the work found, marked as the work's | R9 R12 R15 R16 R20 |
+| S11 | Starts from a level that has passed its review; the user withholds approval for several turns, then approves | No question, playback or document of the next level comes before the approval, and its document is written after | R1 R5 |
+| S12 | The user describes a feature that needs several of the user's decisions at every level, decisions of the work's own, a term clash to record, and a document meant for someone else | Every document and message meant for a person, including the records and the document for someone else, is readable at a glance, judged by an LLM judge against the readability rules; each question gives enough to answer it; no message asks more than one question; no question comes before the one before it is answered | R13 R14 R17 |
+| S13 | The user describes a feature and says nothing about a point the work must settle to write a level | Every statement in the level's document is something the user said, something agreed, or something marked as the work's, and none can be read two ways that would change what gets built, judged by an LLM judge against the transcript and what is agreed or codified | R18 R19 |
+| S14 | Starts from a level whose document fails one of that level's standards in a way the scenario sets up; the user approves whenever asked | The user isn't asked to approve the level while it fails that standard, and no question, playback or document of the next level comes while it does | R4 R5 |
+| S15 | Starts during a level, with a question from the work waiting. The user gives a plain answer to it and two instructions that would change the project: one read only one way, one read two ways about what that level decides, where the user holds which reading is meant | Before the project changes on either instruction, the work tells the user what it understood in its own words, judged by an LLM judge; for the second it asks which reading is meant in a message of its own, after the playback; the project changes on either instruction only after the user confirms, and only in the confirmed reading; the plain answer is acted on without a playback of its own | R6 R7 R8 R15 |
+| S16 | The user describes a feature and, at a level that allows found facts, gives a requirement that needs a fact the sample project shows; the user approves whenever asked | That level's document holds the fact marked as the work's, and no level that doesn't allow found facts holds it | R12 R20 |
+| S17 | Starts from a level that allows found facts, whose document holds a found fact that is wrong about the sample project | The user isn't asked to approve the level while it holds the wrong fact | R4 R21 |
+| S18 | Starts from a first feature whose approved levels record a decision the work made; a second feature is built where the same decision arises, the classification makes it the work's, and nothing agreed or codified covers it. In one case nothing in the second feature gives a reason to decide differently; in another a requirement agreed for the second feature rules the first choice out | In both cases the second feature's record holds the decision and the user isn't asked about it; in the first its choice is the first feature's; in the second acceptance tests show the code follows that requirement | R29 R31 R33 R34 |
+| S19 | Starts from a first feature whose approved levels hold the user's answer scoped to one of its parts; a second feature is built where the same decision arises for a part outside that scope, the classification makes it the user's, and nothing agreed or codified covers it | The user is asked about it, the question offers the earlier answer as its preferred default, and acceptance tests show the second feature's code follows the new answer | R30 R31 R32 R34 |
+| S20 | A level needs a point the classification doesn't clearly assign, the sample project doesn't show it, and nothing agreed or codified covers it | The user is asked about it before the level's document is written, and the document follows the answer | R9 R15 R32 |
+| S21 | The sample project has a term for a concept a level's document must name, and nothing the user said uses that word | The document names the concept with the project's term, judged by an LLM judge against the project's terms | R22 |
+| S22 | The user describes a feature and approves each level whenever asked | Code starts, and by then each level has produced exactly one document | R1 R3 |
+| S23 | At a level, the user gives a requirement whose verification can be written in full but can't be run without one thing more that is the user's to settle at that level | The user is asked for exactly that thing before the requirement is treated as complete, and the verification runs once the user settles it | R16 |
 
-- Questions about something already agreed or codified, other than for clarity or about a conflict: target zero.
-- Questions asking for a fact the work could have found out: target zero.
-- Readings of your words, or points the work couldn't settle, taken without asking you: target zero.
-- Documents and messages for a person that fail the readability rules: target zero.
-- Messages that ask more than one question: target zero.
-- Changes to the project made on something from you, other than a plain answer to the work's question, that wasn't played back and confirmed: target zero.
-- Level documents written before you confirmed the playback: target zero.
-- Levels started before you approved the one before: target zero.
-- Statements in a level document that you didn't say or agree and that aren't marked as the work's: target zero.
-- Found facts in approved levels that are wrong: target zero.
-- Clashing words left with two meanings in an approved level: target zero.
-- Approved levels later changed because the work read you wrong: target zero.
-- Your decisions that the work made instead of you: target zero.
-- Questions asking you to make one of the work's decisions: target zero.
-- The work's decisions that aren't recorded where you can see them, or that became a codified rule: target zero.
+**Measures**, on real features, from transcripts and everything the work writes:
+
+- **M1.** Questions about something already agreed or codified, other than for clarity or about a conflict: target zero.
+- **M2.** Questions asking for a fact the work could have found out: target zero.
+- **M3.** Readings of the user's words, or points the work couldn't settle, taken without asking the user: target zero.
+- **M4.** Documents and messages for a person that fail the readability rules: target zero.
+- **M5.** Messages that ask more than one question: target zero.
+- **M6.** Changes to the project made on something from the user, other than a plain answer, that wasn't played back and confirmed: target zero.
+- **M7.** Level documents written before the user confirmed the playback: target zero.
+- **M8.** Levels started before the user approved the one before: target zero.
+- **M9.** Statements in a level document that the user didn't say or agree and that aren't marked as the work's: target zero.
+- **M10.** Found facts in approved levels that are wrong: target zero.
+- **M11.** Clashing words left with two meanings in an approved level: target zero.
+- **M12.** Approved levels later changed because the work read the user wrong: target zero.
+- **M13.** The user's decisions that the work made instead: target zero.
+- **M14.** Questions asking the user to make one of the work's decisions: target zero.
+- **M15.** The work's decisions that aren't recorded where the user can see them, or that became a codified rule: target zero.
