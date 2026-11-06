@@ -85,6 +85,13 @@ class StopHookTest(unittest.TestCase):
         self.assertEqual(verdict, {})
         self.assertEqual(self.calls_made(), [])
 
+    def test_skips_a_null_last_message(self) -> None:
+        for host in ("claude", "codex"):
+            with self.subTest(host=host):
+                self.fake_cli(host, '{"ok": false, "reason": "x"}')
+                self.assertEqual(self.run_hook(host, {"last_assistant_message": None}), {})
+        self.assertEqual(self.calls_made(), [])
+
     def test_skips_a_message_with_no_question(self) -> None:
         self.fake_cli("claude", '{"ok": false, "reason": "no"}')
         self.assertEqual(self.run_hook("claude", {"last_assistant_message": "Done."}), {})
