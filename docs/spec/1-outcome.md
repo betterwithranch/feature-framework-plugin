@@ -5,7 +5,7 @@
 **Requirements.**
 
 - **R1.** A feature the user has decided to build becomes working code with passing tests.
-- **R2.** The user's intent is drawn out one level at a time, so the user's decisions are made before code starts.
+- **R2.** The user's intent is drawn out one level at a time, so the user's decisions are made before code starts, other than something only the user can settle that still blocks the work after code starts.
 - **R3.** Each level produces one document.
 - **R4.** The user is asked to approve a level only after it passes its review.
 - **R5.** Work moves to the next level only when the current one passes its review and the user approves it.
