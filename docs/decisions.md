@@ -188,3 +188,6 @@ D57  Enforce goals and the decide-or-ask rule with hooks, on both hosts
 
 D58  Only an absolute term rules out exceptions
       Decided 2026-11-06. Clarifies D50. Only an absolute term rules out exceptions. A requirement without one is not contradicted by an exception elsewhere. A requirement meant to have no exceptions uses an absolute term. A review finding that calls a requirement without an absolute term contradicted by an exception is dropped. Why: asked whether a rule stated generally also holds in every case (FF-48), the user chose B, keeping D50: "if a rule is meant to not have exceptions, it should use absolute terms and no exceptions. there should be no "convention-based" approach like general rules do X. That is an extra rule to follow with no extra value."
+
+D59  Project terms aren't found facts
+      Decided 2026-11-06. Using a project term with the project's meaning isn't a fact the work found, so every level uses project terms, including levels that don't allow found facts. Why: asked whether a project term the work finds counts as a found fact (FF-49), the user chose A: "No: using a project term with the project's meaning isn't a fact the work found, so every level uses project terms."

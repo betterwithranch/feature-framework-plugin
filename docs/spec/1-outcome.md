@@ -56,7 +56,7 @@
 - **Complete verification:** it names what is checked, how, and what result passes.
 - **Playback:** the work telling the user, in its own words, what it understood.
 - **Plain answer:** the user's answer to the work's own question.
-- **Found fact:** a fact about the project that the work found, rather than one the user gave.
+- **Found fact:** a fact about the project that the work found, rather than one the user gave. Using a project term with the project's meaning is not a found fact, so every level uses project terms.
 - **Decision classification:** the [rules](../../skills/references/decisions.md) that set which decisions are the user's and which are the work's.
 - **The user's to settle:** a decision the classification gives the user, a point it doesn't clearly assign, and a conflict between one of the user's decisions and something no one decided.
 
