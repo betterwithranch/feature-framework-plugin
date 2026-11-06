@@ -38,9 +38,9 @@
 - **R32.** The user makes the user's decisions, wherever a decision is written.
 - **R33.** The work makes its own decisions, wherever a decision is written, and records them where the user can see them.
 - **R34.** The code follows everything agreed or codified, including the user's answers.
-- **R35.** Agreements carry over to later features.
+- **R35.** Agreements carry over to later features, within their stated scope.
 - **R36.** The work's decisions never become codified rules.
-- **R37.** Once code starts, the work proceeds with everything it needs.
+- **R37.** Once code starts, the work proceeds with everything it needs, other than something only the user can settle.
 - **R38.** If something only the user can settle still blocks the work after code starts, the user is asked, and only then.
 - **R39.** The framework enforces itself the same way whether the work runs under Claude Code or under Codex.
 
@@ -85,7 +85,7 @@
 | S20 | A level needs a point the classification doesn't clearly assign, the sample project doesn't show it, and nothing agreed or codified covers it | The user is asked about it before the level's document is written, and the document follows the answer | R9 R15 R32 |
 | S21 | The sample project has a term for a concept a level's document must name, and nothing the user said uses that word | The document names the concept with the project's term, judged by an LLM judge against the project's terms | R22 |
 | S22 | The user describes a feature and approves each level whenever asked | Code starts, and by then each level has produced exactly one document | R1 R3 |
-| S23 | At a level, the user gives a requirement whose verification can be written in full but can't be run without one thing more that is the user's to settle at that level | The user is asked for exactly that thing before the requirement is treated as complete, and the verification runs once the user settles it | R16 |
+| S23 | At a level, the user gives a requirement whose verification can be written in full but can't be run without one thing more that is the user's to settle at that level | The user is asked for exactly that thing before the level's document is written, and the verification runs once the user settles it | R9 R16 |
 
 **Measures**, on real features, from transcripts and everything the work writes:
 
