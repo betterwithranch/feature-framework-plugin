@@ -65,8 +65,17 @@ class StopHookTest(unittest.TestCase):
         self.run_hook("claude", {"last_assistant_message": "A or B?"})
         self.run_hook("codex", {"last_assistant_message": "A or B?"})
         claude_call, codex_call = self.calls_made()
-        self.assertIn("-p --model haiku", claude_call)
-        self.assertIn("exec --model gpt-6-luna", codex_call)
+        self.assertIn("--model haiku --no-session-persistence", claude_call)
+        self.assertIn("--model gpt-6-luna --sandbox read-only --ephemeral", codex_call)
+
+    def test_nested_check_runs_with_hooks_off(self) -> None:
+        self.fake_cli("claude", '{"ok": true}')
+        self.fake_cli("codex", '{"ok": true}')
+        self.run_hook("claude", {"last_assistant_message": "A or B?"})
+        self.run_hook("codex", {"last_assistant_message": "A or B?"})
+        claude_call, codex_call = self.calls_made()
+        self.assertIn('-p --settings {"disableAllHooks": true}', claude_call)
+        self.assertIn("exec -c features.hooks=false", codex_call)
 
     def test_skips_when_already_continuing(self) -> None:
         self.fake_cli("claude", '{"ok": false, "reason": "no"}')

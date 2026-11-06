@@ -2,7 +2,7 @@
 hooks = true
 
 [[hooks.SessionStart]]
-matcher = "startup|resume"
+matcher = "startup|resume|compact"
 
 [[hooks.SessionStart.hooks]]
 type = "command"

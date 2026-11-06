@@ -5,6 +5,7 @@ Questions set aside because they belong to a later level ([D9](decisions.md)). E
 | Question | Owning level |
 | --- | --- |
 | Docs for people who install the framework, written for them rather than for those who build from a level's document ([D56](decisions.md)) | The level that owns packaging |
+| How the framework ships its hooks to other projects: a Claude Code plugin's `hooks/hooks.json` with `${CLAUDE_PLUGIN_ROOT}`, and Codex's equivalent. This repo's `.claude/settings.json` and `.codex/config.toml` only run them here | The level that owns packaging |
 | Where the end-to-end sample project lives: a separate repo, or a fixture in this repo | Design |
 | Where a feature's level artifacts (Outcome, Behaviour, Design, Slices) are stored | Design |
 | The framework's form, for example a plugin for Claude Code and Codex | Design |

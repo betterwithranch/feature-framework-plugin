@@ -19,8 +19,14 @@ PROMPT = Path(__file__).resolve().parent / "prompts" / "stop-check.md"
 NESTED = "FEATURE_FRAMEWORK_STOP_CHECK"
 NOT_CHECKED = "The stop check failed, so this message was not checked."
 COMMANDS = {
-    "claude": ["claude", "-p", "--model", "haiku", "--no-session-persistence"],
-    "codex": ["codex", "exec", "--model", "gpt-6-luna", "--sandbox", "read-only", "--ephemeral"],
+    "claude": [
+        "claude", "-p", "--settings", '{"disableAllHooks": true}',
+        "--model", "haiku", "--no-session-persistence",
+    ],
+    "codex": [
+        "codex", "exec", "-c", "features.hooks=false",
+        "--model", "gpt-6-luna", "--sandbox", "read-only", "--ephemeral",
+    ],
 }
 
 

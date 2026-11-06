@@ -27,4 +27,4 @@ Takes a feature you've decided to build from intent to working code, one level a
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.
 
-The hooks run under both Claude Code and Codex. Codex runs a repo's hooks only after you review and trust them with `/hooks`.
+The hooks run in this repo under both Claude Code and Codex. Codex runs a repo's hooks only after you review and trust them with `/hooks`.

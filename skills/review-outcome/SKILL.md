@@ -1,6 +1,6 @@
 ---
 name: review-outcome
-description: Review a feature's Outcome document on its own and report findings that would change what gets built. Use at the Outcome gate, given only the Outcome document.
+description: Reviews a feature's Outcome document on its own and reports findings that would change what gets built. Use at the Outcome gate, given only the Outcome document.
 ---
 
 # Review an Outcome
