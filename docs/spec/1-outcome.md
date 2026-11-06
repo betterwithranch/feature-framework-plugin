@@ -18,7 +18,7 @@
 - **R12.** The user is asked for their decisions, not for facts the work can find out.
 - **R13.** The user is asked one question at a time, and the next waits for their answer.
 - **R14.** Each question gives the user enough to answer it without asking back.
-- **R15.** Nothing is guessed: a fact is looked up, a decision of the user's is asked, a reading is asked, and anything the work can't settle one of those ways is put to the user.
+- **R15.** Nothing is guessed: a fact is looked up, a decision of the user's is asked, a decision of the work's is made by the work, a reading is asked, and anything the work can't settle one of those ways is put to the user.
 - **R16.** Anything missing from a requirement or its verification that is the user's to settle at this level is asked of the user, one question at a time.
 - **R17.** Every document and message meant for a person is readable at a glance.
 - **R18.** Everything in a level's document is something the user said or agreed, or something the work filled in and marked as its own, such as a decision it made.
