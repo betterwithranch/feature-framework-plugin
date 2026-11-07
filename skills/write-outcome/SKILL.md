@@ -1,27 +1,23 @@
 ---
 name: write-outcome
-description: Write the Outcome of a feature, the first planning level - who it is for, what it achieves, end-to-end scenarios with automated checks, and how success is measured on real use. Use when starting a feature, before any behaviour, design or code, and to fix findings from an Outcome review.
+description: Writes the Outcome of a feature, the first planning level - who it is for, what it achieves, end-to-end scenarios with automated verifications, and how success is measured on real use. Use when starting a feature, before any behaviour, design or code, and to fix findings from an Outcome review.
 ---
 
 # Write an Outcome
 
-Read [the Outcome definition](../references/outcome.md). Write a document that has its contents and meets its criteria.
+Read [the Outcome definition](../references/outcome.md) and [the decision classification](../references/decisions.md), which sets who makes each decision. Write a document that has its contents and passes its structure checks and reviews.
 
 ## Rules
 
+- Write for the reader the definition names, in the form its contents set.
 - State what the user gets. Leave exactly what counts, and how it works, to later levels.
 - Be simple and to the point. Use short sentences and say only what the reader needs to know what result is asked for.
-- Use one term per concept, and reuse the same phrase for the same idea. Define a term only when a reader couldn't tell what result it means.
-- State what each check confirms, not how it is built.
-- Fix a problem by removing the wording that caused it, not by adding a new qualifier or distinction.
+- An absolute term, such as every, never, only, always, all, none, any or anything, means no exceptions. If a requirement has exceptions, write it in non-absolute terms. A requirement meant to have no exceptions uses an absolute term.
+- Use one term per concept, and reuse the same phrase for the same idea.
 
 ## Self-check before review
 
-1. List the vocabulary and confirm each concept has one term.
-2. List the claims, scenarios and measures, and map every part of each claim to a scenario that fails if that part is broken.
-3. Check the document against each criterion in the definition. For criterion 5, go through each scenario and measure one at a time, against each item.
-4. Fix what fails.
-
-## After a fix
-
-Rerun the self-check on the changed text and on every claim, scenario and measure linked to it. A fix that moves a problem somewhere else is not a fix.
+1. Run `scripts/structure.py <document>` and fix every failure it prints.
+2. Run `scripts/absolutes.py <document>`.
+3. Judge the document against the rules of each of the four reviews the definition names, writing the grid each one asks for.
+4. Fix every FAIL, then repeat from step 1.

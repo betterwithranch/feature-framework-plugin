@@ -2,36 +2,31 @@
 
 An Outcome states what the user gets and how success is judged. It is the first planning level of a feature.
 
+## Reader
+
+An Outcome is written for those who build from it: the agents doing later levels, whoever turns its scenarios into tests, and maintainers. The user approves that same document. It is written in a neutral voice, naming "the user", not "you".
+
 ## Contents
 
 An Outcome contains:
 
 - Who the feature is for.
-- What it achieves, as results the user can observe.
-- End-to-end scenarios, each with an automated check and a pass bar. No check needs a person.
+- Its requirements: what it achieves, as results the user can observe.
+- End-to-end scenarios, each with its starting state and what it must show to pass, checked automatically. No verification needs a person. How the scenarios run, such as how many runs must pass, belongs to the level that writes the tests.
 - How success is measured on real use, each measure with a target.
+- A reference to the project's glossary, which defines its terms.
 
-An Outcome does not contain non-goals, behaviour rules, edge cases, design decisions, implementation, a slicing plan, where anything lives, or how tests are built.
+Every requirement, scenario and measure carries a visible ID (R1, S1, M1), stable once approved. Each line states one requirement.
 
-A scenario states its starting state, what happens and what passes, as results you can observe. How the scenario is scripted, and how a check tells one case from another, is how tests are built.
+## Reviews
 
-An Outcome leaves room for interpretation; later levels narrow it. A point that needs a definition, rule, threshold or procedure to resolve (what exactly counts as X, when exactly Y happens, how much work stops, how a scenario is scripted or a check is built) belongs to a later level.
+An Outcome passes when its structure checks pass and each of its four reviews marks every cell PASS. Each review is its own set of yes/no rules, judged by its own isolated judge:
 
-## Criteria
+- [Scope](outcome-reviews/scope.md)
+- [Clarity](outcome-reviews/clarity.md)
+- [Verification](outcome-reviews/verification.md)
+- [Provenance](outcome-reviews/provenance.md)
 
-A sound Outcome meets all six.
+The structure checks are `skills/write-outcome/scripts/structure.py`: the required sections are present, every requirement ID is cited by a scenario or measure and every cited ID exists, IDs run in document order without gaps or duplicates, and no level-1 banned term appears. `skills/write-outcome/scripts/absolutes.py` lists the absolute terms in each statement for the Clarity review.
 
-1. Complete. Every required element is present.
-2. Nothing extra. Nothing is present that the Outcome isn't responsible for.
-3. Clear. For every statement, a reader knows what result the user is meant to get.
-4. Traceable. Every part of every claim has a scenario whose check fails if that part is broken. Every scenario and measure checks a claim. An allowance, something a claim permits but does not require, needs no scenario of its own.
-5. Sound checks. Taking each check as built faithfully at a later level, and judged against the claims it traces to, no check or measure:
-   - passes when the user doesn't get the result;
-   - passes because the scenario never brings about what the claim is about;
-   - fails or counts against behaviour a claim requires or allows. Each allowance or exception a scenario touches is either ruled out by its starting state or carried into its whole check, and each one a measure touches is carried into it;
-   - can be satisfied by the work being judged;
-   - compares against an expected result that the scenario doesn't set before the run;
-   - leaves its starting state to the work being judged instead of setting it.
-
-   A scenario need not re-check a claim that another scenario covers.
-6. Consistent. No claims, scenarios, measures or definitions contradict each other.
+Each rule judges what the document describes; nothing runs at this level. A judge leaves out a FAIL that few users would ever meet or that changes nothing for them. This is judged, not scored.
