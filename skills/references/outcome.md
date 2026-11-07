@@ -12,7 +12,7 @@ An Outcome contains:
 
 - Who the feature is for.
 - Its requirements: what it achieves, as results the user can observe.
-- End-to-end scenarios, each with an automated verification and a pass bar. No verification needs a person. A pass bar that applies to every scenario, such as how many runs must pass, is stated once.
+- End-to-end scenarios, each with its starting state and what it must show to pass, checked automatically. No verification needs a person. How the scenarios run, such as how many runs must pass, belongs to the level that writes the tests.
 - How success is measured on real use, each measure with a target.
 - A reference to the project's glossary, which defines its terms.
 

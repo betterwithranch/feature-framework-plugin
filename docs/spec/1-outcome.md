@@ -47,7 +47,7 @@
 
 **Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
 
-**Scenarios.** Each runs several times under Claude Code and several times under Codex, on a sample project, and passes only if every run under both passes. The user in a scenario is a scripted user: it answers questions, confirms or corrects playbacks and approves levels as its script says. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, any levels a scenario starts from, *and the rules a judge applies* come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged. *Words in italics are the work's, added to check the requirements a row cites.*
+**Scenarios.** Each runs on a sample project, and every check is automated; none needs a person. Acceptance tests and any levels a scenario starts from come with the scenario; no check relies only on tests written by the work being judged. *Words in italics are the work's, added to check the requirements a row cites.*
 
 | ID | Scenario | Passes when | Verifies |
 | --- | --- | --- | --- |
