@@ -7,7 +7,7 @@ The project's terms, shared by every feature's level documents.
 - **Project:** its code, tests, documents, decisions, settings, branches and pull requests.
 - **Passes its review:** a level's document meets that level's standards and is consistent and complete.
 - **Approved:** the user says so.
-- **Requirement:** a result listed with an R ID in a level's document. Its **verification** is what shows it holds.
+- **Requirement:** a result the user asks for. Its **verification** is what shows it holds.
 - **Complete requirement:** its verification can be written in full and run, with nothing left to ask the user.
 - **Complete verification:** it names what is checked, how, and what result passes.
 - **Playback:** the work telling the user, in its own words, what it understood.
