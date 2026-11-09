@@ -40,7 +40,7 @@
 
 **Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
 
-**Scenarios.** Each runs on a sample project. *In a scenario, the user describes a feature, answers the work's questions, confirms its playbacks and approves its levels when asked, and holds the answers its checks expect, except where the scenario says otherwise.* Acceptance tests and any approved levels a scenario starts from come with the scenario. The Verifies column is the work's, and so are words in italics, added to check the requirements a row cites.
+**Scenarios.** Each runs on a sample project. *In a scenario, the user describes a feature, answers the work's questions, confirms its playbacks and approves its levels when asked, and holds the answers its checks expect, except where the scenario says otherwise.* Acceptance tests and any approved levels a scenario starts from come with the scenario. The Verifies column and the requirement IDs a measure cites are the work's, and so are words in italics, added to check the requirements a row cites.
 
 | ID | Scenario | Passes when | Verifies |
 | --- | --- | --- | --- |
