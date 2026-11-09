@@ -52,7 +52,7 @@ Leaves to later levels: non-goals, rules and edge cases, design decisions, imple
 | `docs/spec/1-outcome.md` | The framework's own Outcome: what it achieves and how success is checked |
 | `docs/goals.md` | The goals every change serves, and when to decide versus ask |
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
-| `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
+| `docs/decisions.md` | The decision log: one entry per decision, append-only |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
 | `skills/references/outcome.md` | What an Outcome contains and the criteria it must meet, shared by the Outcome skills |
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
