@@ -6,7 +6,7 @@
 - State each fact once, in the file whose purpose it covers. Anywhere else, link to it.
 - `README.md` says what the framework is and where things are. Nothing else: no status, progress or approvals.
 - `docs/spec/` holds the framework's own level artifacts, as specifications only.
-- `docs/decisions/` holds one decision per record. History, dates and approvals belong here.
+- `docs/decisions.md` is the append-only decision log: one entry per decision, never edited or deleted; a change is a new entry that replaces the old. History, dates and approvals belong here.
 - `docs/open-questions.md` lists questions set aside for the level that owns them.
 - `skills/` holds instructions the framework uses on every feature. Write them as Claude skills: frontmatter with `name` and `description`, then direct instructions. No history, dates, status or examples of past mistakes.
 - `skills/references/` holds what more than one skill needs, such as what a level's document contains and the criteria it must meet. Skills refer to it and don't repeat it.
