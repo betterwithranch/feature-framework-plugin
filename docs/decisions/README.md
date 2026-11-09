@@ -48,7 +48,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted, amended by 0060 and 0064 |
 | 0043 | [The Clarity review's rules](0043-the-clarity-review-s-rules.md) | Accepted, amended by 0059 |
 | 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062, 0063 and 0065 |
-| 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted |
+| 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted, amended by 0066 |
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |
 | 0048 | [The glossary review's rules](0048-the-glossary-review-s-rules.md) | Accepted |
@@ -61,3 +61,4 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0063 | [Verification rule 1 needs no check per item or case](0063-verification-rule-1-needs-no-check-per-item-or-case.md) | Accepted |
 | 0064 | [Scope rule 3 counts what the preamble sets](0064-scope-rule-3-counts-what-the-preamble-sets.md) | Accepted |
 | 0065 | [Verification rule 3 judges the starting state as set up](0065-verification-rule-3-judges-the-starting-state-as-set-up.md) | Accepted |
+| 0066 | [Provenance rule 1: a joined statement needs a source for each part](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) | Accepted |
