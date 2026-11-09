@@ -47,8 +47,8 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0041 | [Structure scripts and four scoped yes/no reviews](0041-structure-scripts-and-four-scoped-yes-no-reviews.md) | Accepted |
 | 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted, amended by 0060 and 0064 |
 | 0043 | [The Clarity review's rules](0043-the-clarity-review-s-rules.md) | Accepted, amended by 0059 |
-| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062, 0063 and 0065 |
-| 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted |
+| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062, 0063, 0065 and 0069 |
+| 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted, amended by 0069 |
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |
 | 0048 | [The glossary review's rules](0048-the-glossary-review-s-rules.md) | Accepted |
@@ -64,3 +64,4 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0066 | [Provenance rule 1: a joined statement needs a source for each part](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) | Replaced by 0067 |
 | 0067 | [A statement joined from agreed points is the work's](0067-a-statement-joined-from-agreed-points-is-the-work-s.md) | Accepted |
 | 0068 | [What is missing is asked within its limits](0068-anything-missing-is-asked-within-its-limits.md) | Accepted |
+| 0069 | [Review grids quote the evidence for each part](0069-review-grids-quote-evidence-for-each-part.md) | Accepted |

@@ -10,4 +10,4 @@ Read the document with the conversation that produced it, the decision log and t
 
 ## Output
 
-A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.
+A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. For rules 1 and 2, a PASS quotes, for each part of the statement, its source or the marking that shows it as the work's. A cell with a missing quote is a FAIL. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.

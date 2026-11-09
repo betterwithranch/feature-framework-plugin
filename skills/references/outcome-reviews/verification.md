@@ -12,4 +12,4 @@ Rows: each requirement for rule 1; each scenario and each measure for rules 2–
 
 ## Output
 
-A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.
+A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. For rule 2, a PASS quotes, for each requirement the row cites, that requirement's result and the row's words that check it. For rule 4, a PASS quotes, for each thing the pass condition names, where the starting state or the preamble sets it up. A cell with a missing quote is a FAIL. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.
