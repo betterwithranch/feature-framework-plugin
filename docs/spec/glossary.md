@@ -2,7 +2,7 @@
 
 The project's terms, shared by every feature's level documents.
 
-- **Code starts:** the first change to the project's code or tests for that feature.
+- **Code starts:** the first change to the project's code or tests.
 - **Project:** its code, tests, documents, decisions, settings, branches and pull requests.
 - **Passes its review:** a level's document meets that level's standards and is consistent and complete.
 - **Approved:** the user says so.
