@@ -26,3 +26,4 @@ Questions set aside because they belong to a later level ([decision 0009](decisi
 | The next feature makes the same decision again, with the earlier one as its preferred default, unless an agreement or codified rule already covers the case. | Behaviour |
 | No check relies only on tests written by the work being judged. | Behaviour |
 | The framework enforces itself the same way whether the work runs under Claude Code or under Codex. | Design |
+| Nothing is guessed. | Behaviour |

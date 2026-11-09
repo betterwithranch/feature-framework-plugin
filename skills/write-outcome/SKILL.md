@@ -22,4 +22,4 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 1. Run `scripts/structure.py <document>` and fix every failure it prints.
 2. Run `scripts/absolutes.py <document>`.
 3. Judge the document against the rules of each of the four reviews the definition names, writing the grid each one asks for.
-4. Fix every FAIL, then repeat from step 1.
+4. Fix every FAIL. Before committing a fix, judge every row the fix touched against every rule of every review, writing the grid, then repeat from step 1.
