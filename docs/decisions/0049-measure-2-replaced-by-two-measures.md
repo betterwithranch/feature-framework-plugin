@@ -1,4 +1,4 @@
-# 0049. Measure 2 counts decisions made by the wrong party
+# 0049. The approved measure 2 is replaced by two measures
 
 Status: accepted, 2026-11-06, the work's decision
 
@@ -8,7 +8,7 @@ The approved Outcome's second measure, "Decisions in the code that nothing agree
 
 ## Decision
 
-The Outcome's measure 2 counts the user's decisions that the work made, and the work's decisions that aren't recorded where the user can see them or that became a codified rule. Its target stays zero.
+The approved measure is replaced by two: the user's decisions that the work made instead, and the work's decisions that aren't recorded where the user can see them or that became a codified rule. Each has a target of zero.
 
 ## Consequences
 

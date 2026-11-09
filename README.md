@@ -26,18 +26,7 @@ Takes a feature you've decided to build from intent to working code, one level a
 
 ## How every planning level runs
 
-1. The work interviews the user, one question at a time.
-2. It plays back what it understood, and the user confirms.
-3. It writes the level's document.
-4. The level's review runs, in rounds, until it passes.
-5. The user approves. Only then does the next level start.
-
-Throughout:
-
-- Nothing is guessed: a fact is looked up, the user's decisions and readings are asked.
-- One classification sets who makes each decision.
-- A question for a later level is recorded for that level and not answered.
-- Once Slices is approved, Build runs without the user, except for something that is the user's to settle.
+How every planning level runs, from the interview to the user's approval, is stated by the [requirements of the framework's Outcome](docs/spec/1-outcome.md).
 
 ## Level 1 (Outcome)
 

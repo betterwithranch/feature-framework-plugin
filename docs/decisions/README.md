@@ -52,5 +52,5 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |
 | 0048 | [The glossary review's rules](0048-the-glossary-review-s-rules.md) | Accepted |
-| 0049 | [Measure 2 counts decisions made by the wrong party](0049-measure-2-counts-decisions-made-by-the-wrong-party.md) | Accepted |
+| 0049 | [The approved measure 2 is replaced by two measures](0049-measure-2-replaced-by-two-measures.md) | Accepted |
 | 0050 | [How the scenarios run is deferred to the level that writes the tests](0050-how-the-scenarios-run-is-deferred.md) | Accepted |
