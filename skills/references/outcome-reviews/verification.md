@@ -2,7 +2,7 @@
 
 Rows: each requirement for rule 1; each scenario and each measure for rules 2–7. Judge each by the description's own words, not by imagined runs.
 
-1. Together, the scenarios and measures citing a requirement describe a check of every part of it.
+1. Together, the scenarios and measures citing a requirement describe a check that fails if any part of it isn't met. A separate check for each listed item, case, level or term isn't needed.
 2. The scenario or measure describes a check of the result the requirement states.
 3. What it describes as passing includes every way the requirements it cites, taken together, allow the user to get that result.
 4. Each thing the scenario's pass condition names, other than what the work being verified produces, is set up in its starting state or in what the preamble sets for every scenario.
