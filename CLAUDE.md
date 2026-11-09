@@ -10,11 +10,13 @@
 - `docs/open-questions.md` lists questions set aside for the level that owns them.
 - `skills/` holds instructions the framework uses on every feature. Write them as Claude skills: frontmatter with `name` and `description`, then direct instructions. No history, dates, status or examples of past mistakes.
 - `skills/references/` holds what more than one skill needs, such as what a level's document contains and the criteria it must meet. Skills refer to it and don't repeat it.
-- `docs/goals.md` states the goals every change serves and when to decide versus ask. Hooks in `.claude/settings.json` load it at session start and on every prompt.
+- `docs/goals.md` explains the goals every change serves, for people. The agent's version is `hooks/prompts/goals.md`, which hooks load at session start and on every prompt.
+- `hooks/` holds the hook scripts and `hooks/prompts/` the prompts they load, written as instructions to an agent. `.claude/settings.json` and `.codex/config.toml` only point at them: settings hold no prompts, and a prompt and a doc are separate files written for their reader.
+- The code the framework ships to enforce itself (its hooks, checks, skills and the settings that load them) works under both Claude Code and Codex, and depends on nothing only one of them has.
 
 ## Working
 
-- Follow `docs/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
+- Follow `hooks/prompts/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
 - Run an agreed gate until it passes, without asking between runs. Fix its findings with the level's write skill, including its after-a-fix self-check.
 - Stop a gate after four rounds that don't pass. Look for a conflict or ambiguity in the instructions involved, report it and fix the instructions instead of patching the document again.
 - Commit and push each agreed change to `main` when it is done.

@@ -58,6 +58,10 @@ Leaves to later levels: non-goals, rules and edge cases, design decisions, imple
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
 | `CLAUDE.md` | Rules for agents working in this repo |
-| `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
+| `hooks/` | Hook scripts that load the goals, check a turn's end, and check a level document before an agent commits it |
+| `hooks/prompts/` | The prompts those hooks load, written for the agent |
+| `.claude/settings.json` | Points Claude Code at the hooks |
+| `.codex/config.toml` | Points Codex at the hooks |
+| `tests/` | Tests for the hook scripts |
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.

@@ -2,11 +2,10 @@
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "startup|resume|compact",
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"$CLAUDE_PROJECT_DIR/docs/goals.md\""
+            "command": "cat \"$CLAUDE_PROJECT_DIR/hooks/prompts/goals.md\""
           }
         ]
       }
@@ -16,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cat \"$CLAUDE_PROJECT_DIR/docs/goals.md\""
+            "command": "cat \"$CLAUDE_PROJECT_DIR/hooks/prompts/goals.md\""
           }
         ]
       }
@@ -25,9 +24,21 @@
       {
         "hooks": [
           {
-            "type": "prompt",
-            "timeout": 30,
-            "prompt": "Hook input: $ARGUMENTS\n\nIf stop_hook_active is true, return {\"ok\": true}.\n\nRead last_assistant_message. Return {\"ok\": false, \"reason\": \"Don't ask for approval of something already decided. Do it, then report. Ask only when blocked by a decision no one has made or by a conflict.\"} if the message ends by asking the user to approve or confirm any of: applying fixes for findings, rerunning a review or test, committing or pushing, or continuing to a next step the conversation already agreed. Otherwise return {\"ok\": true}. Ending a turn to wait for background work that is still running is allowed. A question about a decision no one has made yet, or about a conflict between agreed things, is allowed."
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/stop.py\" claude",
+            "timeout": 120
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/hooks/selfcheck.py\"",
+            "timeout": 30
           }
         ]
       }
