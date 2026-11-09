@@ -30,7 +30,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0024 | [Where found facts live](0024-where-found-facts-live.md) | Accepted |
 | 0025 | [A decision holds within its scope](0025-a-decision-holds-within-its-scope.md) | Accepted |
 | 0026 | [Questions per level are tracked, not targeted](0026-questions-per-level-are-tracked-not-targeted.md) | Accepted |
-| 0027 | [Complete requirements and verification](0027-complete-requirements-and-verification.md) | Accepted |
+| 0027 | [Complete requirements and verification](0027-complete-requirements-and-verification.md) | Accepted, amended by 0068 |
 | 0028 | [Nothing is guessed](0028-nothing-is-guessed.md) | Accepted |
 | 0029 | [Four review rounds per approved version; decisions need approval](0029-four-review-rounds-per-approved-version.md) | Accepted |
 | 0030 | [One classification of who decides](0030-one-classification-of-who-decides.md) | Accepted, amended by 0061 |
@@ -63,3 +63,4 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0065 | [Verification rule 3 judges the starting state as set up](0065-verification-rule-3-judges-the-starting-state-as-set-up.md) | Accepted |
 | 0066 | [Provenance rule 1: a joined statement needs a source for each part](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) | Replaced by 0067 |
 | 0067 | [A statement joined from agreed points is the work's](0067-a-statement-joined-from-agreed-points-is-the-work-s.md) | Accepted |
+| 0068 | [What is missing is asked within its limits](0068-anything-missing-is-asked-within-its-limits.md) | Accepted |
