@@ -2,7 +2,7 @@
 
 The project's terms, shared by every feature's level documents. Words in italics are the work's.
 
-- **The user:** the person who decides which features to build and approves each level. *Where the Outcome reference and its reviews speak of what the user gets or can observe, "the user" means whoever the feature is for.*
+- **The user:** the person who decides which features to build and approves each level. *The skills and their references also use "the user" for whoever a feature is for. For this framework's own features, that is the same person.*
 - **Code starts:** the first change to the project's code or tests.
 - **Project:** its code, tests, documents, decisions, settings, branches and pull requests.
 - **Passes its review:** a level's document meets that level's standards and is consistent and complete.
