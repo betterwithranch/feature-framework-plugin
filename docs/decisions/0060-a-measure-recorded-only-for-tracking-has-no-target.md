@@ -9,6 +9,7 @@ Scope rule 4 read "Each measure is taken on real use and has a target." The Outc
 ## Decision
 
 - Scope rule 4 reads: "Each measure is taken on real use, and has a target unless it is recorded only for tracking."
+- Scope rule 6 adds: "A measure recorded only for tracking may say what it counts."
 - Verification rule 6 reads: "It states the expected result, unless it is a measure recorded only for tracking."
 
 ## Consequences
