@@ -1,6 +1,6 @@
 # 0013. Enforce goals and the decide-or-ask rule with hooks
 
-Status: accepted, 2026-10-28
+Status: replaced by [decision 0052](0052-enforce-goals-and-the-decide-or-ask-rule-with-hook.md)
 
 ## Context
 
