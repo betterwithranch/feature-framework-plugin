@@ -11,7 +11,7 @@
 - **R5.** Work moves to the next level only when the current one passes its review and the user approves it.
 - **R6.** Before the work acts on something from the user that could change the project, other than a plain answer, it plays back what it understood and waits for the user to confirm.
 - **R7.** A plain answer is acted on without a playback of its own.
-- **R8.** Anything from the user that could be read more than one way about what the current level decides is put to the user as a choice, in a message of its own, after the playback when there is one.
+- **R8.** Anything from the user that could be read more than one way is put to the user as a choice, in a message of its own, after the playback.
 - **R9.** Before a level's document is written, the user is interviewed about what that level needs.
 - **R10.** After the interview, the work plays back what it understood the user wants at that level.
 - **R11.** A level's document is written only after the user confirms its playback.
@@ -40,7 +40,7 @@
 
 **Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
 
-**Scenarios.** Each runs on a sample project. *In a scenario, the user describes a feature, answers the work's questions, confirms its playbacks and approves its levels when asked, and holds the answers its checks expect, except where the scenario says otherwise.* Acceptance tests and any approved levels a scenario starts from come with the scenario. The Verifies column and the requirement IDs a measure cites are the work's, and so are words in italics, added to check the requirements a row cites.
+**Scenarios.** Each runs on a sample project. *In a scenario, the user describes a feature, answers the work's questions, confirms its playbacks and approves its levels when asked, and holds the answers its checks expect, except where the scenario says otherwise.* Acceptance tests and any approved levels a scenario starts from come with the scenario. The Verifies column and the requirement IDs a measure cites are the work's, and so are words in italics anywhere in this document.
 
 | ID | Scenario | Passes when | Verifies |
 | --- | --- | --- | --- |
@@ -51,7 +51,7 @@
 | S5 | The levels are approved and cover everything the feature needs, *no existing code conflicts with them,* and code starts from there | Nothing is asked after code starts, and acceptance tests pass | R1 R31 R32 |
 | S6 | The levels are approved with one of the user's decisions left unmade, and code starts from there | The user is asked about it, and acceptance tests show the code follows the answer | R28 R31 R32 |
 | S7 | The levels are approved, the existing code *that no one decided* conflicts with *one of the user's decisions in* them, and code starts from there | The user is asked about the conflict, and acceptance tests show the code follows the answer | R28 R32 |
-| S8 | At every level, one of the user's answers could be read more than one way about what that level decides, nothing flags it, and the user holds which reading is meant | At each level, *the user is interviewed about what that level needs before its document is written; after the interview the work plays back what it understood the user wants at that level; and* the user is asked which reading is meant in a message of its own after the playback *of that answer*, *when there is one*, and acceptance tests show the code follows the readings given | R8 R9 R10 R28 |
+| S8 | At every level, one of the user's answers could be read more than one way *about what that level decides*, nothing flags it, and the user holds which reading is meant | At each level, *the user is interviewed about what that level needs before its document is written; after the interview the work plays back what it understood the user wants at that level; and* the user is asked which reading is meant in a message of its own after the playback and before its document is written, and acceptance tests show the code follows the readings given | R8 R9 R10 R11 R28 |
 | S9 | At a level, one of the user's answers uses a word the sample project uses to mean something else, and the user holds what they meant | The playback names the clash; the document is written only after the user confirms; it uses the project's term only for the project's meaning and a distinct phrase for the user's; the clash is recorded where the user can see it; acceptance tests show the code follows what the user meant | R11 R20 R21 R22 R23 R28 |
 | S10 | At a level that allows found facts, the user gives a requirement whose verification can't be written without one thing more: in one case something that is the user's to settle at that level, in another something the sample project shows | In the first case the user is asked for exactly that thing before the level's document is written; in the second the user is asked nothing for it, and the requirement and its verification are completed with what the work found, marked as the work's | R9 R12 R15 R19 R33 |
 | S11 | Starts from a level that has passed its review; the user withholds approval for several turns, then approves | No question, playback or document of the next level comes before the approval, and its document is written after | R5 |

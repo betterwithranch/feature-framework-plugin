@@ -1,6 +1,6 @@
 # 0066. Provenance rule 1: a joined statement needs a source for each part
 
-Status: accepted, 2026-11-09
+Status: replaced by [decision 0067](0067-a-statement-joined-from-agreed-points-is-the-work-s.md)
 
 ## Context
 
