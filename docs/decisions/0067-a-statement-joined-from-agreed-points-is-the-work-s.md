@@ -17,3 +17,4 @@ Status: accepted, 2026-11-09
 
 - Replaces [decision 0066](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md).
 - The Outcome marks words in italics as the work's anywhere in the document, not only in scenarios.
+- R8's timing, "in a message of its own, after the playback", is a procedure, and the case of a plain answer that no playback follows is an edge case (Scope rules 6 and 8). Both move to the open questions for Behaviour, and R8 keeps "Anything from the user that could be read more than one way is put to the user as a choice." S8 and S15 drop the timing with it.
