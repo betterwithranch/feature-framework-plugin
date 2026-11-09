@@ -1,6 +1,6 @@
 # 0049. The approved measure 2 is replaced by two measures
 
-Status: accepted, 2026-11-06, the work's decision
+Status: pending FF-68: the conflict between the approved measure 2 and [decision 0030](0030-one-classification-of-who-decides.md) is the user's to settle
 
 ## Context
 
