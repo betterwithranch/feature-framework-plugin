@@ -9,7 +9,7 @@
 - **R3.** Each level produces one document.
 - **R4.** The user is asked to approve a level only after it passes its review.
 - **R5.** Work moves to the next level only when the current one passes its review and the user approves it.
-- **R6.** Before the work acts on anything from the user that could change the project, other than a plain answer, it tells the user what it understood, in its own words, and waits for the user to confirm.
+- **R6.** Before the work acts on something from the user that could change the project, other than a plain answer, it tells the user what it understood, in its own words, and waits for the user to confirm.
 - **R7.** A plain answer is acted on without a playback of its own.
 - **R8.** Anything from the user that could be read more than one way about what the current level decides is put to the user as a choice, in a message of its own, after the playback when there is one.
 - **R9.** Before a level's document is written, the user is interviewed about what that level needs.
@@ -30,7 +30,7 @@
 - **R24.** After the user confirms, the document keeps the project's term for the project's meaning and uses a distinct phrase for the user's.
 - **R25.** The clash is recorded where the user sees it.
 - **R26.** A question for a later level is answered at that level, not earlier.
-- **R27.** Nothing already agreed or codified is asked again, except for clarity or to resolve a conflict.
+- **R27.** Something already agreed or codified is asked again only for clarity or to resolve a conflict.
 - **R28.** Approving a level makes the user's decisions and answers in it agreed.
 - **R29.** The work's decisions in an approved level stay the work's.
 - **R30.** A decision holds only within its stated scope.
@@ -40,7 +40,7 @@
 - **R34.** The code follows everything agreed or codified, including the user's answers.
 - **R35.** Agreements carry over to later features, within their stated scope.
 - **R36.** The work's decisions never become codified rules.
-- **R37.** Once code starts, the work proceeds with everything it needs, other than something that is the user's to settle.
+- **R37.** Once code starts, the work proceeds with what it needs, other than something that is the user's to settle.
 - **R38.** If something that is the user's to settle still blocks the work after code starts, the user is asked, and only then.
 - **R39.** The framework enforces itself the same way whether the work runs under Claude Code or under Codex.
 - **R40.** Each requirement in a level's document is complete, and so is its verification.
@@ -54,7 +54,7 @@
 | S1 | The user describes a feature *that needs both the user's decisions and the work's, can answer any question about it, and nothing conflicts* | *Each of the user's decisions, wherever written, was made by the user before code starts; the user is asked to make none of the work's and for no fact the sample project shows; each of the work's is recorded where the user can see it and none became a codified rule;* the code has passing tests, and acceptance tests pass | R1 R2 R12 R15 R32 R33 R36 |
 | S2 | The user *describes a feature,* holds an invariant *of it* and reveals it only when asked | It surfaces *when the user is interviewed, before the document of the level that needs it is written,* and acceptance tests show the code follows it | R2 R9 R15 R34 |
 | S3 | The user *describes a feature,* agrees partially *to the first level before approving it, approves each level once it passes its review, and at the first level* asks a question for a later level | *Partial agreement doesn't move the work on;* levels go in order; *no question, playback or document of a level comes before the user approves the one before;* code starts only after every level is approved; the question is answered at its level, not earlier | R2 R5 R26 |
-| S4 | *Starts from a first feature whose approved levels hold scripted answers its acceptance tests depend on, and from* an approved earlier level of a second feature that holds the user's answer to a question. *The scripted answers* and a codified rule apply to the second feature, *and nothing conflicts. The first feature is built, then the second* | Nothing in that level, the scripted answers or the rule is asked again; acceptance tests show *the first feature's code follows the scripted answers and* the second's follows all three | R27 R28 R31 R34 R35 |
+| S4 | *Starts from a first feature whose approved levels hold scripted answers, each read only one way, that its acceptance tests depend on, and from* an approved earlier level of a second feature that holds the user's answer to a question. *The scripted answers* and a codified rule apply to the second feature, *and nothing conflicts. The first feature is built, then the second* | Nothing in that level, the scripted answers or the rule is asked again; acceptance tests show *the first feature's code follows the scripted answers and* the second's follows all three | R27 R28 R31 R34 R35 |
 | S5 | The levels are approved, hold all the user's decisions the feature needs, *each read only one way; the work's decisions are left to it; nothing the classification leaves unassigned arises; nothing that is the user's to settle is missing; nothing conflicts;* code starts | Nothing is asked after code starts, and acceptance tests pass | R1 R37 R38 |
 | S6 | The levels are approved with one of the user's decisions left unmade; code starts | The user is asked about it, and acceptance tests show the code follows the answer | R15 R34 R38 |
 | S7 | The levels are approved; existing code that no one decided conflicts with one of the user's decisions in them; code starts | The user is asked about the conflict, and acceptance tests show the code follows the answer | R34 R38 |
