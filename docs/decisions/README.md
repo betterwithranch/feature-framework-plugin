@@ -33,7 +33,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0027 | [Complete requirements and verification](0027-complete-requirements-and-verification.md) | Accepted |
 | 0028 | [Nothing is guessed](0028-nothing-is-guessed.md) | Accepted |
 | 0029 | [Four review rounds per approved version; decisions need approval](0029-four-review-rounds-per-approved-version.md) | Accepted |
-| 0030 | [One classification of who decides](0030-one-classification-of-who-decides.md) | Accepted |
+| 0030 | [One classification of who decides](0030-one-classification-of-who-decides.md) | Accepted, amended by 0061 |
 | 0031 | [Verifications test behaviour and pass independently](0031-verifications-test-behaviour-and-pass-independently.md) | Accepted |
 | 0032 | [One verification for a requirement that holds across cases](0032-one-verification-for-a-requirement-that-holds-across-cases.md) | Accepted |
 | 0033 | [Absolute terms have no exceptions](0033-absolute-terms-have-no-exceptions.md) | Accepted |
@@ -52,7 +52,8 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |
 | 0048 | [The glossary review's rules](0048-the-glossary-review-s-rules.md) | Accepted |
-| 0049 | [The approved measure 2 is replaced by two measures](0049-measure-2-replaced-by-two-measures.md) | Pending FF-68 |
+| 0049 | [The approved measure 2 is replaced by two measures](0049-measure-2-replaced-by-two-measures.md) | Accepted |
 | 0050 | [How the scenarios run is deferred to the level that writes the tests](0050-how-the-scenarios-run-is-deferred.md) | Accepted |
 | 0059 | [No exception to an absolute term, anywhere](0059-no-exception-to-an-absolute-term-anywhere.md) | Accepted |
 | 0060 | [A measure recorded only for tracking has no target](0060-a-measure-recorded-only-for-tracking-has-no-target.md) | Accepted |
+| 0061 | [A later decision replaces an earlier one it disagrees with](0061-a-later-decision-replaces-an-earlier-one-it-disagrees-with.md) | Accepted |
