@@ -47,7 +47,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0041 | [Structure scripts and four scoped yes/no reviews](0041-structure-scripts-and-four-scoped-yes-no-reviews.md) | Accepted |
 | 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted, amended by 0060 |
 | 0043 | [The Clarity review's rules](0043-the-clarity-review-s-rules.md) | Accepted, amended by 0059 |
-| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted |
+| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060 |
 | 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted |
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |

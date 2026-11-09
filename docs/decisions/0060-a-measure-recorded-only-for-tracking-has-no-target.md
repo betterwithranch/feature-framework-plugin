@@ -8,8 +8,9 @@ Scope rule 4 read "Each measure is taken on real use and has a target." The Outc
 
 ## Decision
 
-Scope rule 4 reads: "Each measure is taken on real use, and has a target unless it is recorded only for tracking."
+- Scope rule 4 reads: "Each measure is taken on real use, and has a target unless it is recorded only for tracking."
+- Verification rule 6 reads: "It states the expected result, unless it is a measure recorded only for tracking."
 
 ## Consequences
 
-- Amends the Scope review's rules, [decision 0042](0042-the-scope-review-s-rules.md).
+- Amends the Scope review's rules, [decision 0042](0042-the-scope-review-s-rules.md), and the Verification review's rules, [decision 0044](0044-the-verification-review-s-rules.md).
