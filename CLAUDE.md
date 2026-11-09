@@ -3,6 +3,7 @@
 ## Documentation
 
 - Every file has one purpose. Before writing to a file, check the content serves that purpose; put anything else where it belongs.
+- State each fact once, in the file whose purpose it covers. Anywhere else, link to it.
 - `README.md` says what the framework is and where things are. Nothing else: no status, progress or approvals.
 - `docs/spec/` holds the framework's own level artifacts, as specifications only.
 - `docs/decisions.md` is the append-only decision log: one entry per decision, never edited or deleted; a change is a new entry that replaces the old.
