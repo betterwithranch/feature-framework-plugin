@@ -47,7 +47,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0041 | [Structure scripts and four scoped yes/no reviews](0041-structure-scripts-and-four-scoped-yes-no-reviews.md) | Accepted |
 | 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted, amended by 0060 and 0064 |
 | 0043 | [The Clarity review's rules](0043-the-clarity-review-s-rules.md) | Accepted, amended by 0059 |
-| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062 and 0063 |
+| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062, 0063 and 0065 |
 | 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted |
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |
@@ -60,3 +60,4 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0062 | [Verification rules 3 and 4 are bounded to what a scenario cites and names](0062-verification-rules-3-and-4-bounded-to-what-a-scenario-cites-and-names.md) | Accepted |
 | 0063 | [Verification rule 1 needs no check per item or case](0063-verification-rule-1-needs-no-check-per-item-or-case.md) | Accepted |
 | 0064 | [Scope rule 3 counts what the preamble sets](0064-scope-rule-3-counts-what-the-preamble-sets.md) | Accepted |
+| 0065 | [Verification rule 3 judges the starting state as set up](0065-verification-rule-3-judges-the-starting-state-as-set-up.md) | Accepted |
