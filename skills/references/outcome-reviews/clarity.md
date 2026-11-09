@@ -6,7 +6,7 @@ Rows: each requirement, the scenario preamble, each scenario and each measure. R
 2. The statement uses each term with the meaning the glossary gives it.
 3. Each concept has one term throughout the document.
 4. The statement contradicts no other requirement, scenario, measure or definition.
-5. No other statement makes an exception to an absolute term the script lists in it.
+5. No statement makes an exception to an absolute term the script lists in it.
 
 ## Output
 
