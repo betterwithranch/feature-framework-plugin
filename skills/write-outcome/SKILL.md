@@ -14,6 +14,7 @@ Read [the Outcome definition](../references/outcome.md) and [the decision classi
 - Be simple and to the point. Use short sentences and say only what the reader needs to know what result is asked for.
 - An absolute term, such as every, never, only, always, all, none, any or anything, means no exceptions. If a requirement has exceptions, write it in non-absolute terms. A requirement meant to have no exceptions uses an absolute term.
 - Use one term per concept, and reuse the same phrase for the same idea.
+- A statement that fails Scope rule 5, 6 or 7 belongs to a later level. Move it word for word to the project's open questions, for the level that owns it, and leave it out of the Outcome.
 
 ## Self-check before review
 

@@ -2,6 +2,7 @@
 
 The project's terms, shared by every feature's level documents.
 
+- **The user:** the person who decides which features to build and approves each level.
 - **Code starts:** the first change to the project's code or tests.
 - **Project:** its code, tests, documents, decisions, settings, branches and pull requests.
 - **Passes its review:** a level's document meets that level's standards and is consistent and complete.

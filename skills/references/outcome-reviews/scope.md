@@ -5,7 +5,7 @@ Rows: the "for whom" line, each requirement, the scenario preamble, each scenari
 1. The document says who the feature is for.
 2. Each requirement is a result the user can observe.
 3. Each scenario states its starting state, what happens and what passes, as results the user can observe.
-4. Each measure is taken on real use and has a target.
+4. Each measure is taken on real use, and has a target unless it is recorded only for tracking.
 5. The statement says what the user gets or how that is judged, not how the work produces it.
 6. The statement sets no definition, rule, threshold or procedure; those belong to a later level.
 7. The statement names no place where anything lives: no file, component or tool.

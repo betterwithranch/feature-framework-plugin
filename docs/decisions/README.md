@@ -45,7 +45,7 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0039 | [Project terms aren't found facts](0039-project-terms-aren-t-found-facts.md) | Accepted |
 | 0040 | [Review findings carry no impact rating](0040-review-findings-carry-no-impact-rating.md) | Accepted |
 | 0041 | [Structure scripts and four scoped yes/no reviews](0041-structure-scripts-and-four-scoped-yes-no-reviews.md) | Accepted |
-| 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted |
+| 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted, amended by 0060 |
 | 0043 | [The Clarity review's rules](0043-the-clarity-review-s-rules.md) | Accepted, amended by 0059 |
 | 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted |
 | 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted |
@@ -55,3 +55,4 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0049 | [The approved measure 2 is replaced by two measures](0049-measure-2-replaced-by-two-measures.md) | Accepted |
 | 0050 | [How the scenarios run is deferred to the level that writes the tests](0050-how-the-scenarios-run-is-deferred.md) | Accepted |
 | 0059 | [No exception to an absolute term, anywhere](0059-no-exception-to-an-absolute-term-anywhere.md) | Accepted |
+| 0060 | [A measure recorded only for tracking has no target](0060-a-measure-recorded-only-for-tracking-has-no-target.md) | Accepted |
