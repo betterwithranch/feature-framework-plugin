@@ -9,7 +9,6 @@ Clarity rule 5 read "No other statement makes an exception to an absolute term t
 ## Decision
 
 - Clarity rule 5 reads: "No statement makes an exception to an absolute term the script lists in it."
-- A review rule that fails to enforce a recorded decision is fixed to match that decision without asking. That is not a change to approved wording that needs the user.
 
 ## Consequences
 
