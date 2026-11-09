@@ -30,7 +30,7 @@
 - **R24.** A question for a later level is answered at that level, not earlier.
 - **R25.** Something already agreed or codified is asked again only for clarity or to resolve a conflict.
 - **R26.** The user makes the user's decisions, wherever a decision is written.
-- **R27.** The work makes its own decisions, wherever a decision is written, and records them where the user can see them.
+- **R27.** The work makes its own decisions, wherever a decision is written, and records them *where the user can see them*.
 - **R28.** The code follows everything agreed or codified, including the user's answers.
 - **R29.** Agreements carry over to later features, within their stated scope.
 - **R30.** The work's decisions never become codified rules.
