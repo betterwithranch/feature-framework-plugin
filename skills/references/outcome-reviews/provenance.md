@@ -10,4 +10,4 @@ Read the document with the conversation that produced it, the decision log and t
 
 ## Output
 
-A grid: one row per item and one column per rule. Each cell is PASS or FAIL. A rule passes any item it doesn't apply to. A FAIL quotes the words that fail. A PASS for rules 1 and 2 on an item they apply to quotes the source of each part of the statement, or the marking that shows that part as the agent's. A PASS missing a quote it needs is a FAIL. Judge nothing outside these rules.
+A grid: one row per item and one column per rule. Each cell is PASS or FAIL. A rule passes any item it doesn't apply to. A FAIL quotes the words that fail. A PASS on where a statement comes from, or on what a statement marked as the agent's decides, quotes the source of each part of the statement, or the marking that shows that part as the agent's. A PASS on an item a rule doesn't apply to needs no quote. A PASS missing a quote it needs is a FAIL. Judge nothing outside these rules.

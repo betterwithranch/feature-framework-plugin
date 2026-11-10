@@ -1,6 +1,6 @@
 # Outcome review: Verification
 
-Rows: each requirement for rule 1; each scenario and each measure for rules 2–7. Judge each by the description's own words, not by imagined runs.
+Rows: each requirement, each scenario and each measure. The rule on whether the checks together cover a requirement applies to requirement rows. Every other rule applies to scenario and measure rows. Judge each by the description's own words, not by imagined runs.
 
 The requirements are one set. Each scenario and measure is judged against the whole set, not against one requirement alone.
 
@@ -14,4 +14,4 @@ The requirements are one set. Each scenario and measure is judged against the wh
 
 ## Output
 
-A grid: one row per item and one column per rule. Each cell is PASS or FAIL. A rule passes any item it doesn't apply to. A FAIL quotes the words that fail. A PASS for rule 2 on an item it applies to quotes each cited requirement's result and the row's words that check that result. A PASS for rule 4 on an item it applies to quotes a source for each thing the pass condition checks. The source is the starting state's words that set it up, the words that set it up in what the document says applies to every scenario, or the words saying the work produces it. A PASS missing a quote it needs is a FAIL. Judge nothing outside these rules.
+A grid: one row per item and one column per rule. Each cell is PASS or FAIL. A rule passes any item it doesn't apply to. A FAIL quotes the words that fail. A PASS on checking a cited requirement's result quotes that result and the row's words that check it. A PASS on where each thing the pass condition checks comes from quotes its source. The source is the starting state's words that set it up, the words that set it up in what the document says applies to every scenario, or the words saying the work produces it. A PASS on an item a rule doesn't apply to needs no quote. A PASS missing a quote it needs is a FAIL. Judge nothing outside these rules.

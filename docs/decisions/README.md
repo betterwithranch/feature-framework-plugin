@@ -67,7 +67,8 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0067 | [A statement joined from agreed points is the work's](0067-a-statement-joined-from-agreed-points-is-the-work-s.md) | Accepted |
 | 0068 | [What is missing is asked within its limits](0068-anything-missing-is-asked-within-its-limits.md) | Accepted |
 | 0069 | [Review grids quote the evidence for each part](0069-review-grids-quote-evidence-for-each-part.md) | Proposed |
-| 0070 | [Writing rules](0070-writing-rules.md) | Accepted |
+| 0070 | [Writing rules](0070-writing-rules.md) | Accepted, amended by 0074 |
 | 0071 | ["The agent" names who acts](0071-the-agent-names-who-acts.md) | Accepted |
 | 0072 | [No "n/a": a rule passes what it doesn't apply to](0072-no-n-a-a-rule-passes-what-it-doesn-t-apply-to.md) | Accepted |
 | 0073 | [Verification judges against the whole set of requirements](0073-verification-judges-against-the-whole-set-of-requirements.md) | Accepted |
+| 0074 | [Name a rule by what it checks](0074-name-a-rule-by-what-it-checks.md) | Accepted |
