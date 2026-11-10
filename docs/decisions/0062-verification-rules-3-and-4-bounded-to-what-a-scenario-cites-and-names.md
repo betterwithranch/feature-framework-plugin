@@ -12,7 +12,7 @@ The Outcome's review ran four rounds without passing. CLAUDE.md says that after 
 ## Decision
 
 - Verification rule 3 reads: "What it describes as passing includes every way the requirements it cites, taken together, allow the user to get that result."
-- Verification rule 4 reads: "Each thing the scenario's pass condition names, other than what the work being verified produces, is set up in its starting state or in what the preamble sets for every scenario."
+- Verification rule 4 reads: "Each thing the pass condition checks is either set up in the starting state or produced by the work being verified. What the document says applies to every scenario is part of each scenario's starting state." The user approved this wording as FF-69 A on 2026-11-10.
 
 ## Consequences
 

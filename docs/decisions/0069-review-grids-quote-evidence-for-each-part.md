@@ -9,7 +9,7 @@ The Outcome's fourth set of review rounds didn't pass, and every FAIL in it was 
 ## Decision
 
 - Verification rule 2: a PASS quotes, for each requirement the row cites, that requirement's result and the row's words that check it.
-- Verification rule 4: a PASS quotes, for each thing the pass condition names, where the starting state or the preamble sets it up.
+- Verification rule 4: a PASS quotes, for each thing the pass condition checks, where the starting state, or what the document says applies to every scenario, sets it up, or the words saying the work produces it.
 - Provenance rules 1 and 2: a PASS quotes, for each part of the statement, its source or the marking that shows it as the work's.
 - A cell with a missing quote is a FAIL. The round structure is unchanged.
 
