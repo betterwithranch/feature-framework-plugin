@@ -1,6 +1,6 @@
 # 0060. A measure recorded only for tracking has no target
 
-Status: proposed, 2026-11-09
+Status: withdrawn: the user rejected it, 2026-11-10
 
 ## Context
 
@@ -15,3 +15,4 @@ Scope rule 4 read "Each measure is taken on real use and has a target." The Outc
 ## Consequences
 
 - Amends the Scope review's rules, [decision 0042](0042-the-scope-review-s-rules.md), and the Verification review's rules, [decision 0044](0044-the-verification-review-s-rules.md).
+- Withdrawn on 2026-11-10. The user said: "what is a measure only for tracking? that's a feature in level 1 that is verified to measure completeness. I don't see the value of treating it any differently". Scope rules 4 and 6 and Verification rule 6 are back to their approved wording.

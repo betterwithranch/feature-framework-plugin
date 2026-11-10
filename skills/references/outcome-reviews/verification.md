@@ -9,7 +9,7 @@ The requirements are one set. Each scenario and measure is judged against the wh
 3. What it describes as passing includes every way the requirements allow the user to get that result.
 4. Each thing the pass condition checks is either set up in the starting state or produced by the work being verified. What the document says applies to every scenario is part of each scenario's starting state.
 5. What it describes as passing is what the user sees, not the system's own record that it succeeded.
-6. A scenario states the expected result. So does a measure that isn't recorded only for tracking. A measure recorded only for tracking needs no expected result.
+6. It states the expected result.
 7. What it describes as passing depends on no other scenario or measure.
 
 ## Output
