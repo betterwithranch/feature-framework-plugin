@@ -1,6 +1,6 @@
 # 0063. Verification rule 1 needs no check per item or case
 
-Status: accepted, 2026-11-09
+Status: proposed, 2026-11-09
 
 ## Context
 
@@ -8,7 +8,7 @@ The Outcome's second set of four review rounds didn't pass. In each round Verifi
 
 ## Decision
 
-Verification rule 1 reads: "Together, the scenarios and measures citing a requirement describe a check that fails if any part of it isn't met. A separate check for each listed item, case, level or term isn't needed."
+Verification rule 1 reads: "Together, the scenarios and measures citing a requirement describe a check that fails if any part of the requirement isn't met. A separate check for each listed item, case, level or term isn't needed."
 
 ## Consequences
 

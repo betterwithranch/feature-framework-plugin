@@ -1,6 +1,6 @@
 # 0069. Review grids quote the evidence for each part
 
-Status: accepted, 2026-11-09
+Status: proposed, 2026-11-09
 
 ## Context
 
@@ -8,9 +8,9 @@ The Outcome's fourth set of review rounds didn't pass, and every FAIL in it was 
 
 ## Decision
 
-- Verification rule 2: a PASS quotes, for each requirement the row cites, that requirement's result and the row's words that check it.
-- Verification rule 4: a PASS quotes, for each thing the pass condition checks, where the starting state, or what the document says applies to every scenario, sets it up, or the words saying the work produces it.
-- Provenance rules 1 and 2: a PASS quotes, for each part of the statement, its source or the marking that shows it as the work's.
+- Verification rule 2: "A PASS for rule 2 quotes each cited requirement's result and the row's words that check that result."
+- Verification rule 4: "A PASS for rule 4 quotes a source for each thing checked by what the row describes as passing. The source is the starting state's words that set it up, the words that set it up in what the document says applies to every scenario, or the words saying the work produces it."
+- Provenance rules 1 and 2: "A PASS for rules 1 and 2 quotes the source of each part of the statement, or the marking that shows that part as the work's."
 - A cell with a missing quote is a FAIL. The round structure is unchanged.
 
 ## Consequences

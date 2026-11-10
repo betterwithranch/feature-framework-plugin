@@ -1,6 +1,6 @@
 # Outcome review: Provenance
 
-Read the document with the conversation that produced it, the decision log and the codified rules, including [the decision classification](../decisions.md). Rows: each requirement, the scenario preamble, each scenario and each measure.
+Read the document with the conversation that produced it, the decision log and the codified rules, including [the decision classification](../decisions.md). Rows: each requirement, the paragraph above the scenario table, each scenario and each measure.
 
 1. The statement is something the user said or agreed, or it is marked as the work's.
 2. A statement marked as the work's makes no decision the decision classification gives to the user.
@@ -10,4 +10,4 @@ Read the document with the conversation that produced it, the decision log and t
 
 ## Output
 
-A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. For rules 1 and 2, a PASS quotes, for each part of the statement, its source or the marking that shows it as the work's. A cell with a missing quote is a FAIL. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.
+A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. A PASS for rules 1 and 2 quotes the source of each part of the statement, or the marking that shows that part as the work's. A cell with a missing quote is a FAIL. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.

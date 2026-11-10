@@ -1,6 +1,6 @@
 # 0065. Verification rule 3 judges the starting state as set up
 
-Status: accepted, 2026-11-09
+Status: proposed, 2026-11-09
 
 ## Context
 
@@ -8,7 +8,7 @@ Verification rule 3 read "What it describes as passing includes every way the re
 
 ## Decision
 
-Verification rule 3 reads: "What it describes as passing includes every way the requirements it cites, taken together, allow the user to get that result from the starting state the scenario sets up. A case the starting state doesn't set up is not judged."
+Verification rule 3 reads: "What it describes as passing includes every way the cited requirements together allow the user to get that result from the starting state the scenario sets up. A case the starting state doesn't set up is not judged."
 
 ## Consequences
 

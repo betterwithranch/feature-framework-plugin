@@ -4,7 +4,7 @@
 Usage: absolutes.py <document.md>
 
 Prints one tab-separated line per absolute: ID (R<n>, S<n>, M<n>, or
-"glossary: <term>", or "preamble"), the term, and the sentence it sits in.
+"glossary: <term>", or "the paragraph above the scenario table"), the term, and the sentence it sits in.
 The terms are the absolute terms the decision log lists and words that say the same.
 """
 import re
@@ -36,7 +36,7 @@ def items(doc: str) -> list[tuple[str, str]]:
         elif m := GLOSSARY.match(line):
             found.append((f"glossary: {m.group(1)}", m.group(2)))
         elif line.startswith("**Scenarios.**"):
-            found.append(("preamble", line))
+            found.append(("the paragraph above the scenario table", line))
     return found
 
 

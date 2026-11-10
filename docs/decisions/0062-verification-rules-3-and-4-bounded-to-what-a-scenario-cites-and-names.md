@@ -1,6 +1,6 @@
 # 0062. Verification rules 3 and 4 are bounded to what a scenario cites and names
 
-Status: accepted, 2026-11-09
+Status: partly accepted: rule 4 approved as FF-69 A; rule 3 proposed
 
 ## Context
 
@@ -11,7 +11,7 @@ The Outcome's review ran four rounds without passing. CLAUDE.md says that after 
 
 ## Decision
 
-- Verification rule 3 reads: "What it describes as passing includes every way the requirements it cites, taken together, allow the user to get that result."
+- Verification rule 3 reads: "What it describes as passing includes every way the cited requirements together allow the user to get that result."
 - Verification rule 4 reads: "Each thing the pass condition checks is either set up in the starting state or produced by the work being verified. What the document says applies to every scenario is part of each scenario's starting state." The user approved this wording as FF-69 A on 2026-11-10.
 
 ## Consequences
