@@ -4,7 +4,7 @@ Status: accepted, 2026-11-10
 
 ## Context
 
-The documents and review rules used "the work" for who asks, plays back, decides and records, and the glossary didn't define it. Asked whether to add a glossary entry for "the work" (FF-71), the user chose B: no entry, and the term is replaced everywhere. Asked what replaces it (FF-72), the user chose B, "the agent", because "this needs to work when run with Codex too and naming it claude will break that."
+The documents and review rules used "the work" for who asks, plays back, decides and records, and the glossary didn't define it. Asked whether to add a glossary entry for "the work" (FF-71), the user chose B: no entry, and the term is replaced everywhere. Asked what replaces it (FF-72), the user chose B, "the agent", because "this needs to work when run with codex too and naming it claude will break that".
 
 ## Decision
 

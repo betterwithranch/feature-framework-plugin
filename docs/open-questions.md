@@ -25,7 +25,7 @@ Questions set aside because they belong to a later level ([decision 0009](decisi
 | A decision holds only within its stated scope. | Behaviour |
 | The next feature makes the same decision again, with the earlier one as its preferred default, unless an agreement or codified rule already covers the case. | Behaviour |
 | No check relies only on tests written by the work being judged. | Behaviour |
-| The framework enforces itself the same way whether the work runs under Claude Code or under Codex. The user's answer (FF-72, 2026-11-10): "this needs to work when run with codex too and naming it claude will break that" | Design |
+| The framework enforces itself the same way whether the framework runs under Claude Code or under Codex. The user's answer (FF-72, 2026-11-10): "this needs to work when run with codex too and naming it claude will break that" | Design |
 | Nothing is guessed. | Behaviour |
 | When a choice between readings is put to the user: "in a message of its own, after the playback" (decision 0021, FF-14 A) | Behaviour |
 | A plain answer that could be read more than one way when no playback follows it, such as an answer given after code starts. A plain answer gets no playback of its own (R7), and the choice comes after the playback (0021). Options: A. the choice goes in a message of its own straight away, "after the playback, when there is one"; B. such an answer gets a playback, and R7 covers only answers read one way | Behaviour |
