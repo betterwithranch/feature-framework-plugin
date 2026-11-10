@@ -8,7 +8,13 @@ An Outcome is written for those who build from it: the agents doing later levels
 
 ## Contents
 
-An Outcome contains who the feature is for; its requirements, as results the user can observe; end-to-end scenarios, checked automatically; measures of success on real use; and a reference to the project's glossary.
+An Outcome contains:
+
+- who the feature is for
+- its requirements, as results the user can observe
+- end-to-end scenarios, checked automatically
+- measures of success on real use
+- a reference to the project's glossary
 
 It leaves to later levels: non-goals, rules and edge cases, design decisions, implementation, slicing, where anything lives, and how tests are built.
 
@@ -25,6 +31,14 @@ An Outcome passes when its structure checks pass and each of its four reviews ma
 
 The project glossary has its own review, [glossary-review.md](glossary-review.md), run alongside them.
 
-The structure checks are `skills/write-outcome/scripts/structure.py`: the required sections are present, every requirement ID is cited by a scenario or measure and every cited ID exists, IDs run in document order without gaps or duplicates, and no level-1 banned term appears. `skills/write-outcome/scripts/absolutes.py` lists the absolute terms in each statement for the Clarity review.
+The structure checks are run by `skills/write-outcome/scripts/structure.py`. They check that:
 
-Each rule judges what the document describes; nothing runs at this level. A judge leaves out a FAIL that few users would ever meet or that changes nothing for them. This is judged, not scored.
+- the required sections are present
+- every requirement ID is cited by a scenario or measure
+- every cited ID exists
+- IDs run in document order without gaps or duplicates
+- no level-1 banned term appears
+
+`skills/write-outcome/scripts/absolutes.py` lists the absolute terms in each statement for the Clarity review.
+
+Each rule judges what the document describes. Nothing runs at this level. A judge leaves out a FAIL that few users would ever meet or that changes nothing for them. This is judged, not scored.

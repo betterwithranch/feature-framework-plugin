@@ -6,7 +6,7 @@ Read the document with the conversation that produced it, the decision log and t
 2. A statement marked as the agent's makes no decision the decision classification gives to the user.
 3. The document holds no fact the agent looked up about the project.
 4. A project term used with the project's meaning counts as the project's, not as a fact the agent looked up.
-5. Where a word of the user's clashes with a project term, the document records the clash and uses the project's term only with its meaning.
+5. The document records each clash between a word of the user's and a project term. It uses that project term only with its meaning.
 
 ## Output
 

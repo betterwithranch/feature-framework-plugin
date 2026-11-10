@@ -7,7 +7,7 @@ Read the project glossary with the conversation that produced it, the decision l
 3. The entry says what its term means and sets no rule, threshold or procedure.
 4. Each concept has one term in the glossary.
 5. The entry contradicts no other entry.
-6. An entry for a term the project already uses gives the project's meaning; where a word of the user's clashes with it, the glossary records the clash.
+6. An entry for a term the project already uses gives the project's meaning. The glossary records each clash between a word of the user's and that term.
 
 ## Output
 

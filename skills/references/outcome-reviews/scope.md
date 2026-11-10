@@ -7,7 +7,7 @@ Rows: the "for whom" line, each requirement, the paragraph above the scenario ta
 3. Each scenario states its starting state, what happens and what passes, as results the user can observe. What the document says applies to every scenario counts as stated.
 4. Each measure is taken on real use and has a target.
 5. The statement says what the user gets or how that is judged, not how the agent produces it.
-6. The statement sets no definition, rule, threshold or procedure; those belong to a later level.
+6. The statement sets no definition, rule, threshold or procedure. Those belong to a later level.
 7. The statement names no place where anything lives: no file, component or tool.
 8. The statement excludes nothing from the feature and covers no edge case.
 

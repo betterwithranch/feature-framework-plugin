@@ -1,6 +1,6 @@
 # 0063. Verification rule 1 needs no check per item or case
 
-Status: proposed, 2026-11-09
+Status: accepted, 2026-11-10; applies decisions 0032 and 0034
 
 ## Context
 

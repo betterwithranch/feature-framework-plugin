@@ -60,16 +60,17 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0060 | [A measure recorded only for tracking has no target](0060-a-measure-recorded-only-for-tracking-has-no-target.md) | Withdrawn |
 | 0061 | [A later decision replaces an earlier one it disagrees with](0061-a-later-decision-replaces-an-earlier-one-it-disagrees-with.md) | Accepted |
 | 0062 | [Verification rules 3 and 4 are bounded to what a scenario cites and names](0062-verification-rules-3-and-4-bounded-to-what-a-scenario-cites-and-names.md) | Partly accepted: rule 4 approved as FF-69 A; rule 3 replaced by 0073 |
-| 0063 | [Verification rule 1 needs no check per item or case](0063-verification-rule-1-needs-no-check-per-item-or-case.md) | Proposed |
-| 0064 | [Scope rule 3 counts what the document says applies to every scenario](0064-scope-rule-3-counts-what-the-preamble-sets.md) | Proposed |
+| 0063 | [Verification rule 1 needs no check per item or case](0063-verification-rule-1-needs-no-check-per-item-or-case.md) | Accepted |
+| 0064 | [Scope rule 3 counts what the document says applies to every scenario](0064-scope-rule-3-counts-what-the-preamble-sets.md) | Accepted |
 | 0065 | [Verification rule 3 judges the starting state as set up](0065-verification-rule-3-judges-the-starting-state-as-set-up.md) | Replaced by 0073 |
 | 0066 | [Provenance rule 1: a joined statement needs a source for each part](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) | Replaced by 0067 |
 | 0067 | [A statement joined from agreed points is the work's](0067-a-statement-joined-from-agreed-points-is-the-work-s.md) | Accepted |
 | 0068 | [What is missing is asked within its limits](0068-anything-missing-is-asked-within-its-limits.md) | Accepted |
-| 0069 | [Review grids quote the evidence for each part](0069-review-grids-quote-evidence-for-each-part.md) | Proposed |
+| 0069 | [Review grids quote the evidence for each part](0069-review-grids-quote-evidence-for-each-part.md) | Accepted |
 | 0070 | [Writing rules](0070-writing-rules.md) | Accepted, amended by 0074 |
 | 0071 | ["The agent" names who acts](0071-the-agent-names-who-acts.md) | Accepted |
 | 0072 | [No "n/a": a rule passes what it doesn't apply to](0072-no-n-a-a-rule-passes-what-it-doesn-t-apply-to.md) | Accepted |
 | 0073 | [Verification judges against the whole set of requirements](0073-verification-judges-against-the-whole-set-of-requirements.md) | Accepted |
 | 0074 | [Name a rule by what it checks](0074-name-a-rule-by-what-it-checks.md) | Accepted |
 | 0075 | [Measures in plain words](0075-measures-in-plain-words.md) | Accepted |
+| 0076 | [Approved text follows the writing rules](0076-approved-text-follows-the-writing-rules.md) | Accepted |

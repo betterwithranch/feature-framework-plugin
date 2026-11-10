@@ -1,6 +1,6 @@
 # 0064. Scope rule 3 counts what the document says applies to every scenario
 
-Status: proposed, 2026-11-09
+Status: accepted, 2026-11-10; applies Verification rule 4 as approved in FF-69 A
 
 ## Context
 
