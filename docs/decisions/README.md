@@ -2,6 +2,8 @@
 
 Architecture decision records. Each records one agreed decision, its context and consequences.
 
+Records follow [the writing rules](../../skills/references/writing.md).
+
 | # | Decision | Status |
 | --- | --- | --- |
 | 0001 | [Make the level of work explicit](0001-make-the-level-explicit.md) | Accepted |
@@ -65,3 +67,4 @@ Architecture decision records. Each records one agreed decision, its context and
 | 0067 | [A statement joined from agreed points is the work's](0067-a-statement-joined-from-agreed-points-is-the-work-s.md) | Accepted |
 | 0068 | [What is missing is asked within its limits](0068-anything-missing-is-asked-within-its-limits.md) | Accepted |
 | 0069 | [Review grids quote the evidence for each part](0069-review-grids-quote-evidence-for-each-part.md) | Accepted |
+| 0070 | [Writing rules](0070-writing-rules.md) | Accepted |

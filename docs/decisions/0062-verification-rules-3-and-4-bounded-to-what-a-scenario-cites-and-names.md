@@ -17,4 +17,4 @@ The Outcome's review ran four rounds without passing. CLAUDE.md says that after 
 ## Consequences
 
 - Amends the Verification review's rules, [decision 0044](0044-the-verification-review-s-rules.md).
-- Rule 3 enforces [decision 0021](0021-play-back-before-acting-interview-before-drafting.md), as [decision 0059](0059-no-exception-to-an-absolute-term-anywhere.md) allows.
+- Rule 3 enforces [decision 0021](0021-play-back-before-acting-interview-before-drafting.md).

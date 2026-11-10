@@ -7,6 +7,8 @@ description: Reviews a feature's Outcome document by running its structure check
 
 Read [the Outcome definition](../references/outcome.md). It names the structure checks and the four reviews.
 
+The review rules follow [the writing rules](../references/writing.md).
+
 ## Method
 
 1. Run `skills/write-outcome/scripts/structure.py <document>`. Report any failure it prints.
