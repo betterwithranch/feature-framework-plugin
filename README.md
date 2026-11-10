@@ -45,7 +45,7 @@ What an Outcome contains and leaves to later levels is in [skills/references/out
 | `skills/references/outcome.md` | What an Outcome contains and the criteria it must meet, shared by the Outcome skills |
 | `skills/references/outcome-reviews/` | The rules of the Outcome's four reviews: Scope, Clarity, Verification and Provenance |
 | `skills/references/glossary-review.md` | The rules of the project glossary's review |
-| `skills/references/decisions.md` | Which decisions the user makes and which the work makes |
+| `skills/references/decisions.md` | Which decisions the user makes and which the agent makes |
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
 | `skills/write-outcome/scripts/` | Scripts that check an Outcome's structure and list its absolute terms |
 | `tests/` | Tests for those scripts |

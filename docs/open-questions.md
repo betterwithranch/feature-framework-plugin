@@ -18,14 +18,14 @@ Questions set aside because they belong to a later level ([decision 0009](decisi
 | Whether the scenarios are plugin evals (`claude plugin eval`, following Anthropic's guidance for well-written plugin evals), and how a multi-turn scripted user is done, since plugin eval documents no simulated user ([decision 0050](decisions/0050-how-the-scenarios-run-is-deferred.md)) | The level that writes the tests |
 | Whether the deterministic hook scripts are tested with pytest ([decision 0050](decisions/0050-how-the-scenarios-run-is-deferred.md)) | The level that writes the tests |
 | How support for both Claude Code and Codex is shown without running every scenario under each ([decision 0050](decisions/0050-how-the-scenarios-run-is-deferred.md)) | The level that writes the tests |
-| Nothing is guessed: a fact is looked up, a decision of the user's is asked, a decision of the work's is made by the work, a reading is asked, and anything the work can't settle one of those ways is put to the user. | Behaviour |
+| Nothing is guessed: a fact is looked up, a decision of the user's is asked, a decision of the agent's is made by the agent, a reading is asked, and anything the agent can't settle one of those ways is put to the user. | Behaviour |
 | Before the user approves a level that allows found facts, its review checks each found fact against the project, and a wrong fact is a finding. | Behaviour |
 | Approving a level makes the user's decisions and answers in it agreed. | Behaviour |
-| The work's decisions in an approved level stay the work's. | Behaviour |
+| The agent's decisions in an approved level stay the agent's. | Behaviour |
 | A decision holds only within its stated scope. | Behaviour |
 | The next feature makes the same decision again, with the earlier one as its preferred default, unless an agreement or codified rule already covers the case. | Behaviour |
 | No check relies only on tests written by the work being judged. | Behaviour |
-| The framework enforces itself the same way whether the work runs under Claude Code or under Codex. | Design |
+| The framework enforces itself the same way whether the work runs under Claude Code or under Codex. The user's answer (FF-72, 2026-11-10): "this needs to work when run with codex too and naming it claude will break that" | Design |
 | Nothing is guessed. | Behaviour |
 | When a choice between readings is put to the user: "in a message of its own, after the playback" (decision 0021, FF-14 A) | Behaviour |
 | A plain answer that could be read more than one way when no playback follows it, such as an answer given after code starts. A plain answer gets no playback of its own (R7), and the choice comes after the playback (0021). Options: A. the choice goes in a message of its own straight away, "after the playback, when there is one"; B. such an answer gets a playback, and R7 covers only answers read one way | Behaviour |

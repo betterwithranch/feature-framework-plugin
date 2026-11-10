@@ -4,7 +4,7 @@ Status: accepted, 2026-11-09
 
 ## Context
 
-[Decision 0066](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) let Provenance rule 1 pass a statement that joins several things the user said or agreed. It cited no recorded decision, and the classification says the opposite: a decision that "Follows from something agreed, a codified rule or a goal" is the work's ("The work decides" 1), and the work's statements are marked as its own. So the review round that failed R8 and S8's "about what the current level decides", which joins [decision 0021](0021-play-back-before-acting-interview-before-drafting.md) with [decision 0009](0009-block-lower-level-questions.md), gave the right verdict, and the earlier passes were the misses.
+[Decision 0066](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) let Provenance rule 1 pass a statement that joins several things the user said or agreed. It cited no recorded decision, and the classification says the opposite: a decision that "Follows from something agreed, a codified rule or a goal" is the work's ("The agent decides" 1, formerly 'The work decides'), and the work's statements are marked as its own. So the review round that failed R8 and S8's "about what the current level decides", which joins [decision 0021](0021-play-back-before-acting-interview-before-drafting.md) with [decision 0009](0009-block-lower-level-questions.md), gave the right verdict, and the earlier passes were the misses.
 
 ## Decision
 
