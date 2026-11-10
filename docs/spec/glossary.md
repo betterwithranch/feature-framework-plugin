@@ -1,6 +1,6 @@
 # Glossary
 
-The project's terms, shared by every feature's level documents. Words in italics are the work's.
+The project's terms, shared by every feature's level documents. Words in italics are the agent's.
 
 - **The user:** the person who decides which features to build and approves each level. *The skills and their references also use "the user" for whoever a feature is for. For this framework's own features, that is the same person.*
 - **Code starts:** the first change to the project's code or tests.
@@ -10,8 +10,8 @@ The project's terms, shared by every feature's level documents. Words in italics
 - **Requirement:** a result the user can observe. Its **verification** is what shows it holds.
 - **Complete requirement:** its verification can be written in full and run, with nothing left to ask the user.
 - **Complete verification:** it names what is checked, how, and what result passes.
-- **Playback:** the work telling the user, in its own words, what it understood.
-- **Plain answer:** the user's answer to the work's own question.
-- **Found fact:** a fact about the project that the work found, *rather than one the user gave*. Using a project term with the project's meaning is not a found fact.
-- **Decision classification:** the [rules](../../skills/references/decisions.md) that set which decisions are the user's and which are the work's.
+- **Playback:** the agent telling the user, in its own words, what it understood.
+- **Plain answer:** the user's answer to the agent's own question.
+- **Found fact:** a fact about the project that the agent found, *rather than one the user gave*. Using a project term with the project's meaning is not a found fact.
+- **Decision classification:** the [rules](../../skills/references/decisions.md) that set which decisions are the user's and which are the agent's.
 - **The user's to settle:** *a decision the classification gives the user, a point it doesn't clearly assign, and a conflict between one of the user's decisions and something no one decided.*

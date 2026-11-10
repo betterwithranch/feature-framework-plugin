@@ -8,7 +8,7 @@ Status: accepted, 2026-11-09
 
 ## Decision
 
-- Provenance rule 1 returns to "The statement is something the user said or agreed, or it is marked as the work's."
+- Provenance rule 1 returns to "The statement is something the user said or agreed, or it is marked as the agent's."
 - R8 drops "about what the current level decides". The limit narrows what [decision 0021](0021-play-back-before-acting-interview-before-drafting.md) says ("Anything that could be read more than one way is put to the user as a choice"), and narrowing an agreement is the user's decision ("The user decides" 2), so R8 returns to 0021's scope.
 - S8 keeps "about what that level decides", marked as the work's: it only sets up the scenario's case.
 - R8 and S8 also return to what the user agreed on when the choice comes: R8 "after the playback" (FF-14 A, 0021), dropping the unagreed "when there is one"; S8 "after the playback and before its document is written" (FF-20 A, "keep it as written").

@@ -2,7 +2,7 @@
 
 Read the project glossary with the conversation that produced it, the decision log, the codified rules and the project. Rows: each glossary entry.
 
-1. The entry is something the user said or agreed, or it is marked as the work's.
+1. The entry is something the user said or agreed, or it is marked as the agent's.
 2. A reader can tell what the term means from its entry, read with the rest of the glossary.
 3. The entry says what its term means and sets no rule, threshold or procedure.
 4. Each concept has one term in the glossary.
