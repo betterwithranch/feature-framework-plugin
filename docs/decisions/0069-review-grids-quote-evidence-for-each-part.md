@@ -8,10 +8,10 @@ The Outcome's fourth set of review rounds didn't pass, and every FAIL in it was 
 
 ## Decision
 
-- Verification rule 2: "A PASS for rule 2 quotes each cited requirement's result and the row's words that check that result."
-- Verification rule 4: "A PASS for rule 4 quotes a source for each thing the pass condition checks. The source is the starting state's words that set it up, the words that set it up in what the document says applies to every scenario, or the words saying the work produces it."
-- Provenance rules 1 and 2: "A PASS for rules 1 and 2 quotes the source of each part of the statement, or the marking that shows that part as the agent's."
-- A cell with a missing quote is a FAIL. The round structure is unchanged.
+- Verification rule 2: "A PASS for rule 2 on an item it applies to quotes each cited requirement's result and the row's words that check that result."
+- Verification rule 4: "A PASS for rule 4 on an item it applies to quotes a source for each thing the pass condition checks. The source is the starting state's words that set it up, the words that set it up in what the document says applies to every scenario, or the words saying the work produces it."
+- Provenance rules 1 and 2: "A PASS for rules 1 and 2 on an item they apply to quotes the source of each part of the statement, or the marking that shows that part as the agent's."
+- A PASS missing a quote it needs is a FAIL. The round structure is unchanged.
 
 ## Consequences
 

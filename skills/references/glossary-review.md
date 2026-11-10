@@ -11,4 +11,4 @@ Read the project glossary with the conversation that produced it, the decision l
 
 ## Output
 
-A grid: one row per entry, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. A rule that doesn't apply to an entry is marked "n/a". Judge nothing outside these rules.
+A grid: one row per entry and one column per rule. Each cell is PASS or FAIL. A rule passes any entry it doesn't apply to. A FAIL quotes the words that fail. Judge nothing outside these rules.

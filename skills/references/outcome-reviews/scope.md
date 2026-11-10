@@ -13,4 +13,4 @@ Rows: the "for whom" line, each requirement, the paragraph above the scenario ta
 
 ## Output
 
-A grid: one row per item, one column per rule, every cell PASS or FAIL. A FAIL quotes the words that fail. A rule that doesn't apply to an item is marked "n/a". Judge nothing outside these rules.
+A grid: one row per item and one column per rule. Each cell is PASS or FAIL. A rule passes any item it doesn't apply to. A FAIL quotes the words that fail. Judge nothing outside these rules.

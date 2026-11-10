@@ -20,7 +20,7 @@ The review rules follow [the writing rules](../references/writing.md).
 ## Output
 
 - Structure: the script's failures, or "pass".
-- The merged grid: every row against every rule of every review, PASS, FAIL with its quote, or n/a; the glossary review's rows are its entries.
+- The merged grid: every row against every rule of every review, PASS or FAIL with its quote; the glossary review's rows are its entries.
 - The FAIL cells, listed with review, rule, row and quote.
 
 ## Rounds

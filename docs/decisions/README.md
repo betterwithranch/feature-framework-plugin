@@ -69,3 +69,4 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0069 | [Review grids quote the evidence for each part](0069-review-grids-quote-evidence-for-each-part.md) | Proposed |
 | 0070 | [Writing rules](0070-writing-rules.md) | Accepted |
 | 0071 | ["The agent" names who acts](0071-the-agent-names-who-acts.md) | Accepted |
+| 0072 | [No "n/a": a rule passes what it doesn't apply to](0072-no-n-a-a-rule-passes-what-it-doesn-t-apply-to.md) | Accepted |
