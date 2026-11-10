@@ -72,3 +72,4 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0072 | [No "n/a": a rule passes what it doesn't apply to](0072-no-n-a-a-rule-passes-what-it-doesn-t-apply-to.md) | Accepted |
 | 0073 | [Verification judges against the whole set of requirements](0073-verification-judges-against-the-whole-set-of-requirements.md) | Accepted |
 | 0074 | [Name a rule by what it checks](0074-name-a-rule-by-what-it-checks.md) | Accepted |
+| 0075 | [Measures in plain words](0075-measures-in-plain-words.md) | Accepted |

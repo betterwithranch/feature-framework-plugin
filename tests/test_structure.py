@@ -24,7 +24,7 @@ DOC = """**For whom.** Someone.
 
 **Measures**, on real use:
 
-- **M1.** Count of R2 failures: target zero.
+- **M1.** Count of R2 failures: none.
 """
 
 

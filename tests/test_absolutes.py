@@ -24,7 +24,7 @@ DOC = """# Outcome
 
 **Measures**, on real features:
 
-- **M1.** Messages with anything extra: target zero.
+- **M1.** Messages with anything extra: none.
 """
 
 
@@ -48,6 +48,7 @@ class AbsolutesTest(unittest.TestCase):
                 ("glossary: Plain answer", "never"),
                 ("S1", "no"),
                 ("M1", "anything"),
+                ("M1", "none"),
             ],
         )
 

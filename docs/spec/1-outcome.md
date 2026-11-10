@@ -67,7 +67,7 @@
 
 **Measures**, on real features, from transcripts and the code:
 
-- **M1.** Questions about something already agreed or codified, other than for clarity or about a conflict (R25): target zero.
-- **M2.** *The user's decisions that the agent made instead (R26): target zero.*
-- **M3.** *The agent's decisions that aren't recorded where the user can see them, or that became a codified rule (R27 R30): target zero.*
-- **M4.** Times the user is asked after code starts because of a decision no one made: counted for each feature as planning misses. It's not a pass bar.
+- **M1.** Questions about something already agreed or codified that aren't for clarity or about a conflict (R25): none.
+- **M2.** *The user's decisions that the agent made instead (R26): none.*
+- **M3.** *The agent's decisions that aren't recorded where the user can see them, or that became a codified rule (R27 R30): none.*
+- **M4.** Times the user is asked after code starts because of a decision no one made (R32): none.
