@@ -1,6 +1,6 @@
 # 0065. Verification rule 3 judges the starting state as set up
 
-Status: proposed, 2026-11-09
+Status: superseded by 0073 (FF-74 A), 2026-11-10
 
 ## Context
 

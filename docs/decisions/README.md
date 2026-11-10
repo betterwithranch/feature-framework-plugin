@@ -49,7 +49,7 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0041 | [Structure scripts and four scoped yes/no reviews](0041-structure-scripts-and-four-scoped-yes-no-reviews.md) | Accepted |
 | 0042 | [The Scope review's rules](0042-the-scope-review-s-rules.md) | Accepted, amended by 0060 and 0064 |
 | 0043 | [The Clarity review's rules](0043-the-clarity-review-s-rules.md) | Accepted, amended by 0059 |
-| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062, 0063, 0065 and 0069 |
+| 0044 | [The Verification review's rules](0044-the-verification-review-s-rules.md) | Accepted, amended by 0060, 0062, 0063, 0069 and 0073 |
 | 0045 | [The Provenance review's rules](0045-the-provenance-review-s-rules.md) | Accepted, amended by 0069 |
 | 0046 | [One project glossary](0046-one-project-glossary.md) | Accepted |
 | 0047 | [Where the project glossary lives](0047-where-the-project-glossary-lives.md) | Accepted |
@@ -59,10 +59,10 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0059 | [No exception to an absolute term, anywhere](0059-no-exception-to-an-absolute-term-anywhere.md) | Accepted |
 | 0060 | [A measure recorded only for tracking has no target](0060-a-measure-recorded-only-for-tracking-has-no-target.md) | Proposed |
 | 0061 | [A later decision replaces an earlier one it disagrees with](0061-a-later-decision-replaces-an-earlier-one-it-disagrees-with.md) | Accepted |
-| 0062 | [Verification rules 3 and 4 are bounded to what a scenario cites and names](0062-verification-rules-3-and-4-bounded-to-what-a-scenario-cites-and-names.md) | Partly accepted: rule 4 approved as FF-69 A; rule 3 proposed |
+| 0062 | [Verification rules 3 and 4 are bounded to what a scenario cites and names](0062-verification-rules-3-and-4-bounded-to-what-a-scenario-cites-and-names.md) | Partly accepted: rule 4 approved as FF-69 A; rule 3 replaced by 0073 |
 | 0063 | [Verification rule 1 needs no check per item or case](0063-verification-rule-1-needs-no-check-per-item-or-case.md) | Proposed |
 | 0064 | [Scope rule 3 counts what the document says applies to every scenario](0064-scope-rule-3-counts-what-the-preamble-sets.md) | Proposed |
-| 0065 | [Verification rule 3 judges the starting state as set up](0065-verification-rule-3-judges-the-starting-state-as-set-up.md) | Proposed |
+| 0065 | [Verification rule 3 judges the starting state as set up](0065-verification-rule-3-judges-the-starting-state-as-set-up.md) | Replaced by 0073 |
 | 0066 | [Provenance rule 1: a joined statement needs a source for each part](0066-provenance-rule-1-a-joined-statement-needs-a-source-per-part.md) | Replaced by 0067 |
 | 0067 | [A statement joined from agreed points is the work's](0067-a-statement-joined-from-agreed-points-is-the-work-s.md) | Accepted |
 | 0068 | [What is missing is asked within its limits](0068-anything-missing-is-asked-within-its-limits.md) | Accepted |
@@ -70,3 +70,4 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0070 | [Writing rules](0070-writing-rules.md) | Accepted |
 | 0071 | ["The agent" names who acts](0071-the-agent-names-who-acts.md) | Accepted |
 | 0072 | [No "n/a": a rule passes what it doesn't apply to](0072-no-n-a-a-rule-passes-what-it-doesn-t-apply-to.md) | Accepted |
+| 0073 | [Verification judges against the whole set of requirements](0073-verification-judges-against-the-whole-set-of-requirements.md) | Accepted |

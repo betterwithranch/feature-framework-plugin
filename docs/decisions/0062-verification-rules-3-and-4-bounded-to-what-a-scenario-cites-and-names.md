@@ -1,6 +1,6 @@
 # 0062. Verification rules 3 and 4 are bounded to what a scenario cites and names
 
-Status: partly accepted: rule 4 approved as FF-69 A; rule 3 proposed
+Status: partly accepted: rule 4 approved as FF-69 A; rule 3 replaced by 0073 (FF-74 A)
 
 ## Context
 
