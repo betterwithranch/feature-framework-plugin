@@ -26,38 +26,34 @@ Takes a feature you've decided to build from intent to working code, one level a
 
 ## How every planning level runs
 
-1. The work interviews the user, one question at a time.
-2. It plays back what it understood, and the user confirms.
-3. It writes the level's document.
-4. The level's review runs, in rounds, until it passes.
-5. The user approves. Only then does the next level start.
-
-Throughout:
-
-- Nothing is guessed: a fact is looked up, the user's decisions and readings are asked.
-- One classification sets who makes each decision.
-- A question for a later level is recorded for that level and not answered.
-- Once Slices is approved, Build runs without the user, except for something that is the user's to settle.
+How every planning level runs, from the interview to the user's approval, is stated by the [requirements of the framework's Outcome](docs/spec/1-outcome.md).
 
 ## Level 1 (Outcome)
 
-Contains who the feature is for; its requirements, as results the user can observe; end-to-end scenarios, checked automatically; measures of success on real use; and a reference to the project's glossary.
-
-Leaves to later levels: non-goals, rules and edge cases, design decisions, implementation, slicing, where anything lives, and how tests are built.
+What an Outcome contains and leaves to later levels is in [skills/references/outcome.md](skills/references/outcome.md).
 
 ## Layout
 
 | Path | Contents |
 | --- | --- |
 | `docs/spec/1-outcome.md` | The framework's own Outcome: what it achieves and how success is checked |
+| `docs/spec/glossary.md` | The project's terms, shared by every level document |
 | `docs/goals.md` | The goals every change serves, and when to decide versus ask |
 | `docs/spec/candidates.md` | Content agreed before the Outcome, to be checked at the level that owns it |
 | `docs/decisions/` | Decision records: one agreed decision each, with context and consequences |
 | `docs/open-questions.md` | Questions set aside for the level that owns them |
 | `skills/references/outcome.md` | What an Outcome contains and the criteria it must meet, shared by the Outcome skills |
+| `skills/references/outcome-reviews/` | The rules of the Outcome's four reviews: Scope, Clarity, Verification and Provenance |
+| `skills/references/glossary-review.md` | The rules of the project glossary's review |
+| `skills/references/decisions.md` | Which decisions the user makes and which the agent makes |
+| `skills/references/decisions-judge.md` | How the decisions judge rules on a review's FAILs |
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
+| `skills/write-outcome/scripts/` | Scripts that check an Outcome's structure and list its absolute terms |
+| `tests/` | Tests for those scripts and the review gate |
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
+| `skills/review-outcome/scripts/review_gate.py` | Check that refuses edits and reviews the decisions judge's verdicts don't allow |
+| `reviews/round.json` | The current review round's FAILs and the decisions judge's verdicts |
 | `CLAUDE.md` | Rules for agents working in this repo |
-| `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
+| `.claude/settings.json` | Hooks that load the goals, block unnecessary approval requests and run the review gate |
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.

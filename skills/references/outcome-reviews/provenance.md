@@ -1,0 +1,13 @@
+# Outcome review: Provenance
+
+Read the document with the conversation that produced it, the decision log and the codified rules, including [the decision classification](../decisions.md). Rows: each requirement, the paragraph above the scenario table, each scenario and each measure.
+
+1. The statement is something the user said or agreed, or it is marked as the agent's.
+2. A statement marked as the agent's makes no decision the decision classification gives to the user.
+3. The document holds no fact the agent looked up about the project.
+4. A project term used with the project's meaning counts as the project's, not as a fact the agent looked up.
+5. The document records each clash between a word of the user's and a project term. It uses that project term only with its meaning.
+
+## Output
+
+A grid: one row per item and one column per rule. Each cell is PASS or FAIL. A rule passes any item it doesn't apply to. A FAIL quotes the words that fail. A PASS on where a statement comes from, or on what a statement marked as the agent's decides, quotes the source of each part of the statement, or the marking that shows that part as the agent's. A PASS on an item a rule doesn't apply to needs no quote. A PASS missing a quote it needs is a FAIL. Judge nothing outside these rules.
