@@ -10,5 +10,22 @@
       "review_reason": "R32 requires the user to be asked when something that is the user's to settle still blocks after code starts. A user's decision left unmade (S6's case) is a decision no one made, so M4 counts the question R32 requires against \"none\" and excludes a way the requirements allow the user to get the result."
     }
   ],
-  "verdicts": []
+  "verdicts": [
+    {
+      "row": "M4",
+      "rule": "3",
+      "verdict": "Rule misfire",
+      "quotes": [
+        {
+          "record": "0075",
+          "words": "Each measure says, in plain words, what is counted on each real feature, and that the count should be none."
+        },
+        {
+          "record": "0075",
+          "words": "The planning-misses measure has the same target as the others. It follows from R2, R31 and R32: decisions are made before code starts. It cites R32."
+        }
+      ],
+      "user_answer": null
+    }
+  ]
 }
