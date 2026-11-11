@@ -74,3 +74,4 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0074 | [Name a rule by what it checks](0074-name-a-rule-by-what-it-checks.md) | Accepted |
 | 0075 | [Measures in plain words](0075-measures-in-plain-words.md) | Accepted |
 | 0076 | [Approved text follows the writing rules](0076-approved-text-follows-the-writing-rules.md) | Accepted |
+| 0077 | [Each review finding goes to the user for approval](0077-each-review-finding-goes-to-the-user-for-approval.md) | Accepted |
