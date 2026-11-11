@@ -46,11 +46,14 @@ What an Outcome contains and leaves to later levels is in [skills/references/out
 | `skills/references/outcome-reviews/` | The rules of the Outcome's four reviews: Scope, Clarity, Verification and Provenance |
 | `skills/references/glossary-review.md` | The rules of the project glossary's review |
 | `skills/references/decisions.md` | Which decisions the user makes and which the agent makes |
+| `skills/references/decisions-judge.md` | How the decisions judge rules on a review's FAILs |
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
 | `skills/write-outcome/scripts/` | Scripts that check an Outcome's structure and list its absolute terms |
-| `tests/` | Tests for those scripts |
+| `tests/` | Tests for those scripts and the review gate |
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
+| `skills/review-outcome/scripts/review_gate.py` | Check that refuses edits and reviews the decisions judge's verdicts don't allow |
+| `reviews/round.json` | The current review round's FAILs and the decisions judge's verdicts |
 | `CLAUDE.md` | Rules for agents working in this repo |
-| `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
+| `.claude/settings.json` | Hooks that load the goals, block unnecessary approval requests and run the review gate |
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.

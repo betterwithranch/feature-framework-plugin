@@ -31,6 +31,17 @@
           }
         ]
       }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit|Agent|Task|Skill",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/skills/review-outcome/scripts/review_gate.py\""
+          }
+        ]
+      }
     ]
   }
 }

@@ -1,0 +1,14 @@
+{
+  "review": "Verification",
+  "commit": "17cc486",
+  "fails": [
+    {
+      "row": "M4",
+      "rule": "3",
+      "rule_text": "What it describes as passing includes every way the requirements allow the user to get that result.",
+      "words": "Times the user is asked after code starts because of a decision no one made (R32): none.",
+      "review_reason": "R32 requires the user to be asked when something that is the user's to settle still blocks after code starts. A user's decision left unmade (S6's case) is a decision no one made, so M4 counts the question R32 requires against \"none\" and excludes a way the requirements allow the user to get the result."
+    }
+  ],
+  "verdicts": []
+}

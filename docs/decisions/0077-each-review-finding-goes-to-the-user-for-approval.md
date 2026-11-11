@@ -1,6 +1,6 @@
 # 0077. Each review finding goes to the user for approval
 
-Status: accepted, 2026-11-11
+Status: replaced by 0078, 2026-11-11
 
 ## Context
 

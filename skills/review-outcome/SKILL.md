@@ -25,4 +25,4 @@ The review rules follow [the writing rules](../references/writing.md).
 
 ## Rounds
 
-A round starts with one review. When every cell passes, two more run independently, and the round passes when all three pass. When the first review has a FAIL, the round ends there and the failures are fixed before the next round.
+A round starts with one review. When every cell passes, two more run independently, and the round passes when all three pass. When the first review has a FAIL, the round ends there. Write its FAIL cells to `reviews/round.json`, then run [the decisions judge](../references/decisions-judge.md) fresh. Apply only its Settled changes, exactly as given, and send every other verdict to the user. The next round starts when no finding is open.
