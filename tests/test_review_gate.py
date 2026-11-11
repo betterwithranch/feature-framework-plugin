@@ -106,6 +106,45 @@ class GateTest(unittest.TestCase):
         out = self.run_gate("Agent", {"prompt": "Follow skills/references/decisions-judge.md on the outcome-reviews/verification.md FAILs"})
         self.assertEqual(out.returncode, 0)
 
+    def bash(self, cmd: str) -> int:
+        return self.run_gate("Bash", {"command": cmd}).returncode
+
+    def test_refuses_shell_writes_to_guarded_paths(self) -> None:
+        self.round({"fails": [{}], "verdicts": [self.settled()]})
+        for cmd in [
+            "sed -i 's/old/new/' docs/spec/1-outcome.md",
+            "echo x > docs/spec/1-outcome.md",
+            "echo x >> skills/references/outcome-reviews/scope.md",
+            "echo x | tee skills/references/writing.md",
+            "mv /tmp/x docs/spec/1-outcome.md",
+            "cp /tmp/x skills/references/outcome.md",
+            "rm skills/references/decisions.md",
+            "perl -pi -e 's/a/b/' docs/spec/1-outcome.md",
+            "python3 -c \"open('docs/spec/1-outcome.md','w').write('x')\"",
+            "python3 - <<'EOF'\np='docs/spec/1-outcome.md'\ns=open(p).read()\nopen(p,'w').write(s)\nEOF",
+            "git checkout -- docs/spec/1-outcome.md",
+            "git restore skills/references/outcome-reviews/scope.md",
+            "git apply /tmp/fix.patch && cat docs/spec/1-outcome.md",
+            "cd skills/references && sed -i 's/a/b/' outcome.md",
+        ]:
+            with self.subTest(cmd=cmd):
+                self.assertEqual(self.bash(cmd), 2)
+
+    def test_allows_shell_reads_of_guarded_paths(self) -> None:
+        for cmd in [
+            "cat docs/spec/1-outcome.md",
+            "grep -n M4 docs/spec/1-outcome.md",
+            "python3 skills/write-outcome/scripts/structure.py docs/spec/1-outcome.md",
+            "python3 skills/write-outcome/scripts/absolutes.py docs/spec/1-outcome.md > /tmp/abs.txt 2>&1",
+            "cp docs/spec/1-outcome.md /tmp/copy.md",
+            "git diff docs/spec/1-outcome.md",
+            "git apply --check /tmp/fix.patch",
+            "sed -n 1,20p skills/references/outcome.md",
+            "echo hi > README.md",
+        ]:
+            with self.subTest(cmd=cmd):
+                self.assertEqual(self.bash(cmd), 0)
+
 
 if __name__ == "__main__":
     unittest.main()

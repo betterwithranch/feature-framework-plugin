@@ -14,10 +14,17 @@ An edit to docs/spec/1-outcome.md or skills/references/** is allowed only when:
 Starting a review is refused while any finding is open: a FAIL with no verdict,
 a verdict waiting on the user, or a change not yet applied.
 
+A shell command that names one of those paths and writes to it (sed -i, a
+redirection, tee, mv, cp onto it, rm, python or perl writing, git checkout or
+git restore) is refused, and so is any git apply: a shell write can't be matched to a
+Settled change, so it goes through Edit instead. When in doubt, it refuses.
+
 Creating skills/references/decisions-judge.md is exempt, as decision 0078 approves it.
 """
 import json
 import os
+import re
+import shlex
 import sys
 from pathlib import Path
 
@@ -102,6 +109,59 @@ def open_findings(base: Path, rnd: dict) -> list:
     return out
 
 
+GUARDED_WORDS = ("docs/spec/1-outcome.md", "1-outcome.md", "skills/references", "outcome-reviews",
+                 "glossary-review.md", "decisions-judge.md", "writing.md", "outcome.md", "decisions.md")
+WRITE_SCRIPT_HINTS = ("write(", "write_text", "write_bytes", "writelines", "open(", "rename", "replace(", "unlink", "remove(", "shutil", "os.system", "subprocess")
+SCRIPTING = re.compile(r"\b(python[0-9.]*|perl|ruby|node)\b")
+
+
+def names_guarded(text: str) -> bool:
+    return any(w in text for w in GUARDED_WORDS)
+
+
+def tokens(cmd: str) -> list:
+    try:
+        return shlex.split(cmd, posix=True)
+    except ValueError:
+        return cmd.split()
+
+
+def check_bash(cmd: str):
+    refuse = "Shell writes to the Outcome or the review rules are refused; apply a Settled change with Edit."
+    if re.search(r"\bgit\s+(apply|am)\b(?![^;&|]*--(check|stat|numstat))", cmd):
+        return "A patch can change the Outcome or the review rules unseen, so git apply is refused; apply a Settled change with Edit."
+    if not names_guarded(cmd):
+        return None
+    for target in re.findall(r"(?<![0-9&<>-])>{1,2}\|?\s*([^\s;|&<>]+)", cmd):
+        if names_guarded(target):
+            return refuse
+    if SCRIPTING.search(cmd) and any(h in cmd for h in WRITE_SCRIPT_HINTS):
+        return refuse
+    for seg in re.split(r"&&|\|\||[;|\n]", cmd):
+        t = tokens(seg.strip())
+        if not t:
+            continue
+        head = os.path.basename(t[0])
+        rest = " ".join(t[1:])
+        if not names_guarded(seg):
+            continue
+        if head == "sed" and any(a.startswith("-i") or a == "--in-place" or a.startswith("--in-place") for a in t[1:]):
+            return refuse
+        if head in ("tee", "mv", "rm", "truncate", "dd", "ln", "install", "patch", "ed", "ex"):
+            return refuse
+        if head == "cp":
+            args = [a for a in t[1:] if not a.startswith("-")]
+            if not args or names_guarded(args[-1]) or any(a.startswith("-t") or a == "--target-directory" for a in t[1:]):
+                return refuse
+        if head.startswith(("perl", "ruby")) and any(a.startswith(("-i", "-pi", "-ni")) for a in t[1:]):
+            return refuse
+        if head == "awk" and "inplace" in rest:
+            return refuse
+        if head == "git" and len(t) > 1 and t[1] in ("checkout", "restore", "mv", "rm"):
+            return refuse
+    return None
+
+
 def is_review_start(tool: str, inp: dict) -> bool:
     if tool == "Skill":
         return "review-outcome" in str(inp.get("skill", ""))
@@ -119,6 +179,8 @@ def decide(event: dict, base: Path):
             r = rel(inp.get("file_path", ""), base)
             return f"{r}: use one Edit per Settled change." if protected(r) else None
         return check_edit(base, tool, inp)
+    if tool == "Bash":
+        return check_bash(str(inp.get("command", "")))
     if is_review_start(tool, inp):
         rnd = load_round(base)
         if rnd:

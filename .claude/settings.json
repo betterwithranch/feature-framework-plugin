@@ -34,7 +34,7 @@
     ],
     "PreToolUse": [
       {
-        "matcher": "Edit|Write|MultiEdit|Agent|Task|Skill",
+        "matcher": "Edit|Write|MultiEdit|Bash|Agent|Task|Skill",
         "hooks": [
           {
             "type": "command",
