@@ -75,4 +75,5 @@ Records follow [the writing rules](../../skills/references/writing.md).
 | 0075 | [Measures in plain words](0075-measures-in-plain-words.md) | Accepted |
 | 0076 | [Approved text follows the writing rules](0076-approved-text-follows-the-writing-rules.md) | Accepted |
 | 0077 | [Each review finding goes to the user for approval](0077-each-review-finding-goes-to-the-user-for-approval.md) | Replaced by 0078 |
-| 0078 | [A decisions judge rules on every review FAIL](0078-a-decisions-judge-rules-on-every-review-fail.md) | Accepted |
+| 0078 | [A decisions judge rules on every review FAIL](0078-a-decisions-judge-rules-on-every-review-fail.md) | Accepted, amended by 0079 |
+| 0079 | [The agent writes every fix; the judge checks it](0079-the-agent-writes-every-fix-the-judge-checks-it.md) | Accepted |

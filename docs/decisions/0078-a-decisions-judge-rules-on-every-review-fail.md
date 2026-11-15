@@ -15,5 +15,6 @@ The agent fixing a finding chose the fix by its own reading, made a wrong change
 ## Consequences
 
 - Replaces [decision 0077](0077-each-review-finding-goes-to-the-user-for-approval.md).
+- [Decision 0079](0079-the-agent-writes-every-fix-the-judge-checks-it.md) replaces "The agent applies only Settled changes, exactly as given": the agent writes every fix, and the judge checks it.
 - `docs/goals.md` "Decide or ask", [decision 0029](0029-four-review-rounds-per-approved-version.md) and `CLAUDE.md` point to the judge for review findings.
 - Adding the judge, the check and these records needs no verdict of its own, as this decision approves them.

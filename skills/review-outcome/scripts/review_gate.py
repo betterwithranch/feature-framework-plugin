@@ -7,17 +7,17 @@ same way under any agent host that passes the tool call as JSON.
 
 An edit to docs/spec/1-outcome.md or skills/references/** is allowed only when:
 - reviews/round.json has verdicts for the current round,
-- the edit's old and new text equal an entry that is Settled or has a recorded
-  answer from the user,
+- the edit's old and new text equal a fix the judge passed, on an entry that is
+  Settled or has a recorded answer from the user,
 - no entry is Rule misfire, Conflict or Missing without a recorded answer.
 
 Starting a review is refused while any finding is open: a FAIL with no verdict,
-a verdict waiting on the user, or a change not yet applied.
+a verdict waiting on the user, or a fix not yet passed or applied.
 
 A shell command that names one of those paths and writes to it (sed -i, a
 redirection, tee, mv, cp onto it, rm, python or perl writing, git checkout or
 git restore) is refused, and so is any git apply: a shell write can't be matched to a
-Settled change, so it goes through Edit instead. When in doubt, it refuses.
+passed fix, so it goes through Edit instead. When in doubt, it refuses.
 
 Creating skills/references/decisions-judge.md is exempt, as decision 0078 approves it.
 """
@@ -60,8 +60,12 @@ def load_round(base: Path):
     return json.loads(f.read_text(encoding="utf-8"))
 
 
-def allowed_changes(rnd: dict) -> list:
+def to_fix(rnd: dict) -> list:
     return [v for v in rnd.get("verdicts", []) if v.get("verdict") == "Settled" or v.get("user_answer")]
+
+
+def passed_fixes(rnd: dict) -> list:
+    return [v["fix"] for v in to_fix(rnd) if (v.get("fix") or {}).get("passes") is True]
 
 
 def waiting(rnd: dict) -> list:
@@ -81,7 +85,7 @@ def check_edit(base: Path, tool: str, inp: dict):
     if open_:
         rows = ", ".join(f"{v.get('row')} rule {v.get('rule')}" for v in open_)
         return f"{r}: findings wait on the user ({rows}). Nothing changes until they are answered."
-    entries = [v for v in allowed_changes(rnd) if v.get("file") == r]
+    entries = [f for f in passed_fixes(rnd) if f.get("file") == r]
     if tool == "Edit":
         pair = (inp.get("old_string"), inp.get("new_string"))
         if any((v.get("old"), v.get("new")) == pair for v in entries):
@@ -91,7 +95,7 @@ def check_edit(base: Path, tool: str, inp: dict):
         for v in entries:
             if v.get("old") and current.count(v["old"]) == 1 and inp.get("content") == current.replace(v["old"], v["new"]):
                 return None
-    return f"{r}: the edit doesn't match a Settled change or a recorded answer in {ROUND}."
+    return f"{r}: the edit doesn't match a fix the judge passed in {ROUND}."
 
 
 def open_findings(base: Path, rnd: dict) -> list:
@@ -101,11 +105,15 @@ def open_findings(base: Path, rnd: dict) -> list:
     if fails and len(verdicts) < len(fails):
         out.append(f"{len(fails) - len(verdicts)} FAIL(s) have no verdict")
     out += [f"{v.get('row')} rule {v.get('rule')} waits on the user" for v in waiting(rnd)]
-    for v in allowed_changes(rnd):
-        f = base / v.get("file", "")
+    for v in to_fix(rnd):
+        fix = v.get("fix") or {}
+        if fix.get("passes") is not True:
+            out.append(f"{v.get('row')} rule {v.get('rule')}: no fix the judge passed")
+            continue
+        f = base / fix.get("file", "")
         text = f.read_text(encoding="utf-8") if f.exists() else ""
-        if v.get("old") and v["old"] in text:
-            out.append(f"{v.get('row')} rule {v.get('rule')}: change not applied")
+        if fix.get("old") and fix["old"] in text:
+            out.append(f"{v.get('row')} rule {v.get('rule')}: fix not applied")
     return out
 
 
@@ -127,9 +135,9 @@ def tokens(cmd: str) -> list:
 
 
 def check_bash(cmd: str):
-    refuse = "Shell writes to the Outcome or the review rules are refused; apply a Settled change with Edit."
+    refuse = "Shell writes to the Outcome or the review rules are refused; apply a fix the judge passed with Edit."
     if re.search(r"\bgit\s+(apply|am)\b(?![^;&|]*--(check|stat|numstat))", cmd):
-        return "A patch can change the Outcome or the review rules unseen, so git apply is refused; apply a Settled change with Edit."
+        return "A patch can change the Outcome or the review rules unseen, so git apply is refused; apply a fix the judge passed with Edit."
     if not names_guarded(cmd):
         return None
     for target in re.findall(r"(?<![0-9&<>-])>{1,2}\|?\s*([^\s;|&<>]+)", cmd):

@@ -35,10 +35,25 @@ class GateTest(unittest.TestCase):
         return self.run_gate("Edit", {"file_path": str(self.root / OUTCOME), "old_string": old, "new_string": new})
 
     def settled(self, **extra) -> dict:
+        passes = extra.pop("passes", True)
         v = {"row": "M4", "rule": "3", "verdict": "Settled", "quotes": [{"record": "0075", "words": "x"}],
-             "file": OUTCOME, "old": "old words", "new": "new words", "user_answer": None}
+             "user_answer": None}
+        if passes is not None:
+            v["fix"] = {"file": OUTCOME, "old": "old words", "new": "new words", "passes": passes}
         v.update(extra)
         return v
+
+    def test_refuses_a_settled_verdict_with_no_checked_fix(self) -> None:
+        self.round({"fails": [{"row": "M4"}], "verdicts": [self.settled(passes=None)]})
+        self.assertEqual(self.edit().returncode, 2)
+
+    def test_refuses_a_fix_the_judge_failed(self) -> None:
+        self.round({"fails": [{"row": "M4"}], "verdicts": [self.settled(passes=False)]})
+        self.assertEqual(self.edit().returncode, 2)
+
+    def test_refuses_a_review_while_a_settled_verdict_has_no_passed_fix(self) -> None:
+        self.round({"fails": [{}], "verdicts": [self.settled(passes=None)]})
+        self.assertEqual(self.run_gate("Skill", {"skill": "review-outcome"}).returncode, 2)
 
     def test_refuses_an_edit_with_no_verdict(self) -> None:
         out = self.edit()
