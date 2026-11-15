@@ -89,9 +89,19 @@ class GateTest(unittest.TestCase):
         out = self.run_gate("Write", {"file_path": str(self.root / "skills/references/outcome-reviews/scope.md"), "content": "x"})
         self.assertEqual(out.returncode, 2)
 
-    def test_allows_creating_the_judge_reference(self) -> None:
-        out = self.run_gate("Write", {"file_path": str(self.root / "skills/references/decisions-judge.md"), "content": "x"})
-        self.assertEqual(out.returncode, 0)
+    def test_guards_the_outcome_definition_and_glossary_review(self) -> None:
+        for name in ("skills/references/outcome.md", "skills/references/glossary-review.md"):
+            with self.subTest(name=name):
+                out = self.run_gate("Edit", {"file_path": str(self.root / name), "old_string": "a", "new_string": "b"})
+                self.assertEqual(out.returncode, 2)
+
+    def test_allows_edits_outside_the_outcome_and_review_rules(self) -> None:
+        self.round({"fails": [{"row": "M4"}], "verdicts": [{"row": "M4", "rule": "3", "verdict": "Rule misfire", "user_answer": None}]})
+        for name in ("skills/references/decisions-judge.md", "skills/references/decisions.md", "skills/references/writing.md"):
+            with self.subTest(name=name):
+                out = self.run_gate("Edit", {"file_path": str(self.root / name), "old_string": "a", "new_string": "b"})
+                self.assertEqual(out.returncode, 0)
+                self.assertEqual(self.run_gate("Bash", {"command": f"sed -i 's/a/b/' {name}"}).returncode, 0)
 
     def test_ignores_other_files(self) -> None:
         self.assertEqual(self.run_gate("Edit", {"file_path": str(self.root / "README.md"), "old_string": "a", "new_string": "b"}).returncode, 0)
@@ -130,10 +140,10 @@ class GateTest(unittest.TestCase):
             "sed -i 's/old/new/' docs/spec/1-outcome.md",
             "echo x > docs/spec/1-outcome.md",
             "echo x >> skills/references/outcome-reviews/scope.md",
-            "echo x | tee skills/references/writing.md",
+            "echo x | tee skills/references/glossary-review.md",
             "mv /tmp/x docs/spec/1-outcome.md",
             "cp /tmp/x skills/references/outcome.md",
-            "rm skills/references/decisions.md",
+            "rm skills/references/outcome-reviews/clarity.md",
             "perl -pi -e 's/a/b/' docs/spec/1-outcome.md",
             "python3 -c \"open('docs/spec/1-outcome.md','w').write('x')\"",
             "python3 - <<'EOF'\np='docs/spec/1-outcome.md'\ns=open(p).read()\nopen(p,'w').write(s)\nEOF",

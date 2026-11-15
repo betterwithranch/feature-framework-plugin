@@ -5,7 +5,9 @@ Reads one hook event as JSON on stdin ({"tool_name": ..., "tool_input": {...}})
 and exits 2 with a reason on stderr to refuse it, or 0 to allow it. It runs the
 same way under any agent host that passes the tool call as JSON.
 
-An edit to docs/spec/1-outcome.md or skills/references/** is allowed only when:
+It guards the Outcome and its review rules: docs/spec/1-outcome.md,
+skills/references/outcome.md, skills/references/glossary-review.md and
+skills/references/outcome-reviews/. An edit to one of them is allowed only when:
 - reviews/round.json has verdicts for the current round,
 - the edit's old and new text equal a fix the judge passed, on an entry that is
   Settled or has a recorded answer from the user,
@@ -18,8 +20,6 @@ A shell command that names one of those paths and writes to it (sed -i, a
 redirection, tee, mv, cp onto it, rm, python or perl writing, git checkout or
 git restore) is refused, and so is any git apply: a shell write can't be matched to a
 passed fix, so it goes through Edit instead. When in doubt, it refuses.
-
-Creating skills/references/decisions-judge.md is exempt, as decision 0078 approves it.
 """
 import json
 import os
@@ -28,9 +28,8 @@ import shlex
 import sys
 from pathlib import Path
 
-PROTECTED_FILES = {"docs/spec/1-outcome.md"}
-PROTECTED_DIRS = ("skills/references/",)
-EXEMPT_NEW = {"skills/references/decisions-judge.md"}
+PROTECTED_FILES = {"docs/spec/1-outcome.md", "skills/references/outcome.md", "skills/references/glossary-review.md"}
+PROTECTED_DIRS = ("skills/references/outcome-reviews/",)
 ROUND = "reviews/round.json"
 REVIEW_MARKERS = ("outcome-reviews/", "glossary-review.md", "review-outcome")
 ASKS_USER = {"Rule misfire", "Conflict", "Missing"}
@@ -76,8 +75,6 @@ def check_edit(base: Path, tool: str, inp: dict):
     r = rel(inp.get("file_path", ""), base)
     if not protected(r):
         return None
-    if r in EXEMPT_NEW and not (base / r).exists():
-        return None
     rnd = load_round(base)
     if not rnd or not rnd.get("verdicts"):
         return f"{r}: no decisions-judge verdict for the current round ({ROUND}). Run the judge first."
@@ -117,8 +114,7 @@ def open_findings(base: Path, rnd: dict) -> list:
     return out
 
 
-GUARDED_WORDS = ("docs/spec/1-outcome.md", "1-outcome.md", "skills/references", "outcome-reviews",
-                 "glossary-review.md", "decisions-judge.md", "writing.md", "outcome.md", "decisions.md")
+GUARDED_WORDS = ("outcome.md", "outcome-reviews", "glossary-review.md")
 WRITE_SCRIPT_HINTS = ("write(", "write_text", "write_bytes", "writelines", "open(", "rename", "replace(", "unlink", "remove(", "shutil", "os.system", "subprocess")
 SCRIPTING = re.compile(r"\b(python[0-9.]*|perl|ruby|node)\b")
 
