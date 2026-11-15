@@ -1,0 +1,11 @@
+# 0021. Play back before acting; interview before drafting
+
+Status: accepted, 2026-11-03
+
+## Context
+
+The main failure was misalignment, the user saying something clear and the work building something different; the user said "play back before drafting should be in the framework to catch misalignment early", "playback anything that could impact the project", and asked for one question at a time because a follow-up on one of several questions makes the exchange messy.
+
+## Decision
+
+Before the work acts on anything from the user that could change the project, it plays back, in its own words, what it understood, and waits for the user to confirm. This covers a level, an instruction, a decision or a correction, whether or not it looks clear. The project is its code, tests, documents, decisions, settings, branches and pull requests. A plain answer to the work's own question is acted on without another playback; something that changes nothing needs no playback. Anything that could be read more than one way is put to the user as a choice between readings, in a message of its own after the playback, one at a time. A correction gets a fresh playback of the corrected parts. Before a level's document is written, at every level before code, the work interviews the user one question at a time and waits for each answer; the next question is chosen from what the answer settles; each question carries the work's recommended answer and can be answered by letter. The work looks up facts itself and asks only for decisions. It then plays back what it understood the user wants at that level, and the document is written only after the user confirms. The level's review also checks that every statement in the document is something the user said or agreed, or something marked as the work's; that every fact marked as the work's is true of the project; and that no statement can be read two ways that would change what gets built. These techniques are adapted, with thanks, from the Superpowers brainstorming skill (obra/superpowers), Matt Pocock's grilling and to-spec skills (aihero.dev) and Cursor's pstack poteto-mode skill; Pocock's rounds of independent questions were considered and not taken. The framework carries its own copy and doesn't load those skills.

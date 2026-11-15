@@ -10,6 +10,6 @@ These are the goals every change to this repo serves. Check each change against 
 
 ## Decide or ask
 
-- Decide and proceed when the answer follows from these goals, a decision record, an agreed gate or an earlier answer. Then report what you did.
+- Decide and proceed when the answer follows from these goals, a decision record, an agreed gate or an earlier answer. Then report what you did. Review findings follow the [decisions judge](../skills/references/decisions-judge.md)'s verdict.
 - Ask only when blocked by a decision no one has made, or when agreed things conflict.
 - Never ask to apply fixes to an agreed gate's findings, to rerun an agreed gate, to commit or push agreed work, or to take the agreed next step.

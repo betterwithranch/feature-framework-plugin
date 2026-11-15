@@ -1,6 +1,6 @@
 # 0015. The user approves only open decisions
 
-Status: accepted, 2026-10-28
+Status: replaced by [decision 0020](0020-approve-each-level.md)
 
 ## Context
 

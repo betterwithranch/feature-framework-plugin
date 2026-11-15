@@ -15,6 +15,6 @@
 ## Working
 
 - Follow `docs/goals.md`. Decide and proceed on anything already agreed; ask only when blocked by a decision no one has made or a conflict.
-- Run an agreed gate until it passes, without asking between runs. Fix its findings with the level's write skill, including its after-a-fix self-check.
-- Stop a gate after four rounds that don't pass. Look for a conflict or ambiguity in the instructions involved, report it and fix the instructions instead of patching the document again.
-- Commit and push each agreed change to `main` when it is done.
+- Run an agreed gate until it passes, without asking between runs. Its findings follow the [decisions judge](skills/references/decisions-judge.md)'s verdict, fixed with the level's write skill, including its after-a-fix self-check.
+- A level's review has four rounds per version the user approved. When they're spent, stop and bring the user the findings and a proposed instruction fix.
+- Each level is built on its own branch, with its own pull request against `main`. Commit and push each agreed change to that branch when it is done. Work on the next level starts when the user approves the level.

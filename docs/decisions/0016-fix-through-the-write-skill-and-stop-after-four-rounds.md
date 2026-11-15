@@ -1,6 +1,6 @@
 # 0016. Fix findings through the write skill, and stop a gate after four rounds
 
-Status: accepted, 2026-10-28
+Status: replaced by [decision 0029](0029-four-review-rounds-per-approved-version.md)
 
 ## Context
 

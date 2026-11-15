@@ -1,6 +1,6 @@
 # 0012. Run each gate review three times and act on the union
 
-Status: accepted, 2026-10-28
+Status: replaced by [decision 0036](0036-a-review-round-one-run-then-two-more-if-it-s-clean.md)
 
 ## Context
 

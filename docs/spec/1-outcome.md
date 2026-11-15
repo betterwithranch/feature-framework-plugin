@@ -1,31 +1,73 @@
 # Outcome
 
-**For whom.** The person who decides which features to build and agrees each level, called "you" below.
+**For whom.** The user.
 
-**Achieves.**
+**Requirements.**
 
-- A feature you've decided to build becomes working code with passing tests.
-- Your intent is drawn out one level at a time, so decisions are made before code starts. Work moves to the next level only when you explicitly agree.
-- A question for a later level is answered at that level, not earlier.
-- Nothing already agreed or codified is asked again, except for clarity before code starts or to resolve a conflict.
-- The code follows everything agreed or codified, including your answers. Agreements carry over to later features.
-- Once code starts, the work proceeds with everything it needs. You're asked only when it's blocked: by a decision no one made, or by a conflict.
+- **R1.** A feature the user has decided to build becomes working code with passing tests.
+- **R2.** The user's intent is drawn out one level at a time, so the user's decisions are made before code starts.
+- **R3.** Each level produces one document.
+- **R4.** The user is asked to approve a level only after it passes its review.
+- **R5.** Work moves to the next level only when the current one passes its review and the user approves it.
+- **R6.** The agent plays back what it understood before it acts on something from the user that could change the project and isn't a plain answer. It waits for the user to confirm before it acts.
+- **R7.** A plain answer is acted on without a playback of its own.
+- **R8.** Anything from the user that could be read more than one way is put to the user as a choice.
+- **R9.** Before a level's document is written, the user is interviewed about what that level needs.
+- **R10.** After the interview, the agent plays back what it understood the user wants at that level.
+- **R11.** A level's document is written only after the user confirms its playback.
+- **R12.** The user is asked for their decisions, not for facts the agent can find out.
+- **R13.** The user is asked one question at a time, and the next waits for their answer.
+- **R14.** Each question gives the user enough to answer it without asking back.
+- **R15.** Anything missing from a requirement or its verification that is the user's to settle at this level is asked of the user, one question at a time.
+- **R16.** Every document and message meant for a person is readable at a glance.
+- **R17.** Everything in a level's document is something the user said or agreed, or something the agent filled in and marked as its own, such as a decision it made.
+- **R18.** No statement in a level's document can be read more than one way that would change what gets built.
+- **R19.** A found fact appears only in a level that allows found facts, marked as the agent's.
+- **R20.** A level's document uses the project's terms with the project's meanings.
+- **R21.** When a word of the user's clashes with a project term, the playback names the clash.
+- **R22.** After the user confirms, the document keeps the project's term for the project's meaning and uses a distinct phrase for the user's.
+- **R23.** The clash is recorded where the user can see it.
+- **R24.** A question for a later level is answered at that level, not earlier.
+- **R25.** Something already agreed or codified is asked again only for clarity or to resolve a conflict.
+- **R26.** The user makes the user's decisions, wherever a decision is written.
+- **R27.** The agent makes its own decisions, wherever a decision is written. It records them *where the user can see them*.
+- **R28.** The code follows everything agreed or codified, including the user's answers.
+- **R29.** Agreements carry over to later features, within their stated scope.
+- **R30.** The agent's decisions never become codified rules.
+- **R31.** Once code starts, the agent proceeds with what it needs, other than something that is the user's to settle.
+- **R32.** If something that is the user's to settle still blocks the agent after code starts, the user is asked, and only then.
+- **R33.** Each requirement in a level's document is complete, and so is its verification.
 
-"Code starts" means the first change to the project's code or tests for that feature.
+**Glossary.** Terms are used as the project's [glossary](glossary.md) defines them.
 
-**Scenarios.** Each runs on a sample project with a scripted user, and passes only if all 10 runs pass. Every check is automated: acceptance tests, transcript analysis or an LLM judge. Acceptance tests, and any agreed levels a scenario starts from, come with the scenario. Acceptance tests fail before the work and pass after it; no check relies only on tests written by the work being judged.
+**Scenarios.** Each runs on a sample project. *The user in a scenario that doesn't say otherwise describes a feature, answers the agent's questions, confirms its playbacks and approves its levels when asked, and holds the answers its checks expect.* Acceptance tests and any approved levels a scenario starts from come with the scenario. The Verifies column and the requirement IDs a measure cites are the agent's, and so are words in italics anywhere in this document.
 
-| # | Scenario | Passes when |
-| --- | --- | --- |
-| 1 | You describe a feature, the scripted user can answer any question about it, and nothing conflicts | Every decision in the code was agreed by you, or codified, before code starts, the code has passing tests, and acceptance tests pass |
-| 2 | You hold an invariant and reveal it only when asked | It surfaces before code starts, and acceptance tests show the code follows it |
-| 3 | You agree each level, one of them only partially at first, and ask a question for a later level | Work goes through the levels in order, moves on only after you explicitly agree, code starts only after every level is agreed, your question is answered at its level, not earlier, and the work asks no question before its level |
-| 4 | You build a feature, giving scripted answers that its acceptance tests depend on, then a second one that those answers apply to. A codified rule exists, an earlier level of the second feature is agreed, including your answer to a question, and nothing conflicts | Nothing in that level, your scripted answers or the rule is asked again, except for clarity before code starts, and acceptance tests show the first feature's code follows your scripted answers and the second feature's code follows all three |
-| 5 | The levels are agreed, cover everything the feature needs and nothing conflicts with them, and code starts from there | Nothing is asked after code starts, and acceptance tests pass |
-| 6 | The levels are agreed with one decision left unmade, and code starts from there | You're asked about it, and acceptance tests show the code follows your answer |
-| 7 | The levels are agreed, the existing code conflicts with them, and code starts from there | You're asked about the conflict, and acceptance tests show the code follows your answer |
+| ID | Scenario | Passes when | Verifies |
+| --- | --- | --- | --- |
+| S1 | The user describes a feature | The code has passing tests, and acceptance tests pass | R1 |
+| S2 | The user holds an invariant and reveals it only when asked | It surfaces before code starts, and acceptance tests show the code follows it | R2 R28 |
+| S3 | The user agrees partially *to the first level*, then asks a question for a later level*. The first level's document fails its review once in a way the scenario sets up, then passes. The user then approves it* | Work goes through the levels in order. *It* moves on from a level only after it passes its review and the user approves it. Code starts only after every level is approved. The question is answered at its level, not earlier. The agent asks no question before its level | R2 R5 R24 |
+| S4 | A second feature follows one whose decisions the user agreed*, scoped to cover the second feature*. A codified rule exists. An earlier level of this feature is approved, including the user's answer to a question*. Nothing conflicts* | They are asked again only for clarity, and acceptance tests show the code follows all three | R25 R28 R29 |
+| S5 | The levels are approved and cover everything the feature needs. *No existing code conflicts with them.* Code starts from there | Nothing is asked after code starts, and acceptance tests pass | R31 R32 |
+| S6 | The levels are approved with one *of the user's* decisions left unmade, and code starts from there | The user is asked about it, and acceptance tests show the code follows the answer | R28 R31 R32 |
+| S7 | The levels are approved. The existing code *that no one decided* conflicts with *one of the user's decisions in* them. Code starts from there | The user is asked about the conflict, and acceptance tests show the code follows the answer | R28 R32 |
+| S8 | At every level, one of the user's answers could be read more than one way *about what that level decides*. Nothing flags it. The user holds which reading is meant | At each level, *the user is interviewed about what that level needs before its document is written. After the interview, the agent plays back what it understood the user wants at that level. At each level,* the user is asked which reading is meant. Acceptance tests show the code follows the readings given | R8 R9 R10 R28 |
+| S9 | At a level, one of the user's answers uses a word the sample project uses to mean something else, and the user holds what they meant | The playback names the clash. The document is written only after the user confirms. It uses the project's term only for the project's meaning and a distinct phrase for the user's. The clash is recorded where the user can see it. Acceptance tests show the code follows what the user meant | R11 R20 R21 R22 R23 R28 |
+| S10 | *At a level that allows found facts,* the user gives a requirement whose verification can't be written without one thing more: in one case something *that is the user's to settle at that level*, in another something the sample project shows | In the first case, the user is asked for exactly that thing *before the level's document is written*. In the second, the user is asked nothing *for it*. *In the second,* the requirement and its verification are completed with what the agent found, marked as the agent's | R9 R12 R15 R19 R33 |
+| S11 | *Starts from a level that has passed its review and isn't the last. The user withholds approval for several turns, then approves* | *No question, playback or document of the next level comes before the approval* | R5 |
+| S12 | *The user describes a feature that needs several of the user's decisions at every level, decisions of the agent's own, a term clash to record, a document meant for someone else, and a requirement missing two things that are the user's to settle* | *Every document and message meant for a person is readable at a glance, including the records and the document for someone else. Each question gives enough to answer it. Each of the two missing things is asked. No message asks more than one question. No question comes before the one before it is answered* | R13 R14 R15 R16 |
+| S13 | *The user describes a feature and says nothing about a point the agent must settle to write a level* | *Every statement in the level's document is something the user said, something agreed, or something marked as the agent's. None can be read more than one way that would change what gets built. This is judged against the transcript and what is agreed or codified* | R17 R18 |
+| S14 | *Starts from a level that isn't the last. The level's document fails its review in one of three ways the scenario sets up, one per case: it fails one of that level's standards, two of its statements contradict, or one of its requirements is incomplete. The user approves whenever asked* | *In each case, the user isn't asked to approve the level while it fails its review. No question, playback or document of the next level comes while it does* | R4 R5 |
+| S15 | *Starts during a level, with a question from the agent waiting. The user gives a plain answer to it and two instructions that would change the project: one read only one way, one that could be read more than one way about what that level decides, where the user holds which reading is meant* | *The agent plays back what it understood before the project changes on either instruction. For the second, it asks which reading is meant. The project changes on either instruction only after the user confirms, and only in the confirmed reading. The plain answer is acted on without a playback of its own* | R6 R7 R8 |
+| S16 | *Starts from a first feature whose approved levels record a decision the agent made. A second feature is built where the same decision arises as one of the agent's decisions. Nothing agreed or codified covers it* | *The user isn't asked about the decision, and the decision is recorded where the user can see it* | R27 |
+| S17 | *Starts from a first feature whose approved levels hold the user's answer scoped to one of its parts. A second feature is built where the same decision arises as one of the user's decisions for a part outside that scope. Nothing agreed or codified covers it* | *The user is asked about it, and acceptance tests show the second feature's code follows the new answer* | R26 R28 R29 |
+| S18 | *The user describes a feature and approves each level whenever asked* | *Each level produces exactly one document. In it, each requirement is complete, and so is its verification. Code starts, the code has passing tests, and acceptance tests pass* | R1 R3 R33 |
+| S19 | *The user describes a feature. At a level that allows found facts, the user gives a requirement that needs a fact the sample project shows. The user approves whenever asked* | *The user is asked nothing for the fact. That level's document holds it, marked as the agent's. The requirement and its verification are complete. No level that doesn't allow found facts holds it* | R12 R19 R33 |
+| S20 | *The sample project has a term for a concept a level's document must name, and nothing the user said uses that word* | *The document names the concept with the project's term, with the project's meaning* | R20 |
 
-**Measured on real features**, from transcripts and the code:
+**Measures**, on real features, from transcripts and the code:
 
-- Questions about something already agreed or codified, other than for clarity before code starts or about a conflict: target zero.
-- Decisions in the code that nothing you agreed or codified covers: target zero.
+- **M1.** Questions about something already agreed or codified that aren't for clarity or about a conflict (R25): none.
+- **M2.** *The user's decisions that the agent made instead (R26): none.*
+- **M3.** *The agent's decisions that aren't recorded where the user can see them, or that became a codified rule (R27 R30): none.*
+- **M4.** Times the user is asked after code starts because of a decision no one made (R32): none.
