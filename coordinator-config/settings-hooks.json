@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "ArtifactData",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$HOME/.claude/one-question-gate.py\"",
+            "timeout": 10
+          },
+          {
+            "type": "agent",
+            "model": "claude-sonnet-5-5",
+            "timeout": 180,
+            "statusMessage": "Checking the question isn't already decided",
+            "prompt": "You check whether a question the feature framework coordinator is about to post to Craig should be asked. The tool call: $ARGUMENTS\n\nIf the call does not create a new document in the 'questions' collection with status 'open' (a set on questions, alone or in a batch), allow it at once without searching.\n\nOtherwise: 1) The document must have a 'question_kind' field naming one kind, with one sentence on why: 'decision fix' (a recorded decision is unclear, too narrow or silent; the question must quote its current text and propose general wording, never decide one case alone); 'conflict' (two recorded decisions conflict; the question must quote both); 'specific change' (only when no fix to the recorded decisions could answer it, saying why); 'approval' (money, acting outside the repos beyond what is authorized, or a change a repo's instructions or decisions say needs Craig's approval, such as approving a level). Refuse if the field is missing; if a 'specific change' could be answered by fixing a recorded decision; if a 'decision fix' or 'conflict' doesn't quote the decision text; if the question only asks approval of wording, a fix or a rename that carries out an existing decision; or if a decision fix sets an open-ended list, or a list built from the cases at hand, instead of a fixed, complete list taken from the scope the decision governs. 2) Search for the topic in '/home/user/ff-current/docs/decisions.md', '/home/user/ff-current/docs/goals.md', '/home/user/ff-current/docs/open-questions.md', '/home/user/ff-current/docs/spec/' and '/home/user/ff-current/skills/references/', using Grep with several keywords. Decisions marked 'Replaced by' no longer hold. Refuse if an existing decision or doc already answers it unambiguously. When you refuse, give the reason in two sentences at most, quoting the deciding text and its file where there is one."
+          }
+        ]
+      }
+    ]
+  }
+}

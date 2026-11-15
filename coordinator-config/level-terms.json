@@ -1,0 +1,12 @@
+{
+  "workstream": "feature-framework",
+  "level": 1,
+  "level_name": "Outcome",
+  "speak_of": "requirements, how they are verified, and 'a level'",
+  "ruled_out": [
+    "Behaviour", "Behavior", "Design", "Slices", "Build",
+    "found fact", "found facts", "codebase", "the code", "code,", "data model",
+    "service", "module", "storage bucket", "hook", "skill"
+  ],
+  "note": "Terms Craig ruled out of level 1 questions (2026-11-03). Add a term the moment he rules it out."
+}
