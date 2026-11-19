@@ -59,6 +59,7 @@ Leaves to later levels: non-goals, rules and edge cases, design decisions, imple
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
 | `CLAUDE.md` | Rules for agents working in this repo |
 | `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
-| `.claude/skills/start-coordinator/` | Skill the user runs as `/start-coordinator <workstream>` to start a coordinator session |
+| `skills/start-coordinator/` | Skill the user runs to start a coordinator session, as `/feature-framework-plugin:start-coordinator <workstream>` once the plugin is installed |
+| `.claude-plugin/plugin.json` | Plugin manifest: names the plugin, which namespaces its skills |
 
-`docs/` describes the framework. `skills/` holds what the framework uses on each feature.
+`docs/` describes the framework. `skills/` holds the plugin's skills.
