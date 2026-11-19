@@ -58,6 +58,7 @@ Leaves to later levels: non-goals, rules and edge cases, design decisions, imple
 | `skills/write-outcome/` | Skill for writing a feature's Outcome |
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
 | `CLAUDE.md` | Rules for agents working in this repo |
-| `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
+| `.claude/settings.json` | Hooks that load the goals, block unnecessary approval requests, and run the coordinator's compaction hooks |
+| `.claude/hooks/coordinator/` | A coordinator's compaction hooks: what its summary keeps before compaction, and how it rereads its rules and makes its board consistent after |
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.
