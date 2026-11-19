@@ -4,7 +4,6 @@
 
 - Every file has one purpose. Before writing to a file, check the content serves that purpose; put anything else where it belongs.
 - State each fact once, in the file whose purpose it covers. Anywhere else, link to it.
-- The repository never names a person. It refers to "the user".
 - `README.md` says what the framework is and where things are. Nothing else: no status, progress or approvals.
 - `docs/spec/` holds the framework's own level artifacts, as specifications only.
 - `docs/decisions/` holds one decision per record. History, dates and approvals belong here.
