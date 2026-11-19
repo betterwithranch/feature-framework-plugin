@@ -30,8 +30,8 @@ An item has these fields and no others.
 
 Everything else goes elsewhere:
 
-- History and dates: the item's PR and the repository's commit log. The backlog holds the present only.
-- A decision: the workstream's decision records.
+- History and dates: the item's PR and commit log, or the version history of the document it changed. The backlog holds the present only.
+- A decision: the document that owns its subject, such as a skill's references or the repository's architecture docs.
 - An open question: a question card on the board, with a question id.
 - What a thread is doing now or its plan: the thread's card on the board.
 
@@ -53,13 +53,14 @@ An `active` item whose thread is waiting stays `active`: the thread's card holds
 ## Done and dropped items
 
 - A `done` or `dropped` item is removed from the backlog in the turn it reaches that state. Its id stays retired.
-- Its history lives in its PR and the commit log. The decision to drop it lives in a decision record.
+- Its history lives in its PR and commit log, or the version history of the document it changed. The decision to drop it lives in the document that owns its subject.
 - Its open questions move to the board's parked questions.
 
 ## Worker sessions and thread cards
 
-- A worker session is named `<item id> <item title>`, with the title as in the backlog. Example: `PL-I3 Define backlog rules`.
-- Its tags are `workstream:<prefix>` and `item:<item id>`.
-- A session works one item. A session replacing another for the same item takes the same name and tags. At most one unarchived worker session exists per item.
+- A worker session is named `<item id> <role>: <item title>`, with the title as in the backlog. Example: `PL-I3 writer: Define backlog rules`.
+- Role is one of `writer`, `reviewer` or `tester`. The writer makes the item's change, the reviewer checks it in a session separate from the writer's, and the tester is a throwaway session that runs the change to try it.
+- Its tags are `workstream:<prefix>`, `item:<item id>` and `role:<role>`.
+- An item can have several sessions, one for each role. At most one unarchived session exists per item and role. A session replacing another for the same item and role takes the same name and tags.
 - A thread card's heading is `T<n>: <item id> <item title>`. A thread card names exactly one item, and that item is `active`.
 - Every `active` item is named on exactly one thread card.
