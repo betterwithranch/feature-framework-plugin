@@ -59,13 +59,13 @@ Why:
 
 ## Owners
 
-Each named owner is a feature, so ownership doesn't depend on a session that ends.
+Each named owner is a feature, so ownership doesn't depend on a session that ends. An owner marked proposed is not yet agreed.
 
 | Item | Owner |
 | --- | --- |
-| Board templates | Coordinator (proposed) |
+| Board templates | Coordinator |
 | The tracker template the basic coordinator follows | Coordinator (proposed), defined in this repository |
 | The shared tests | Decision making (proposed) |
-| The decision checks' rules and tests | Decision making (proposed) |
+| The decision checks' rules and tests | Decision making |
 | A coordinator's session decision file and checkpoints | That coordinator |
 | A user's file list, checkpoints and guarded files | That user of the checks |
