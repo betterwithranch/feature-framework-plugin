@@ -61,5 +61,7 @@ Leaves to later levels: non-goals, rules and edge cases, design decisions, imple
 | `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
 | `skills/start-coordinator/` | Skill the user runs to start a coordinator session, as `/feature-framework-plugin:start-coordinator <workstream>` once the plugin is installed |
 | `.claude-plugin/plugin.json` | Plugin manifest: names the plugin, which namespaces its skills |
+| `skills/start-coordinator/references/backlog.md` | The rules for a coordinator's backlog: items, ids, fields, states, and how worker sessions and thread cards name items |
+| `docs/coordinator.md` | How a coordinator runs, explained for a person, linking the rules |
 
 `docs/` describes the framework. `skills/` holds the plugin's skills.
