@@ -22,12 +22,40 @@ Why: the decision framework reads decisions from these files as it is built.
 
 ## 4. Each coordination doc owns its workstream's work
 
-A workstream's coordination doc is the only place its work is tracked. The combined backlog is a read-only view of every workstream's items and dependencies, linking to the rows that own them.
+A workstream's coordination doc is the only place its work is tracked. The Workstreams page replaces the combined backlog as the one view across workstreams.
 
-Why: coordinators own their own work, and Craig needs one view of all of it to see the dependencies.
+Why: coordinators own their own work, and Craig needs one page across workstreams to get them back on track.
 
 ## 5. A doc is tracking, history or documentation, one kind per tab
 
 Each doc, or each tab of a doc, is one of tracking, history or documentation. A doc that tracks work never points to another doc for that work's status.
 
 Why: docs that refer to other docs doing the tracking caused the confusion.
+
+## 6. A worker reports to its coordinator with send_message
+
+A worker reports with send_message to the coordinator session its brief names.
+
+## 7. Board threads and questions are cards
+
+Board threads and questions are cards, never tables.
+
+## 8. The dashboard is the Workstreams page
+
+The dashboard is the Workstreams page, the one page for getting every workstream back on track. The Index of what already exists is a tab of the Coordinator Playbook.
+
+## 9. Craig starts each workstream's coordinator himself
+
+Craig starts each workstream's coordinator himself.
+
+## 10. Every coordinator starts from the Playbook's launch message
+
+Every coordinator starts from the Playbook's one launch message. Its first result is its board, whose header lists the decision files it checks and records in.
+
+## 11. A worker gets its sources before it starts
+
+A worker gets every source it reads before it starts and never attaches a repository itself.
+
+## 12. A refused worker is replaced
+
+A refused worker is replaced with a new one, never routed around. Craig never types into a worker's session.
