@@ -7,6 +7,7 @@ These are the goals every change to this repo serves. Check each change against 
 3. Production-ready features, not prototypes. Invariants and design decisions are settled before the build or marked as non-goals.
 4. MVP first. Build the smallest framework that carries its own build, then apply it to a product feature. Don't gold-plate a level beyond what the next level needs.
 5. Fix instructions, not cases. When a gate gives wrong or unstable results, change the skill so it converges, rather than judging case by case.
+6. Shareable. The plugin works for any user: it names no person and needs no one user's private docs.
 
 ## Decide or ask
 
