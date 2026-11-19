@@ -59,5 +59,6 @@ Leaves to later levels: non-goals, rules and edge cases, design decisions, imple
 | `skills/review-outcome/` | Skill for reviewing an Outcome at its gate |
 | `CLAUDE.md` | Rules for agents working in this repo |
 | `.claude/settings.json` | Hooks that load the goals and block unnecessary approval requests |
+| `.claude/skills/start-coordinator/` | Skill the user runs as `/start-coordinator <workstream>` to start a coordinator session |
 
 `docs/` describes the framework. `skills/` holds what the framework uses on each feature.
